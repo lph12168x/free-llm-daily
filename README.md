@@ -6,6 +6,43 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-10-08）
+
+| 数字 | 含义 |
+| --- | --- |
+| **$0.10 / $0.50** | Anthropic 发布 **Claude Haiku 5.5**：迄今最便宜最快的小模型，比 Haiku 4.5 便宜约 **75%**；**1M 上下文**；**即日起在所有平台提供，包括免费版 Claude 应用**（唯一不需 key、不需绑卡的先进模型试用入口） |
+| **1.05T / 49B** | Mistral 发布 **Large 4**：万亿级 MoE（激活 49B）、**1M 上下文**、160+ 语言；预览期 **$0.68 / $2.09**；**承诺月底开源权重**（许可证待公布） |
+| **20 → 20** | OpenRouter 零价池**两进两出**：进 `apodex-1.1-mini:free`、`ling-3.1-flash`；出 `qwen3.8-27b:free`、`stealth/space-bunny-alpha`；Zen **84 → 87**、免费 ID **13 个** |
+| **免费 × 1 年** | Anthropic 创业扶持（SF Tech Week）：成立 ≤5 年可 **免费用 Claude Team 一年（5 席）+ $1000 API 额度** |
+
+---
+
+### 🆕 **Anthropic 发布 `Claude Haiku 5.5`：$0.10 / $0.50、1M 上下文——免费版 Claude 应用就能用**
+
+**本期唯一一条「旗舰级新模型直接对免费用户开放」。** 当地时间 10/7，Anthropic 发布 **Claude Haiku 5.5**（Claude 5.5 家族第三款，前有 Opus 5.5 与 Sonnet 5.5）：**输入 $0.10 / 输出 $0.50 per 百万**（prompt ≤100K；>100K 升到 $0.50 / $2.50），**比 Haiku 4.5 便宜约 75%**；**1M 上下文 / 128K 最大输出**，Haiku 级**首次支持 effort 档**（自适应思考），知识截止 2026 年 6 月。**🎁 免费入口（关键）**：官方口径「**即日起在所有平台提供，包括免费版 Claude 应用（网页与 App）**」——**这是本期唯一不需 key、不需绑卡的先进模型试用入口**；API 侧同步上架 OpenRouter `anthropic/claude-haiku-5.5`（1M、$0.10/$0.50）与 OpenCode Zen `claude-haiku-5-5`，另可在 AWS Bedrock / Google Cloud / Microsoft Foundry 调用（**API 侧仍按量计费**）。**📈 能力**：OSWorld 2.1（电脑操作）**超 OpenAI GPT-6 Luna**，可作为 Opus 5.5 / Sonnet 5.5 的**子智能体**用于编码；面向分类、摘要、抽取、实时客服、语音 agent；是 Anthropic **首个内置「窄域高危网络安全请求」防护的 Haiku**；Max / Team 订阅另赠每月 API 额度。**⚠️ 迁移注意**：为 Haiku 4.5 写的代码在 5.5 上会 break——手动 extended thinking（`budget_tokens`）返回 400，adaptive thinking 默认开启、响应可能以 thinking 块开头，相同文本计入更多 token。**一句话：Claude 5.5 三档（Opus → Sonnet → Haiku）到齐，「小模型免费档」这一格由 Haiku 补上。**
+
+### 🧠 **Mistral 发布 `Large 4`：1.05T MoE / 49B 激活 / 1M 上下文——月底开源权重**
+
+**欧洲开源路线的旗舰：把万亿级 MoE 的激活压到 49B，意味着「前沿级能力」有机会以「可自托管」的形态落到免费侧。** 10/6 公开预览：**1.05T 总参 / 49B 激活**（约 4.7%）、**1.6B 视觉编码器**、**1M 上下文**、文本+图像、**原生 160+ 语言**，支持函数调用、结构化输出、文档问答、批处理与 Agents / Conversations API；在自有欧洲数据中心的 **3,800 块 NVIDIA Grace Blackwell** 上训练。**💵 定价**：标准 **$1.36 / $4.18 per M**（缓存输入 $0.14），**预览期打折 $0.68 / $2.09、缓存 $0.07**；OpenRouter `mistralai/mistral-large-4-0`（512K、$0.68 / $2.09），OpenCode Zen `mistral-large-4`（均付费，**目前无免费 API 入口**）。**📈 跑分**：DeepSWE v1.1 **61.7%** / SWE-Atlas-QnA 59.4% / Terminal-Bench 4 28.3% / AutomationBench 59.9%；**Cybench 网络安全 93%**、AA Cyber Index 82%；Surge AI 编码人工评测 **3.74/5**（对比 Opus 5 的 4.22）。**🎁 对「免费」的意义**：官方承诺**月底发布权重**（许可证待公布）；参照 **Mistral Large 3 是 Apache-2.0**、长期出现在各类免费托管与自建清单里——**若沿用开放许可，月底就会多一条「可自托管的前沿级」选项**。**先记进候选清单，10 月底回来核一次许可证。** 本期两条大事都指向同一打法：**总参数越堆越大、激活参数越压越小**（Large 4 的 1.05T/49B 与免费侧 Ling 3.1 Flash 的 560B/25B）。
+
+### 🔄 **免费池「数量踩住、质地换一遍」：OpenRouter 两进两出，Zen 免费 ID 13 个**
+
+**本期没有「数量变化」的戏剧性，但质地换了一遍——旧的两条先进免费模型下线，两条新的补位；Space Bunny 少了一个入口。** **🔄 OpenRouter（脚本 10/8 清点）**：目录 **464 → 467 款（+3）**，**零价仍 20 款（`:free` 16 款）**；**进** `apodex/apodex-1.1-mini:free`（262K、长程研究与预测向）、`inclusionai/ling-3.1-flash`（**560B/25B 激活、262K、混合推理——零价但不带 `:free` 后缀**）；**出** `qwen/qwen3.8-27b:free`（**连续 429、长期探不到，本期下架**）、`stealth/space-bunny-alpha`（**从 OR 撤出**）。**🖥️ OpenCode Zen**：`/zen/v1/models` **84 → 87 款**，带免费标记 ID **13 个**：**新增** `exo-free`、`fledge-alpha-free`、`ling-3.1-flash-free`；**移除** `deepseek-v4-flash-free`、`mimo-v2.5-free`（后者原定 10/21 随小米 MiMo-V2.5 下线、**本期提前移除**）；另上架**付费** `claude-haiku-5-5` 与 `mistral-large-4`。**⚠️ 条款分三类**：Space Bunny / LongCat 2.5 = 零保留、不用于训练；**Exo / Fledge / Ling / MiMo / Big Pickle = 免费期数据可能用于改进模型**；Nemotron 两条 = NVIDIA 试用端点，**勿传个人 / 机密数据**。**🐰 Space Bunny 少了一个入口**：OR 零价条目本期消失，**Zen 侧 `space-bunny-free` 仍在**——**把匿名模型写成变量而不是常量**。**stealth 寿命记录**：ox-alpha 6 天 → union-alpha 不到 2 天 → Space Bunny 约两周 → 本期 exo / fledge / ling-3.1-flash 顶替；**看到 $0 且能力强的新条目，正确动作是当天跑完评估。**
+
+### 🌤️ **次要更新（10/8）**
+
+🎁 **Anthropic 创业扶持**：10/6 SF Tech Week 期间推出——**成立 5 年内或近两年获融资的初创，可免费用 Claude Team 一年（最多 5 席）+ $1000 API 额度**；**本期唯一一条「面向真实项目、可持续一年」的免费额度**，符合条件的团队别错过（额度具体口径以官方页面为准）。🧾 **免费网关与厂商新条目**：**BazaarLink**（OpenAI 兼容，2 款免费模型 `qwen/qwen3.7-flash`、`deepseek/deepseek-v4-flash-0731`；免绑卡，10 RPM + 50 加权单位/日，充值后 20 RPM + 100/日，每日 00:00 UTC 重置）、**APInex**（以 `free/` 前缀提供 9 款 1M 上下文模型：Gemini 3.8 Flash、GLM-5.3 Flash、GPT-5.6 Luna、DeepSeek V4.x、Qwen 3.8 Max、Muse Spark 1.3 等）、**Nous Portal**（$0 档含 7 款 `:free`：Ling 3.0 Flash Fin / Step 3.7 Flash / LongCat 2.0 & 2.5 Preview / Laguna S 2.1 / Ling 3.0 Flash Sante / Laguna XS 2.1）。📈 **平台口径**：**OpenRouter 467 款 / 20 零价 / 16 `:free`**，新增付款侧含 `anthropic/claude-haiku-5.5`、`mistralai/mistral-large-4-0`、`google/gemini-nano-banana-2.1`、`unbiased/pareto-26.10-preview`、`nvidia/switchyard`；**近六期流水 9/24 = 457/24/20 → 9/28 = 458/21/17 → 9/29 = 460/20/16 → 9/30 = 464/20/16 → 10/8 = 467/20/16**（零价池连续三期稳在 20，但本期内部换了两条）；**Zen 免费 ID 13 个**（⚠️ 官方定价页仍列 `mimo-v2.5-free` 但接口已移除——**以接口 / 定价页为准**）；**freellm.net 495+ 款 / 30 家平台 / 231 款实时验证**（榜首 NIM `z-ai/glm-5.3` 96、`z-ai/glm-5.3-flash` 95、Ollama Cloud `deepseek-v4-pro` 91、Kilo Code `qwen3.8-27b:free` 91、NIM `Kimi K3` 90）。**⚠️ 滞后实证（本期，很重要）**：**CostGoat 等聚合页仍把已下架的 `qwen/qwen3.8-27b:free` 与 `stealth/space-bunny-alpha` 列为免费 / Online**，而官方接口里已不存在——**「是否还在免费」一律回官方接口复核。**
+
+### 🧾 **今日免费入口速查（先进 + 量大优先）**
+
+① **免费版 Claude 应用**（🔵 本期新增）：**免费档可用**、App / 网页、无需 key 无需绑卡；**Haiku 5.5**、1M / 128K 输出——**本期唯一的「旗舰级新模型免费入口」**（API 侧仍计费）。② **Google AI Studio**：**Gemini 3.8 / 3.7 / 3.6 Flash 免绑卡**、**1M**；3.x Pro 不在免费档；**长期兜底首选**。③ **NVIDIA NIM `z-ai/glm-5.3`**：**40 RPM、不限调用量**（需手机验证）；1.3M、freellm.net 96 分榜首；同站还有 `glm-5.3-flash`（95）与 `Kimi K3`（90）。④ **OpenRouter `nemotron-3-ultra-550b-a55b:free`**：$0 / $0（200 请求/日）、550B / 激活 55B、**1M**——**零价池里量最大、最稳的一条**；勿提交个人 / 机密数据。⑤ **OpenCode Zen** `exo-free` / `fledge-alpha-free`（🔵 本期新增）：**四列全 Free**、限时；**免费期数据可能用于改进模型**，别喂机密。⑥ **Nous Portal**：`inference-api.nousresearch.com/v1`，$0 档含 **7 款 `:free`**（Ling / Step / LongCat / Laguna）；免绑卡、标准限速；清单每周会变，用前先看 `/models`。⑦ **智谱 z.ai**：`GLM-4.7-Flash` 等**输入输出全 Free、无到期日**（国内直连）。⑧ **Mistral Large 4**（🔜 月底开源权重）：现价仍是付费（预览期 $0.68 / $2.09）；**月底权重放出后可能出现免费托管**，先记进候选。**📌 长期兜底组合**：**智谱 z.ai**（GLM Flash 系全 Free）、**Google AI Studio**（Gemini 3.x Flash 免绑卡）、**NVIDIA NIM**（40 RPM 不限量）、**Groq**（30 RPM / 1,000 请求/日，**已下掉 Llama 系**）、**美团 LongCat**（每天 5,000 万 token）、**Cloudflare Workers AI**（每天 1 万 neurons）、**OVHcloud AI Endpoints**（匿名免注册 9 款，2 RPM）、**FreeLLMAPI（自托管，MIT）**（34 家 / 635 端点 / 约 7.4 亿 tokens·月）。
+
+### ⏰ **到期红线**
+
+**刚过去（10/7 前后，如未续期）**：智谱 GLM-5.3-Flash 夜免 + 全天五折结束、ZCode 每日 1 亿 Token 券发放结束（**永久免费档不受影响**）、MiniMax Code 双倍签到结束。**10 月及以后**：**10/10** — DeepSeek 低谷价窗口结束、腾讯混元 Hy4 preview（老用户夜间免费）结束；**10/15** — **阶跃 Step 5 Preview 释放完整 BF16 权重**（许可证待公布）；**10/17** — 豆包全用户 30 天订阅（9/24 那轮）截止；**10/21** — **小米 `mimo-v2.5-pro` / `mimo-v2.5` 正式下线**（Zen 侧 `mimo-v2.5-free` 本期已提前移除）；**10/31（月底）** — **Mistral Large 4 发布开源权重**（许可证与托管渠道届时见分晓）；**11/7** — MiniMax 开放平台 M3 / M2 免费试用到期；**12/31** — 腾讯云 TokenHub / 华为云码道 / 移动云 MoMA 年度额度截止。**🧭 今天该怎么动**：① 现在就做——**打开免费版 Claude 应用试 Haiku 5.5**（本期唯一旗舰级新模型免费入口，用真实「分类 / 摘要 / 抽取」任务测）、**注册 Nous Portal 或去 Zen 摸一遍三条新免费 stealth**（exo / fledge / ling-3.1-flash，三天前还没有，**当天跑完评估**）、**翻一遍配置里写死的免费模型名**（`qwen3.8-27b:free` 已下架、`space-bunny-alpha` 已从 OR 撤出，请求会直接失败）；② 今天之内——**把零价池里 1M 上下文那几条跑一遍**（剩 6 条，`nemotron-3-ultra-550b-a55b:free` 最稳）、**把 Mistral Large 4 记进候选**（月底回来核许可证）；③ 本周之内——**盘点一次「你还有资格领的免费额度」**（尤其 Anthropic 创业扶持：免费 Claude Team 一年 + $1000 API）、**给免费通道按可靠性分层**（永久免费档 → 厂商试用端点 → 免费应用层 → 限时券 → stealth，**生产链路只用前两层**）、**盯三个日期**（10/10、10/21、10/31）、**留意两条还没落地的预期**（Haiku 5.5 会不会下探到免费 API 侧、Mistral Large 4 的许可证是 Apache-2.0 还是更严）。
+
+---
+
 ## 📰 今日摘要（2026-09-30）
 
 | 数字 | 含义 |
