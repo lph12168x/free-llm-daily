@@ -50,7 +50,10 @@ nav_div_re = re.compile(r'<div class="page-nav"(?:\s[^>]*)?>.*?</div>\n?', re.S)
 changed = 0
 for i, name in enumerate(names):
     path = os.path.join(base, name)
-    with open(path, encoding="utf-8") as fh:
+    # newline="" on BOTH read and write so we never silently convert line
+    # endings (Windows text mode would rewrite every CRLF file as LF and, worse,
+    # turn a 1-line nav tweak into a full-file rewrite in git).
+    with open(path, encoding="utf-8", newline="") as fh:
         html = fh.read()
 
     prev = names[i-1] if i > 0 else None
@@ -86,7 +89,7 @@ for i, name in enumerate(names):
         continue
 
     if html != original:
-        with open(path, "w", encoding="utf-8") as fh:
+        with open(path, "w", encoding="utf-8", newline="") as fh:
             fh.write(html)
         changed += 1
         tag = "regenerated" if 'class="page-nav"' in original else "added"

@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>免费大模型日报 · 2026-10-09 · Free LLM Daily</title>
+<style>
+
+
+
+
+
+
+
+
+
+
+
+  :root {
+    --bg-primary: #0f0c29;
+    --bg-secondary: #1a1740;
+    --bg-card: rgba(255,255,255,0.04);
+    --bg-card-hover: rgba(255,255,255,0.08);
+    --border-card: rgba(255,255,255, 0.08);
+    --border-accent: rgba(139,92,246,0.4);
+    --text-primary: #e8e8f0;
+    --text-secondary: #b0b0c8;
+    --text-muted: #8080a0;
+    --accent-1: #8b5cf6;
+    --accent-2: #ec4899;
+    --accent-3: #f093fb;
+    --accent-4: #f5576c;
+    --gradient-hero: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    --gradient-badge: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+    --gradient-title: linear-gradient(135deg, #fff 0%, #a8edea 50%, #fed6e3 100%);
+    --gradient-cta: linear-gradient(90deg, #8b5cf6, #ec4899);
+    --gradient-date: linear-gradient(135deg, #8b5cf6, #ec4899);
+    --shadow-cta: 0 4px 20px rgba(139,92,246,0.4);
+    --shadow-cta-hover: 0 8px 28px rgba(139,92,246,0.6);
+    --hero-overlay: conic-gradient(from 0deg, transparent, rgba(139,92,246,0.18), transparent 30%);
+    --stat-num-gradient: linear-gradient(90deg, #f093fb, #f5576c);
+    --tag-bg: rgba(139,92,246,0.15);
+    --tag-text: #c4b5fd;
+    --tag-border: rgba(139,92,246,0.25);
+    --footer-border: rgba(255,255,255,0.08);
+    --score-gradient: linear-gradient(135deg, #34d399, #10b981);
+    --score-bg: rgba(16,185,129,0.12);
+    --gold: linear-gradient(135deg, #fbd34d, #f59e0b);
+    --hot-bg: linear-gradient(120deg, rgba(245,87,108,0.16), rgba(240,147,251,0.1));
+    --hot-border: rgba(245,87,108,0.45);
+  }
+
+  [data-theme="light"] {
+    --bg-primary: #f5f3ff;
+    --bg-secondary: #ede9fe;
+    --bg-card: rgba(255,255,255,0.75);
+    --bg-card-hover: rgba( 255,255,255,0.95);
+    --border-card: rgba(139,92,246,0.12);
+    --border-accent: rgba(139,92,246,0.35);
+    --text-primary: #1e1b4b;
+    --text-secondary: #4c4a6e;
+    --text-muted: #7876a0;
+    --gradient-hero: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #e0e7ff 100%);
+    --gradient-title: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #db2777 100%);
+    --gradient-cta: linear-gradient(90deg, #7c3aed, #db2777);
+    --gradient-date: linear-gradient(135deg, #7c3aed, #db2777);
+    --hero-overlay: conic-gradient(from 0deg, transparent, rgba(124,58,237,0.08), transparent      30%);
+    --stat-num-gradient: linear-gradient(90deg, #7c3aed, #db2777);
+    --tag-bg: rgba(124,58,237,0.1);
+    --tag-text: #6d28d9;
+    --tag-border: rgba(124,58,237,0.2);
+    --footer-border: rgba(139,92,246,0.12);
+    --score-gradient: linear-gradient(135deg, #059669, #047857);
+    --score-bg: rgba(5,150,105,0.1);
+    --gold: linear-gradient(135deg, #d97706, #b45309);
+    --hot-bg: linear-gradient(120deg, rgba(220,38,38,0.1), rgba(124,58,237,0.08));
+    --hot-border: rgba(220,38,38,0.35);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--gradient-hero);
+    min-height: 100vh;
+    color: var(--text-primary);
+    padding: 32px 20px 60px;
+    line-height: 1.7;
+    transition: background 0.4s, color 0.4s;
+  }
+  .container { max-width: 1180px; margin: 0 auto; }
+
+  .theme-toggle {
+    position: fixed; top: 20px; right: 20px; z-index: 1000;
+    width: 44px; height: 44px; border-radius: 50%;
+    border: 1.5px solid var(--border-card); background: var(--bg-card);
+    backdrop-filter: blur(10px); cursor: pointer; font-size: 20px;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s; box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  .theme-toggle:hover { border-color: var(--accent-1); transform: scale(1.1); box-shadow: 0 4px 20px rgba(139,92,246,0.3); }
+
+  .back-home {
+    position: fixed; top: 20px; left: 20px; z-index: 1000;
+    padding: 9px 16px; border-radius: 30px; font-size: 13px; font-weight: 600;
+    text-decoration: none; color: var(--text-primary);
+    background: var(--bg-card); border: 1.5px solid var(--border-card);
+    backdrop-filter: blur(10px); transition: all 0.3s;
+  }
+  .back-home:hover { border-color: var(--accent-1); background: var(--bg-card-hover); }
+
+  .hero {
+    text-align: center; margin-bottom: 40px; padding: 64px 32px 54px;
+    background: var(--bg-card); border-radius: 28px; backdrop-filter: blur(20px);
+    border: 1px solid var(--border-card); position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: var(--hero-overlay); animation: rotate 14s linear infinite;
+  }
+  @keyframes rotate { to { transform: rotate(360deg); } }
+  .hero-inner { position: relative; z-index: 1; }
+  .badge {
+    display: inline-block; padding: 7px 18px; background: var(--gradient-badge);
+    border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 18px;
+    letter-spacing: 0.5px; color: #fff; box-shadow: 0 2px 12px rgba(240,147,251,0.3);
+  }
+  .hero h1 {
+    font-size: 44px; font-weight: 800; background: var(--gradient-title);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    margin-bottom: 12px; letter-spacing: -1px; line-height: 1.2;
+  }
+  .date-chip {
+    display: inline-block; padding: 8px 22px; border-radius: 16px;
+    background: var(--gradient-date); color: #fff; font-weight: 700; font-size: 18px;
+    margin-bottom: 16px; box-shadow: 0 4px 16px rgba(139,92,246,0.35);
+  }
+  .tagline { color: var(--text-secondary); font-size: 15px; max-width: 760px; margin: 0 auto; }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 40px; }
+  .stat-card {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 18px;
+    padding: 22px 20px; backdrop-filter: blur(10px); transition: all 0.3s; text-align: center;
+  }
+  .stat-card:hover { transform: translateY(-5px); border-color: var(--border-accent); box-shadow: 0 8px 30px rgba(139,92,246, 0.15); }
+  .stat-icon { font-size: 26px; margin-bottom: 8px; }
+  .stat-num { font-size: 32px; font-weight: 800; background: var(--stat-num-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1.1; }
+  .stat-label { color: var(--text-secondary); font-size: 13px; font-weight: 500; margin-top: 4px; }
+
+  .section { margin-bottom: 42px; }
+  .section-title {
+    font-size: 22px; font-weight: 700; margin-bottom: 18px; padding-left: 16px;
+    border-left: 4px solid var(--accent-1); display: flex; align-items: center; gap: 10px;
+  }
+  .section-title .ico { font-size: 26px; }
+
+  .focus {
+    background: linear-gradient(120deg, rgba(139,92,246,0.14), rgba(236,72,153,0.1));
+    border: 1px solid var(--border-accent); border-radius: 20px; padding: 26px 28px;
+    margin-bottom: 26px; backdrop-filter: blur(10px);
+  }
+  .focus h2 { font-size: 19px; font-weight: 800; margin-bottom: 12px; color: var(--accent-3); display: flex; align-items: center; gap: 10px; }
+  .focus p { color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
+  .focus .hl { color: var(--text-primary); font-weight: 700; }
+  .focus .countdown { color: var(--accent-4); font-weight: 800; }
+
+  .hot {
+    background: var(--hot-bg);
+    border: 1px solid var(--hot-border); border-radius: 20px; padding: 26px 28px;
+    margin-bottom: 40px; backdrop-filter: blur(10px); position: relative; overflow: hidden;
+  }
+  .hot .flag {
+    display: inline-block; padding: 5px 14px; border-radius: 12px; font-size: 12px; font-weight: 800;
+    background: var(--gradient-badge); color: #fff; margin-bottom: 12px; letter-spacing: 0.5px;
+  }
+  .hot h2 { font-size: 22px; font-weight: 800; margin-bottom: 8px; color: var(--text-primary); }
+  .hot .sub { color: var(--accent-3); font-size: 14px; font-weight: 700; margin-bottom: 14px; }
+  .hot p { color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
+  .hot .hl { color: var(--text-primary); font-weight: 700; }
+  .hot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 12px; margin-top: 16px; }
+  .hot-item { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 12px; padding: 14px 16px; }
+  .hot-item .k { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+  .hot-item .v { font-size: 16px; font-weight: 800; color: var(--tag-text); }
+  .hot-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--accent-1); text-decoration: none; }
+  .hot-link:hover { text-decoration: underline; }
+
+  .model-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+  .model-card {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 18px;
+    padding: 20px 22px; backdrop-filter: blur(10px); transition: all 0.3s; position: relative; overflow: hidden;
+  }
+  .model-card:hover { transform: translateY(-4px); border-color: var(--border-accent); box-shadow: 0 8px 30px rgba(139,92,246,0.12); }
+  .model-card.top { border-color: rgba(245,158,11,0.4); background: linear-gradient(160deg, rgba(245,158,11,0.08), var(--bg-card)); }
+  .rank-badge {
+    position: absolute; top: 0; right: 0; padding: 5px 14px; font-size: 12px; font-weight: 800;
+    border-bottom-left-radius: 14px; color: #fff;
+  }
+  .rank-1 { background: var(--gold); color: #1e1b4b; }
+  .rank-other { background: rgba(139,92,246,0.55); }
+  .model-head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .score {
+    flex-shrink: 0; width: 58px; height: 58px; border-radius: 14px;
+    background: var(--score-bg); display: flex; flex-direction: column; align-items: center; justify-content: center;
+    border: 1px solid rgba(16,185,129,0.3);
+  }
+  .score .num { font-size: 22px; font-weight: 800; background: var(--score-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
+  .score .unit { font-size: 9px; color: var(--text-muted); margin-top: 2px; }
+  .model-name { font-size: 16px; font-weight: 700; color: var(--text-primary); line-height: 1.35; }
+  .model-provider { font-size: 12px; color: var(--tag-text); font-weight: 600; margin-top: 3px; }
+  .model-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .meta-pill { font-size: 11.5px; padding: 4px 10px; border-radius: 10px; background: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--tag-border); font-weight: 600; }
+  .model-desc { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; }
+  .model-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--accent-1); text-decoration: none; transition: gap 0.2s; }
+  .model-link:hover { gap: 10px; text-decoration: underline; }
+
+  .plat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .plat-card {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 16px;
+    padding: 20px 22px; backdrop-filter: blur(10px); transition: all 0.3s;
+  }
+  .plat-card:hover { transform: translateY(-4px); border-color: var(--border-accent); box-shadow: 0 8px 30px rgba(139,92,246,0.12); }
+  .plat-head { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .plat-emoji { font-size: 24px; }
+  .plat-name { font-size: 15px; font-weight: 700; color: var(--accent-3); }
+  .quota { font-size: 13px; color: var(--text-primary); font-weight: 700; margin-bottom: 6px; }
+  .quota .big { font-size: 17px; background: var(--stat-num-gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+  .plat-desc { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 10px; }
+  .plat-link { font-size: 12px; color: var(--accent-1); text-decoration: none; font-weight: 600; }
+  .plat-link:hover { text-decoration: underline; }
+
+  .combo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
+  .combo-card {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 16px;
+    padding: 20px; backdrop-filter: blur(10px); border-left: 4px solid var(--accent-1); transition: all 0.3s;
+  }
+  .combo-card:hover { transform: translateX(3px); border-color: var(--border-accent); }
+  .combo-card h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: var(--tag-text); }
+  .combo-card p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+  .combo-card .cost { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 800; color: #34d399; background: rgba(52,211,153,0.12); padding: 3px 12px; border-radius: 10px; }
+
+  .risk-list { display: grid; gap: 12px; }
+  .risk-item {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-left: 4px solid var(--accent-4);
+    border-radius: 12px; padding: 16px 20px; backdrop-filter: blur(10px); display: flex; gap: 14px; align-items: flex-start;
+  }
+  .risk-item .icon { font-size: 20px; flex-shrink: 0; }
+  .risk-item h4 { font-size: 14px; font-weight: 700; color: var(--accent-4); margin-bottom: 4px; }
+  .risk-item p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.6; }
+
+  .tag { display: inline-block; padding: 4px 12px; background: var(--tag-bg); color: var(--tag-text); border: 1px solid var(--tag-border); border-radius: 12px; font-size: 12px; font-weight: 600; margin: 3px; }
+  .tag-row { display: flex; flex-wrap: wrap; gap: 2px; margin-top: 8px; }
+
+  .footer { text-align: center; color: var(--text-muted); font-size: 13px; margin-top: 56px; padding: 28px 20px; border-top: 1px solid var(--footer-border); }
+  .footer a { color: var(--accent-1); text-decoration: none; font-weight: 600; }
+  .footer a:hover { text-decoration: underline; }
+  .footer p { margin-bottom: 6px; }
+
+  .scroll-top {
+    position: fixed; bottom: 24px; right: 24px; z-index: 999; width: 44px; height: 44px; border-radius: 50%;
+    border: 1.5px solid var(--border-card); background: var(--bg-card); backdrop-filter: blur(10px); cursor: pointer;
+    font-size: 18px; display: flex; align-items: center; justify-content: center; transition: all 0.3s;
+    opacity: 0; pointer-events: none; box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+  .scroll-top.visible { opacity: 1; pointer-events: auto; }
+  .scroll-top:hover { border-color: var(--accent-1); transform: scale(1.1); }
+
+  @media (max-width: 640px) {
+    .hero { padding: 44px 18px 36px; }
+    .hero h1 { font-size: 30px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+    .model-grid, .plat-grid, .combo-grid { grid-template-columns: 1fr; }
+  }
+
+  .page-nav {
+    position: fixed; top: 16px; left: 12px; z-index: 1000;
+    display: flex; gap: 6px; padding: 6px; border-radius: 30px;
+    background: var(--bg-card); border: 1.5px solid var(--border-card);
+    backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    max-width: calc(100vw - 90px); flex-wrap: wrap; align-items: center;
+  }
+  .page-nav a, .page-nav span.nav-disabled {
+    padding: 7px 13px; border-radius: 20px; font-size: 13px; font-weight: 600;
+    text-decoration: none; color: var(--text-primary); white-space: nowrap;
+    border: 1px solid var(--border-card); transition: all 0.25s; line-height: 1.3;
+  }
+  .page-nav a:hover { border-color: var(--accent-1); background: var(--bg-card-hover); color: var(--accent-1); }
+  .page-nav a.nav-home { color: var(--accent-2); }
+  .page-nav a.nav-latest { color: var(--accent-1); }
+  .page-nav span.nav-disabled { color: var(--text-muted); opacity: 0.4; cursor: not-allowed; }
+  @media (max-width: 640px) {
+    .page-nav { top: 10px; left: 8px; gap: 4px; padding: 5px; max-width: calc(100vw - 70px); }
+    .page-nav a, .page-nav span.nav-disabled { padding: 5px 9px; font-size: 11.5px; }
+  }
+
+  /* Page navigation bar (prev / home / latest / next) */
+  .page-nav {
+    position: fixed; top: 16px; left: 12px; z-index: 1000;
+    display: flex; gap: 6px; padding: 6px; border-radius: 30px;
+    background: var(--bg-card); border: 1.5px solid var(--border-card);
+    backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    max-width: calc(100vw - 90px); flex-wrap: wrap; align-items: center;
+  }
+  .page-nav a, .page-nav span.nav-disabled {
+    padding: 7px 13px; border-radius: 20px; font-size: 13px; font-weight: 600;
+    text-decoration: none; color: var(--text-primary); white-space: nowrap;
+    border: 1px solid var(--border-card); transition: all 0.25s; line-height: 1.3;
+  }
+  .page-nav a:hover { border-color: var(--accent-1); background: var(--bg-card-hover); color: var(--accent-1); }
+  .page-nav a.nav-home { color: var(--accent-2); }
+  .page-nav a.nav-latest { color: var(--accent-1); }
+  .page-nav span.nav-disabled { color: var(--text-muted); opacity: 0.4; cursor: not-allowed; }
+  @media (max-width: 640px) {
+    .page-nav { top: 10px; left: 8px; gap: 4px; padding: 5px; max-width: calc(100vw - 70px); }
+    .page-nav a, .page-nav span.nav-disabled { padding: 5px 9px; font-size: 11.5px; }
+  }
+
+  /* Comparison tables (added 2026-08-31) */
+  .tbl-wrap { overflow-x: auto; margin: 16px 0 4px; border-radius: 12px; border: 1px solid var(--border-card); }
+  .tbl-wrap table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 560px; }
+  .tbl-wrap th {
+    text-align: left; padding: 11px 14px; font-size: 12px; font-weight: 800;
+    color: var(--tag-text); background: var(--tag-bg); letter-spacing: .3px;
+    border-bottom: 1px solid var(--border-card); white-space: nowrap;
+  }
+  .tbl-wrap td { padding: 11px 14px; color: var(--text-secondary); line-height: 1.65; border-bottom: 1px solid var(--border-card); vertical-align: top; }
+  .tbl-wrap tbody tr:last-child td { border-bottom: none; }
+  .tbl-wrap tbody tr:hover { background: var(--bg-card-hover); }
+  .tbl-wrap td:first-child { color: var(--text-primary); font-weight: 700; white-space: nowrap; }
+  .tbl-wrap code { font-size: 12px; background: var(--tag-bg); color: var(--tag-text); padding: 2px 6px; border-radius: 5px; }
+  .pill { display: inline-block; padding: 3px 9px; border-radius: 20px; font-size: 11.5px; font-weight: 800; white-space: nowrap; }
+  .pill.green { background: var(--score-bg); color: var(--text-primary); }
+  .pill.orange { background: rgba(245,158,11,0.16); color: #f59e0b; }
+  .pill.red { background: rgba(245,87,108,0.16); color: #f5576c; }
+  .hot p code, .focus p code, .section p code {
+    background: var(--tag-bg); color: var(--tag-text); padding: 2px 6px; border-radius: 5px; font-size: 12.5px;
+  }
+
+
+  /* === 2026-09-02 新增组件 === */
+  .rank-2 { background: linear-gradient(135deg, #94a3b8, #cbd5e1); color: #0f172a; }
+  .rank-3 { background: linear-gradient(135deg, #b45309, #f59e0b); color: #fff; }
+  .risk-item { display: block; }
+  .risk-title {
+    font-size: 15px; font-weight: 700; color: var(--text-primary);
+    margin-bottom: 8px; line-height: 1.55;
+  }
+  .risk-body { font-size: 13.5px; color: var(--text-secondary); line-height: 1.8; }
+  .combo-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 8px; line-height: 1.5; }
+  .combo-body { font-size: 13px; color: var(--text-secondary); line-height: 1.8; }
+
+
+
+  /* === 2026-09-04 新增组件 === */
+  .amd-box { border-left: 3px solid #f5576c; }
+  .warn-line { color: #f5576c; font-weight: 700; }
+  .ok-line { color: #34d399; font-weight: 700; }
+
+
+  /* === 2026-09-07 新增组件 === */
+  .ifly-box { border-left: 3px solid #4f8cff; }
+  .done-line { color: #94a3b8; font-weight: 700; }
+
+
+  /* === 2026-09-08 新增组件 === */
+  .merge-box { border-left: 3px solid #f59e0b; }
+  .orca-box { border-left: 3px solid #22d3ee; }
+  .drop-line { color: #ef4444; font-weight: 700; }
+  .done-line { color: #94a3b8; font-weight: 700; }
+
+  /* hot-item 正文与迷你参数表 */
+  .hot-body { margin-top: 10px; font-size: 14px; line-height: 1.78; color: var(--text-secondary); }
+  .mini-tbl { margin-top: 10px; border-top: 1px dashed var(--border-card); padding-top: 4px; }
+  .mini-row { display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px dashed var(--border-card); }
+  .mini-row:last-child { border-bottom: none; }
+  .mini-row .k { flex: 0 0 130px; font-size: 12.5px; font-weight: 700; color: var(--text-muted); line-height: 1.65; margin-bottom: 0; }
+  .mini-row .v { flex: 1; font-size: 13.5px; font-weight: 400; color: var(--text-secondary); line-height: 1.72; }
+
+  /* 表格行状态 */
+  .tbl-wrap tbody tr.new-row { background: rgba(139,92,246,0.08); }
+  .tbl-wrap tbody tr.urgent-row { background: rgba(245,87,108,0.10); }
+  .tbl-wrap tbody tr.urgent-row td:first-child { box-shadow: inset 3px 0 0 #f5576c; }
+  .tbl-wrap tbody tr.done-row { opacity: 0.6; }
+
+  /* 状态标签配色（亮/暗双主题） */
+  .tag.ok { background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(16,185,129,0.32); }
+  .tag.warn { background: rgba(245,158,11,0.15); color: #fbbf24; border-color: rgba(245,158,11,0.32); }
+  .tag.bad { background: rgba(239,68,68,0.15); color: #f87171; border-color: rgba(239,68,68,0.32); }
+  html[data-theme="light"] .tag.ok { background: rgba(5,150,105,0.12); color: #047857; border-color: rgba(5,150,105,0.28); }
+  html[data-theme="light"] .tag.warn { background: rgba(217,119,6,0.12); color: #b45309; border-color: rgba(217,119,6,0.28); }
+  html[data-theme="light"] .tag.bad { background: rgba(220,38,38,0.12); color: #b91c1c; border-color: rgba(220,38,38,0.28); }
+
+  @media (max-width: 640px) {
+    .mini-row { flex-direction: column; gap: 3px; }
+    .mini-row .k { flex: none; }
+  }
+
+/* === soft-palette:v1 begin === */
+  :root {
+    --accent-1: #a78bfa;
+    --accent-2: #f0abfc;
+    --accent-3: #c9bdfb;
+    --accent-4: #f6a9a9;
+    --gradient-title: linear-gradient(135deg, #f7f5ff 0%, #c9bdfb 55%, #a78bfa 100%);
+    --gradient-badge: linear-gradient(90deg, #a78bfa, #f0abfc);
+    --gradient-date: linear-gradient(135deg, #8b5cf6, #c084fc);
+    --stat-num-gradient: linear-gradient(90deg, #c9bdfb, #f0abfc);
+    --badge-text: #2a2154;
+    --hot-bg: linear-gradient(120deg, rgba(139,92,246,0.10), rgba(236,72,153,0.07));
+    --hot-border: rgba(167,139,250,0.26);
+    --hl-bg: rgba(139,92,246,0.13);
+    --soft-ok: #7ddcae;
+    --soft-warn: #f2cd7a;
+    --soft-bad: #f4a3a3;
+    --soft-info: #9ec2f7;
+    --soft-mute: #97a3b8;
+    --soft-ok-bg: rgba(16,185,129,0.13);
+    --soft-warn-bg: rgba(217,119,6,0.16);
+    --soft-bad-bg: rgba(220,38,38,0.14);
+    --soft-info-bg: rgba(59,130,246,0.14);
+    --rank-other-bg: rgba(139,92,246,0.5);
+    --gold-border: rgba(251,191,36,0.34);
+  }
+
+  [data-theme="light"] {
+    --accent-1: #7c3aed;
+    --accent-2: #c026d3;
+    --accent-3: #6d28d9;
+    --accent-4: #b05252;
+    --gradient-title: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #a78bfa 100%);
+    --gradient-badge: linear-gradient(90deg, #7c3aed, #c026d3);
+    --gradient-date: linear-gradient(135deg, #6d28d9, #a855f7);
+    --stat-num-gradient: linear-gradient(90deg, #6d28d9, #b4536f);
+    --badge-text: #ffffff;
+    --hot-bg: linear-gradient(120deg, rgba(124,58,237,0.06), rgba(192,38,211,0.045));
+    --hot-border: rgba(124,58,237,0.20);
+    --hl-bg: rgba(124,58,237,0.075);
+    --soft-ok: #0f7a5f;
+    --soft-warn: #a2670a;
+    --soft-bad: #b45252;
+    --soft-info: #245cc4;
+    --soft-mute: #6b7280;
+    --soft-ok-bg: rgba(5,150,105,0.10);
+    --soft-warn-bg: rgba(202,138,4,0.10);
+    --soft-bad-bg: rgba(200,60,60,0.075);
+    --soft-info-bg: rgba(37,99,235,0.075);
+    --rank-other-bg: #8b5cf6;
+    --gold-border: rgba(202,138,4,0.34);
+  }
+
+  /* 徽标：改用柔和紫粉渐变，并按主题切换文字色 */
+  .badge, .hot .flag {
+    background: var(--gradient-badge);
+    color: var(--badge-text);
+    box-shadow: 0 2px 10px rgba(124,58,237,0.16);
+  }
+  .date-chip { box-shadow: 0 4px 14px rgba(124,58,237,0.20); }
+
+  /* 焦点 / 热点区块：去掉红紫撞色，统一为低透明度紫色纸 */
+  .focus { background: var(--hl-bg); border-color: var(--border-accent); }
+  .hot { background: var(--hot-bg); border-color: var(--hot-border); }
+  .focus h2, .hot .sub, .plat-name { color: var(--accent-3); }
+  .focus .countdown, .risk-item h4 { color: var(--accent-4); }
+  .risk-item { border-left-color: var(--accent-4); }
+  .model-card.top { border-color: var(--gold-border); background: linear-gradient(160deg, var(--soft-warn-bg), var(--bg-card)); }
+
+  /* 状态色文字：改为主题感知的低饱和色 */
+  .warn-line { color: var(--soft-warn); }
+  .ok-line { color: var(--soft-ok); }
+  .drop-line { color: var(--soft-bad); }
+  .done-line { color: var(--soft-mute); }
+
+  /* 胶囊标签 */
+  .pill.green { background: var(--soft-ok-bg); color: var(--soft-ok); }
+  .pill.orange { background: var(--soft-warn-bg); color: var(--soft-warn); }
+  .pill.red { background: var(--soft-bad-bg); color: var(--soft-bad); }
+  .combo-card .cost { background: var(--soft-ok-bg); color: var(--soft-ok); }
+  .tag.ok { background: var(--soft-ok-bg); color: var(--soft-ok); }
+  .tag.warn { background: var(--soft-warn-bg); color: var(--soft-warn); }
+  .tag.bad { background: var(--soft-bad-bg); color: var(--soft-bad); }
+
+  /* 表格行状态：用淡底 + 左侧细色条，不再整行压深色 */
+  .tbl-wrap tbody tr.new-row { background: var(--hl-bg); }
+  .tbl-wrap tbody tr.urgent-row { background: var(--soft-bad-bg); }
+  .tbl-wrap tbody tr.urgent-row td:first-child { box-shadow: inset 3px 0 0 var(--soft-bad); }
+  .tbl-wrap tbody tr.done-row { opacity: 0.58; }
+
+  /* 名次徽章 */
+  .rank-other { background: var(--rank-other-bg); }
+
+  /* 内联 code：降低存在感，只做轻声标注 */
+  .hot p code, .focus p code, .section p code, .tbl-wrap code { background: var(--hl-bg); color: var(--accent-3); }
+
+  /* 头条卡片误用了名次徽章渐变（rank-N 本是角标用的小面积金色/青铜渐变，
+     套到整张内容卡上会变成一整面橙黄）。整卡还原为主题色纸，
+     改用左侧 4px 色条区分优先级，文字颜色一并复位，避免白字落在浅底上。 */
+  .hot-item.rank-1, .hot-item.rank-2, .hot-item.rank-3, .hot-item.rank-other {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border-color: var(--border-card);
+  }
+  .hot-item.rank-1 { border-left: 4px solid var(--accent-1); }
+  .hot-item.rank-2 { border-left: 4px solid var(--soft-info); }
+  .hot-item.rank-3 { border-left: 4px solid var(--soft-warn); }
+  .hot-item.rank-1 .hot-link, .hot-item.rank-2 .hot-link, .hot-item.rank-3 .hot-link { color: var(--accent-1); }
+/* === soft-palette:v1 end === */
+
+  /* === 2026-09-09 新增组件（柔和低饱和 palette，亮暗双主题） === */
+  .hot-item.ling-box  { border-left: 4px solid var(--soft-purple, #a78bfa); }
+  .hot-item.bai-box   { border-left: 4px solid var(--soft-blue, #7dd3fc); }
+  .hot-item.sense-box { border-left: 4px solid var(--soft-amber, #fcd34d); }
+
+  :root { --soft-purple: #a78bfa; --soft-blue: #7dd3fc; --soft-amber: #fcd34d; }
+  html[data-theme="light"] { --soft-purple: #7c3aed; --soft-blue: #0369a1; --soft-amber: #b45309; }
+
+  .ok-line { color: #34d399; font-weight: 700; }
+  html[data-theme="light"] .ok-line { color: #047857; }
+  html[data-theme="light"] .drop-line { color: #b91c1c; }
+  html[data-theme="light"] .done-line { color: #64748b; }
+
+  /* hot-item 正文与迷你参数表（沿用 9/8 组件） */
+  .hot-body { margin-top: 10px; font-size: 14px; line-height: 1.78; color: var(--text-secondary); }
+  .mini-tbl { margin-top: 10px; border-top: 1px dashed var(--border-card); padding-top: 4px; }
+  .mini-row { display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px dashed var(--border-card); }
+  .mini-row:last-child { border-bottom: none; }
+  .mini-row .k { flex: 0 0 130px; font-size: 12.5px; font-weight: 700; color: var(--text-muted); line-height: 1.65; margin-bottom: 0; }
+  .mini-row .v { flex: 1; font-size: 13.5px; font-weight: 400; color: var(--text-secondary); line-height: 1.72; }
+
+  /* 表格行状态 */
+  .tbl-wrap tbody tr.new-row { background: rgba(139,92,246,0.08); }
+  .tbl-wrap tbody tr.urgent-row { background: rgba(245,87,108,0.10); }
+  .tbl-wrap tbody tr.urgent-row td:first-child { box-shadow: inset 3px 0 0 #f5576c; }
+  .tbl-wrap tbody tr.done-row { opacity: 0.6; }
+
+  /* 状态标签配色（亮/暗双主题） */
+  .tag.ok { background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(16,185,129,0.32); }
+  .tag.warn { background: rgba(245,158,11,0.15); color: #fbbf24; border-color: rgba(245,158,11,0.32); }
+  .tag.bad { background: rgba(239,68,68,0.15); color: #f87171; border-color: rgba(239,68,68,0.32); }
+  html[data-theme="light"] .tag.ok { background: rgba(5,150,105,0.12); color: #047857; border-color: rgba(5,150,105,0.28); }
+  html[data-theme="light"] .tag.warn { background: rgba(217,119,6,0.12); color: #b45309; border-color: rgba(217,119,6,0.28); }
+  html[data-theme="light"] .tag.bad { background: rgba(220,38,38,0.12); color: #b91c1c; border-color: rgba(220,38,38,0.28); }
+
+  @media (max-width: 640px) {
+    .mini-row { flex-direction: column; gap: 3px; }
+    .mini-row .k { flex: none; }
+  }
+
+
+  /* === 2026-09-10 新增组件（柔和低饱和 palette，亮暗双主题） === */
+  .hot-item.ds-box    { border-left: 4px solid var(--soft-purple, #a78bfa); }
+  .hot-item.hy-box    { border-left: 4px solid var(--soft-blue, #7dd3fc); }
+  .hot-item.bai-box   { border-left: 4px solid var(--soft-amber, #fcd34d); }
+
+  :root { --soft-purple: #a78bfa; --soft-blue: #7dd3fc; --soft-amber: #fcd34d; }
+  html[data-theme="light"] { --soft-purple: #7c3aed; --soft-blue: #0369a1; --soft-amber: #b45309; }
+
+  /* 通用内容卡（本期「次要更新」「到期日历」「今天该怎么动」用） */
+  .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 16px;
+    padding: 20px 22px; backdrop-filter: blur(10px); transition: all 0.3s;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--border-accent); }
+  .card-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; line-height: 1.55; }
+  .card-body { font-size: 13.2px; color: var(--text-secondary); line-height: 1.82; }
+
+  /* 风险/到期卡：在 .card 基础上加左侧色条 */
+  .risk-card { border-left: 4px solid var(--soft-amber, #fcd34d); }
+  .risk-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; line-height: 1.55; }
+  .risk-body ul { margin: 0; padding-left: 20px; list-style: disc; }
+  .risk-body li { font-size: 13.2px; color: var(--text-secondary); line-height: 1.82; margin-bottom: 7px; }
+  .risk-body li:last-child { margin-bottom: 0; }
+
+  /* 表格下方的提示条 */
+  .note {
+    margin-top: 16px; padding: 14px 18px; border-radius: 12px; font-size: 13.2px; line-height: 1.8;
+    background: var(--tag-bg); color: var(--text-secondary); border: 1px solid var(--border-card);
+  }
+
+  @media (max-width: 640px) {
+    .card-grid { grid-template-columns: 1fr; }
+  }
+
+  .ok-line { color: #34d399; font-weight: 700; }
+  html[data-theme="light"] .ok-line { color: #047857; }
+  html[data-theme="light"] .drop-line { color: #b91c1c; }
+  html[data-theme="light"] .done-line { color: #64748b; }
+
+  /* hot-item 正文与迷你参数表 */
+  .hot-body { margin-top: 10px; font-size: 14px; line-height: 1.78; color: var(--text-secondary); }
+  .mini-tbl { margin-top: 10px; border-top: 1px dashed var(--border-card); padding-top: 4px; }
+  .mini-row { display: flex; gap: 12px; padding: 7px 0; border-bottom: 1px dashed var(--border-card); }
+  .mini-row:last-child { border-bottom: none; }
+  .mini-row .k { flex: 0 0 130px; font-size: 12.5px; font-weight: 700; color: var(--text-muted); line-height: 1.65; margin-bottom: 0; }
+  .mini-row .v { flex: 1; font-size: 13.5px; font-weight: 400; color: var(--text-secondary); line-height: 1.72; }
+
+  /* 表格行状态 */
+  .tbl-wrap tbody tr.new-row { background: rgba(139,92,246,0.08); }
+  .tbl-wrap tbody tr.urgent-row { background: rgba(245,87,108,0.10); }
+  .tbl-wrap tbody tr.urgent-row td:first-child { box-shadow: inset 3px 0 0 #f5576c; }
+  .tbl-wrap tbody tr.done-row { opacity: 0.6; }
+
+  /* 状态标签配色（亮/暗双主题） */
+  .tag.ok { background: rgba(16,185,129,0.15); color: #34d399; border-color: rgba(16,185,129,0.32); }
+  .tag.warn { background: rgba(245,158,11,0.15); color: #fbbf24; border-color: rgba(245,158,11,0.32); }
+  .tag.bad { background: rgba(239,68,68,0.15); color: #f87171; border-color: rgba(239,68,68,0.32); }
+  html[data-theme="light"] .tag.ok { background: rgba(5,150,105,0.12); color: #047857; border-color: rgba(5,150,105,0.28); }
+  html[data-theme="light"] .tag.warn { background: rgba(217,119,6,0.12); color: #b45309; border-color: rgba(217,119,6,0.28); }
+  html[data-theme="light"] .tag.bad { background: rgba(220,38,38,0.12); color: #b91c1c; border-color: rgba(220,38,38,0.28); }
+
+  @media (max-width: 640px) {
+    .mini-row { flex-direction: column; gap: 3px; }
+    .mini-row .k { flex: none; }
+  }
+
+
+  /* ===== 9/11 新增组件 ===== */
+  .hot-item.nebius-box { border-left: 4px solid var(--soft-info, #38bdf8); }
+  .hot-item.cog-box    { border-left: 4px solid var(--soft-ok, #34d399); }
+  html[data-theme="light"] .hot-item.nebius-box { border-left-color: #0284c7; }
+  html[data-theme="light"] .hot-item.cog-box    { border-left-color: #047857; }
+  .combo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .combo-card {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 16px;
+    padding: 20px 22px; transition: all 0.3s;
+  }
+  .combo-card:hover { transform: translateY(-3px); border-color: var(--border-accent); }
+  .combo-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; line-height: 1.55; }
+  .combo-body { font-size: 13.2px; color: var(--text-secondary); line-height: 1.82; }
+  .combo-body ul { margin: 0; padding-left: 20px; list-style: disc; }
+  .combo-body li { margin-bottom: 7px; }
+  .combo-body li:last-child { margin-bottom: 0; }
+  @media (max-width: 640px) { .combo-grid { grid-template-columns: 1fr; } }
+
+
+  /* ===== 9/14 新增组件 ===== */
+  .hot-item.ds-box     { border-left: 4px solid var(--soft-purple, #a78bfa); }
+  .hot-item.nv-box     { border-left: 4px solid var(--soft-ok, #34d399); }
+  .hot-item.cn-box     { border-left: 4px solid var(--soft-info, #38bdf8); }
+  html[data-theme="light"] .hot-item.ds-box { border-left-color: #7c3aed; }
+  html[data-theme="light"] .hot-item.nv-box { border-left-color: #047857; }
+  html[data-theme="light"] .hot-item.cn-box { border-left-color: #0284c7; }
+  .combo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .combo-card {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 16px;
+    padding: 20px 22px; transition: all 0.3s;
+  }
+  .combo-card:hover { transform: translateY(-3px); border-color: var(--border-accent); }
+  .combo-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; line-height: 1.55; }
+  .combo-body { font-size: 13.2px; color: var(--text-secondary); line-height: 1.82; }
+  .combo-body ul { margin: 0; padding-left: 20px; list-style: disc; }
+  .combo-body li { margin-bottom: 7px; }
+  .combo-body li:last-child { margin-bottom: 0; }
+  .tbl-wrap { overflow-x: auto; margin-top: 12px; }
+  table.free-tbl { width: 100%; border-collapse: collapse; font-size: 12.8px; min-width: 520px; }
+  table.free-tbl th {
+    text-align: left; padding: 8px 10px; font-weight: 700;
+    color: var(--text-primary); background: var(--bg-hover, rgba(127,127,127,0.12));
+    border-bottom: 1px solid var(--border-card); white-space: nowrap;
+  }
+  table.free-tbl td {
+    padding: 8px 10px; border-bottom: 1px solid var(--border-card);
+    color: var(--text-secondary); line-height: 1.6; vertical-align: top;
+  }
+  table.free-tbl tr:last-child td { border-bottom: none; }
+  table.free-tbl td.k { color: var(--text-primary); font-weight: 600; white-space: nowrap; }
+  @media (max-width: 640px) { .combo-grid { grid-template-columns: 1fr; } }
+
+
+  /* ===== 9/15 新增组件 ===== */
+  .hot-item.bf-box     { border-left: 4px solid var(--soft-purple, #a78bfa); }
+  .hot-item.uo-box     { border-left: 4px solid var(--soft-info, #38bdf8); }
+  .hot-item.cost-box   { border-left: 4px solid var(--soft-ok, #34d399); }
+  html[data-theme="light"] .hot-item.bf-box   { border-left-color: #7c3aed; }
+  html[data-theme="light"] .hot-item.uo-box   { border-left-color: #0284c7; }
+  html[data-theme="light"] .hot-item.cost-box { border-left-color: #047857; }
+  .hot-item.ds-box     { border-left: 4px solid var(--soft-purple, #a78bfa); }
+  .hot-item.nv-box     { border-left: 4px solid var(--soft-ok, #34d399); }
+  .hot-item.cn-box     { border-left: 4px solid var(--soft-info, #38bdf8); }
+  html[data-theme="light"] .hot-item.ds-box { border-left-color: #7c3aed; }
+  html[data-theme="light"] .hot-item.nv-box { border-left-color: #047857; }
+  html[data-theme="light"] .hot-item.cn-box { border-left-color: #0284c7; }
+  .combo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .combo-card {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 16px;
+    padding: 20px 22px; transition: all 0.3s;
+  }
+  .combo-card:hover { transform: translateY(-3px); border-color: var(--border-accent); }
+  .combo-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 10px; line-height: 1.55; }
+  .combo-body { font-size: 13.2px; color: var(--text-secondary); line-height: 1.82; }
+  .combo-body ul { margin: 0; padding-left: 20px; list-style: disc; }
+  .combo-body li { margin-bottom: 7px; }
+  .combo-body li:last-child { margin-bottom: 0; }
+  .tbl-wrap { overflow-x: auto; margin-top: 12px; }
+  table.free-tbl { width: 100%; border-collapse: collapse; font-size: 12.8px; min-width: 560px; }
+  table.free-tbl th {
+    text-align: left; padding: 8px 10px; font-weight: 700;
+    color: var(--text-primary); background: var(--bg-hover, rgba(127,127,127,0.12));
+    border-bottom: 1px solid var(--border-card); white-space: nowrap;
+  }
+  table.free-tbl td {
+    padding: 8px 10px; border-bottom: 1px solid var(--border-card);
+    color: var(--text-secondary); line-height: 1.6; vertical-align: top;
+  }
+  table.free-tbl tr:last-child td { border-bottom: none; }
+  table.free-tbl td.k { color: var(--text-primary); font-weight: 600; white-space: nowrap; }
+  .route-box {
+    background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 16px;
+    padding: 20px 22px; margin-top: 14px;
+  }
+  .route-box h3 { font-size: 15px; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+  .tag.new { background: var(--soft-info, #38bdf8); color: #06263a; }
+  html[data-theme="light"] .tag.new { background: #bae6fd; color: #075985; }
+  @media (max-width: 640px) { .combo-grid { grid-template-columns: 1fr; } }
+
+
+
+  /* ===== 2026-09-16 新增组件 ===== */
+  .hot-item.llm-box    { border-left: 4px solid var(--soft-info, #9ec2f7); }
+  .hot-item.ms-box     { border-left: 4px solid var(--soft-purple, #a78bfa); }
+  .hot-item.os-box     { border-left: 4px solid var(--soft-ok, #7ddcae); }
+  html[data-theme="light"] .hot-item.llm-box { border-left-color: #245cc4; }
+  html[data-theme="light"] .hot-item.ms-box  { border-left-color: #7c3aed; }
+  html[data-theme="light"] .hot-item.os-box  { border-left-color: #0f7a5f; }
+  .hot-item.llm-box .hot-link,
+  .hot-item.ms-box  .hot-link,
+  .hot-item.os-box  .hot-link { color: var(--accent-3); }
+  /* 头条卡片序号小角标（区别于命名性配色，只用极淡底色） */
+  .hot-seal {
+    display: inline-block; font-size: 11px; font-weight: 800;
+    padding: 2px 9px; border-radius: 999px; margin-right: 8px;
+    background: var(--hl-bg); color: var(--accent-3); border: 1px solid var(--border-accent);
+    vertical-align: 1px;
+  }
+  /* 关键数字条 */
+  .kpi-row {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 12px;
+  }
+  .kpi {
+    background: var(--bg-card); border: 1px solid var(--border-card);
+    border-radius: 10px; padding: 10px 12px;
+  }
+  .kpi .kpi-num {
+    font-size: 22px; font-weight: 800; line-height: 1.15;
+    background: var(--stat-num-gradient); -webkit-background-clip: text;
+    background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .kpi .kpi-cap { font-size: 11.5px; color: var(--text-muted); margin-top: 3px; line-height: 1.5; }
+  /* 提供商速查：紧凑两列 */
+  .prov-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .prov-card {
+    background: var(--bg-card); border: 1px solid var(--border-card);
+    border-radius: 12px; padding: 14px 16px;
+  }
+  .prov-card h4 { font-size: 14px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+  .prov-card p { font-size: 12.5px; color: var(--text-secondary); line-height: 1.65; }
+  .prov-card .cost { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 800;
+    color: var(--soft-ok); background: var(--soft-ok-bg); padding: 3px 12px; border-radius: 10px; }
+  @media (max-width: 720px) {
+    .kpi-row { grid-template-columns: 1fr; }
+    .prov-grid { grid-template-columns: 1fr; }
+  }
+
+
+
+  /* === extra-0917 begin === */
+  /* 模板的 .hot-link 是 inline-flex + align-items:center，序号角标作为 flex 子项
+     会被压到最小宽度，中文字符变成「一字一行」。放开换行并让角标不参与收缩。 */
+  .hot-link { flex-wrap: wrap; }
+  .hot-seal { flex: 0 0 auto; white-space: nowrap; }
+  .hot-item.ua-box { border-left: 4px solid var(--accent-1); }
+  .hot-item.bai-box { border-left: 4px solid var(--soft-warn); }
+  .hot-item.pool-box { border-left: 4px solid var(--soft-info); }
+  .ua-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 10px 0 4px; }
+  .ua-cell {
+    background: var(--bg-card); border: 1px solid var(--border-card);
+    border-radius: 12px; padding: 10px 12px;
+  }
+  .ua-cell .ua-k { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+  .ua-cell .ua-v { font-size: 13px; color: var(--text-primary); line-height: 1.7; }
+  .ua-cell .ua-v b { color: var(--accent-3); }
+  .step-list { list-style: none; padding: 0; margin: 8px 0 0; }
+  .step-list li {
+    position: relative; padding: 7px 0 7px 26px;
+    border-bottom: 1px dashed var(--border-card); font-size: 13px; line-height: 1.75;
+  }
+  .step-list li:last-child { border-bottom: none; }
+  .step-list li::before {
+    content: ""; position: absolute; left: 8px; top: 16px;
+    width: 8px; height: 8px; border-radius: 50%; background: var(--soft-mute);
+  }
+  .step-list li.done::before { background: var(--soft-ok); }
+  .step-list li.now::before { background: var(--soft-warn); }
+  .step-list li.die::before { background: var(--soft-bad); }
+  .entry-note {
+    margin-top: 12px; padding: 10px 14px; border-radius: 12px;
+    background: var(--soft-info-bg); color: var(--text-secondary); font-size: 13px; line-height: 1.8;
+  }
+  .entry-note b { color: var(--soft-info); }
+  @media (max-width: 720px) {
+    .ua-grid { grid-template-columns: 1fr; }
+  }
+  /* === extra-0917 end === */
+
+
+
+  /* === extra-0918 begin === */
+  .hot-item.ua2-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.pool-box { border-left: 4px solid var(--soft-info); }
+  .hot-item.qd-box { border-left: 4px solid var(--soft-ok); }
+  .src-tbl { width: 100%; border-collapse: collapse; font-size: 12.8px; min-width: 560px; }
+  .src-tbl th {
+    text-align: left; padding: 9px 12px; font-size: 12px; font-weight: 700;
+    color: var(--text-secondary); background: var(--tag-bg);
+    border-bottom: 1px solid var(--border-card); white-space: nowrap;
+  }
+  .src-tbl td {
+    padding: 9px 12px; border-bottom: 1px dashed var(--border-card);
+    color: var(--text-secondary); vertical-align: top; line-height: 1.7;
+  }
+  .src-tbl td.dim {
+    font-weight: 700; color: var(--text-primary); white-space: nowrap;
+  }
+  .src-tbl tr.col-a td:nth-child(2) { background: var(--soft-ok-bg); }
+  .src-tbl tr.col-b td:nth-child(3) { background: var(--soft-warn-bg); }
+  .src-tbl tr.col-today td { background: var(--soft-info-bg); }
+  .src-tbl td b { color: var(--text-primary); }
+  .src-tbl code { font-size: 12px; }
+  @media (max-width: 720px) {
+    .src-tbl { min-width: 480px; }
+  }
+  /* === extra-0918 end === */
+
+
+
+  /* === extra-0920 begin === */
+  .hot-item.jev-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.pool2-box { border-left: 4px solid var(--soft-info); }
+  .hot-item.cnbox { border-left: 4px solid var(--soft-ok); }
+  /* === extra-0920 end === */
+
+
+
+  /* === extra-0921 begin === */
+  .hot-item.jev2-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.step-box { border-left: 4px solid var(--soft-ok); }
+  .hot-item.ds-box { border-left: 4px solid var(--soft-info); }
+  /* === extra-0921 end === */
+
+
+
+  /* === extra-0922 begin === */
+  .hot-item.mimo-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.ac-box { border-left: 4px solid var(--soft-warn); }
+  .hot-item.grok-box { border-left: 4px solid var(--soft-blue); }
+  /* === extra-0922 end === */
+
+
+
+  /* === extra-0923 begin === */
+  .hot-item.atria-box { border-left: 4px solid var(--soft-ok); }
+  .hot-item.price-box { border-left: 4px solid var(--soft-warn); }
+  .hot-item.pool3-box { border-left: 4px solid var(--soft-blue); }
+  /* === extra-0923 end === */
+
+
+
+  /* === extra-0924 begin === */
+  .hot-item.bunny-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.poolbox-box { border-left: 4px solid var(--soft-blue); }
+  .hot-item.prime-box { border-left: 4px solid var(--soft-amber); }
+  /* === extra-0924 end === */
+
+
+
+  /* === extra-0928 begin === */
+  .hot-item.mm-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.shrink-box { border-left: 4px solid var(--soft-blue); }
+  .hot-item.cat-box { border-left: 4px solid var(--soft-amber); }
+  /* === extra-0928 end === */
+
+
+
+  /* === extra-0929 begin === */
+  .hot-item.sonnet-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.nex-box { border-left: 4px solid var(--soft-blue); }
+  .hot-item.bunny-box { border-left: 4px solid var(--soft-amber); }
+  /* === extra-0929 end === */
+
+
+
+  /* === extra-0930 begin === */
+  .hot-item.sol61-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.gonka-box { border-left: 4px solid var(--soft-blue); }
+  .hot-item.expire-box { border-left: 4px solid var(--soft-amber); }
+  /* === extra-0930 end === */
+
+
+
+  /* === extra-1008 begin === */
+  .hot-item.haiku-box { border-left: 4px solid var(--soft-blue); }
+  .hot-item.ml4-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.pool-box { border-left: 4px solid var(--soft-amber); }
+  /* === extra-1008 end === */
+
+
+  /* === extra-1009 begin === */
+  .hot-item.gemini-box { border-left: 4px solid var(--soft-blue); }
+  .hot-item.step5-box { border-left: 4px solid var(--soft-purple); }
+  .hot-item.pool-box { border-left: 4px solid var(--soft-amber); }
+  /* === extra-1009 end === */
+
+</style>
+<script>
+(function () {
+  var KEY = 'fllm-daily-theme';
+  var root = document.documentElement;
+  var stored = null;
+  try { stored = localStorage.getItem(KEY); } catch (e) {}
+  if (stored !== 'light' && stored !== 'dark') {
+    stored = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+  }
+  root.setAttribute('data-theme', stored);
+
+  function syncIcon() {
+    var icon = document.getElementById('theme-icon');
+    if (icon) icon.textContent = (root.getAttribute('data-theme') === 'dark') ? '🌙' : '☀';
+  }
+
+  window.toggleTheme = function () {
+    var next = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+    syncIcon();
+  };
+
+  document.addEventListener('DOMContentLoaded', function () {
+    syncIcon();
+    var st = document.getElementById('scrollTop');
+    if (st) {
+      var onScroll = function () { st.classList.toggle('visible', window.scrollY > 400); };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+  });
+})();
+</script>
+
+</head>
+<body>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" title="切换亮色/暗色主题" aria-label="主题切换"><span id="theme-icon">☀️</span></button>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">↑</button>
+
+<div class="page-nav"><a href="daily-free-llm-2026-10-08.html" title="上一篇日报">← 上一个</a><a class="nav-home" href="index.html" title="返回首页">🏠 主页</a><a class="nav-latest" href="daily-free-llm-2026-10-09.html" title="最新日报">⭐ 最新</a><span class="nav-disabled">下一个 →</span></div>
+
+<div class="container">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="badge">🤖 AI 每日免费情报 · 10/9</div>
+      <h1>免费大模型日报</h1>
+      <div class="date-chip">📅 2026 年 10 月 9 日 · 周五</div>
+      <div class="stats">
+        <div class="stat-card"><div class="stat-icon">📉</div><div class="stat-num">免费档收缩</div><div class="stat-label">Google 今日（10/9）起把 <b>Gemini 免费档砍到只剩 Flash-Lite（32K）</b>——Flash 需 $4.99/月，<b>AI Plus 的 Pro 也被拔除</b></div></div>
+        <div class="stat-card"><div class="stat-icon">🆕</div><div class="stat-num">600B / 27B</div><div class="stat-label"><b>阶跃 Step 5 Preview</b>：600B 总参 / 27B 激活、<b>1M 上下文</b>、多模态——OpenRouter + OpenCode + Cline + Nous + Kilo <b>免费一周</b></div></div>
+        <div class="stat-card"><div class="stat-icon">🔵</div><div class="stat-num">469 / 19 · 87</div><div class="stat-label">OpenRouter 目录 <b>469 款</b>、零价 <b>20 → 19</b>（<code>ling-3.0-flash-sante:free</code> 转付费）；<b>Zen 87 款 / 免费 ID 13 个</b>（+Step 5、−Fledge）</div></div>
+        <div class="stat-card"><div class="stat-icon">🌏</div><div class="stat-num">200 万 / 日</div><div class="stat-label">国内量最大的一条：<b>火山方舟豆包 200 万 tokens/日</b>；<b>商汤 SenseNova Token Plan 长期免费公测</b>（每 5 小时刷新）</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 头条 -->
+  <div class="section">
+    <h2 class="section-title"><span class="ico">🔥</span> 今日头条 · 三条主线</h2>
+    <div class="hot-grid">
+
+      <div class="hot-item gemini-box">
+        <div class="hot-link"><span class="hot-seal">① 今日最大 · 免费档收缩</span> Google 今日起把 <b>Gemini 免费档砍到只剩 Flash-Lite</b>——付费档也一起缩</div>
+        <div class="hot-body">
+          <b>这是 10 月以来「免费资源」最重要的一次收缩：从今天（10/9）起，没有订阅 Google AI 的个人账户，在 Gemini 应用里能用的模型从 Flash-Lite / Flash / Pro 三款，直接缩到只剩 Flash-Lite 一款。</b>
+          依据 Google 帮助页「Changes to Gemini model access and limits」——付费档也未能幸免，<b>AI Plus 的 Pro 权限同样被拔除</b>。
+          <div class="ua-grid">
+            <div class="ua-cell"><div class="ua-k">📉 到底改了什么</div><div class="ua-v"><b>免费档（$0）→ 仅 Flash-Lite</b>，上下文缩到 <b>32K</b>（约为 1M 的 3%）。<br>
+            <b>Flash 移入 $4.99/月 AI Plus</b>；<b>AI Plus 不再含 Pro</b>。<br>
+            <b>Pro 需 $19.99/月 AI Pro</b>；Deep Think 与全部模型要 $99.99+ 的 AI Ultra。</div></div>
+            <div class="ua-cell"><div class="ua-k">⚠️ 关键区分（别误伤自己）</div><div class="ua-v">这次动的是 <b>Gemini 应用（网页 / App）的免费档</b>，<b>不是 Google AI Studio / Gemini API 的免费层</b>。<br>
+            <b>用 API 的链路（AI Studio 免绑卡、按项目日额度）本次并未同步收紧，仍然可用。</b><br>
+            断掉的是「<b>在 App 里免费用 Pro 深度思考</b>」这条路。</div></div>
+            <div class="ua-cell"><div class="ua-k">🧭 替代怎么选</div><div class="ua-v"><b>要长上下文 + 多模态又不想付费 → 首选转 Google AI Studio</b>（免费层仍在），其次 <b>NVIDIA NIM</b>（GLM-5.3 / Kimi K3，1M）、<b>OpenRouter 零价池</b>。<br>
+            <b>要「最先进又免费」→ 免费版 ChatGPT（GPT-6 Luna）与今天新开的 Step 5 Preview。</b></div></div>
+            <div class="ua-cell"><div class="ua-k">🧭 怎么读这条</div><div class="ua-v"><b>同一天，两条方向相反的动作</b>：Google 收紧免费档（只剩 Flash-Lite）——OpenAI 升级免费档（GPT-6 Luna + 智能界面）。<br>
+            <b>对你的实际含义：别把关键工作流绑在单一免费档上，尤其别绑在「应用层的免费旗舰」上——它随时会变。</b></div></div>
+          </div>
+          <div class="mini-tbl">
+            <div class="mini-row"><span class="k">10/9 免费档对照</span><span class="v"><b>Gemini 应用免费档：Flash-Lite only（32K）</b> ⚠️ 今日生效 —— <b>ChatGPT 免费档：GPT-6 Luna（旗舰级 + 交互界面）</b> ✅ 昨日已推。<b>两家一个收、一个放。</b><br><b>读法：厂商更愿意在「抢用户的窗口期」放旗舰，在「存量入口」收能力。做长期方案时，免费应用层的旗舰只能当</b>锦上添花<b>，不能当底座。</b></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hot-item step5-box">
+        <div class="hot-link"><span class="hot-seal">② 实用 · 先进又免费</span> 阶跃 <b>Step 5 Preview</b>：600B / 27B 激活、<b>1M 上下文</b>，免费一周</div>
+        <div class="hot-body">
+          <b>今天「量大能用的先进模型」这一格，最值得上手的是阶跃星辰的 Step 5 Preview——旗舰级配置，却给了明确的免费窗口。</b>
+          <div class="ua-grid">
+            <div class="ua-cell"><div class="ua-k">🚀 规格</div><div class="ua-v"><b>600B 总参 / 27B 激活</b>的稀疏 MoE，<b>1M 上下文</b>，文本 + 图像 + 视频多模态。<br>
+            官方定位：面向 <b>金融与编码</b>的 agentic / 专业任务，用更低的任务成本换旗舰级智能。</div></div>
+            <div class="ua-cell"><div class="ua-k">🎁 免费入口（约一周）</div><div class="ua-v">10/8 上线 <b>OpenRouter</b>，StepFun 同时在 <b>OpenCode、Cline、Nous Research、Kilo Code</b> 等平台开放免费约一周（Cline 侧为两周）。<br>
+            <b>OpenCode 侧附带零数据保留（ZDR）承诺</b>——免费期相对干净的一条。</div></div>
+            <div class="ua-cell"><div class="ua-k">📊 跑分与实测</div><div class="ua-v">官方称 <b>DeepSWE 上领先 Kimi K3 与 GLM-5.3</b>；AA Intelligence Index 约 <b>44</b>（与 GLM 5.3 / Kimi K3 同一档）。<br>
+            社区实测约 <b>115 tokens/s</b>、首字延迟约 <b>1.5s</b>——「合标准、但不惊艳」是主流评价。</div></div>
+            <div class="ua-cell"><div class="ua-k">💰 免费期后定价</div><div class="ua-v">OpenRouter 为 <b>$1.00 / $2.70 per M</b>（缓存命中 <b>$0.05</b>，上线期五折）。<br>
+            <b>免费窗口就是「把整个仓库塞进去」的最好时机——1M 上下文 + 免费，这种组合不常有。</b></div></div>
+          </div>
+          <div class="mini-tbl">
+            <div class="mini-row"><span class="k">和 ChatGPT Luna 不是一类</span><span class="v"><b>GPT-6 Luna 是「应用里的一次性重活」</b>（不接 API）；<b>Step 5 Preview 是「能接进 agent / CLI 的 1M 长上下文」</b>。<br>
+            <b>建议：趁免费一周，把你最吃上下文的那条链路（整库问答、长文档分析）切到它上面试一次，再决定要不要留。</b>两个免费入口各管一段，不冲突。</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hot-item pool-box">
+        <div class="hot-link"><span class="hot-seal">③ 平台清点</span> OpenRouter <b>469 / 零价 19</b>；Zen <b>87 / 免费 ID 13</b>（Step 5 进、Fledge 出）</div>
+        <div class="hot-body">
+          <b>本期两家接口都动了，但方向一致：新上的先进模型全在付费侧，免费侧靠 preview 补位。</b>
+          <div class="ua-grid">
+            <div class="ua-cell"><div class="ua-k">🔄 OpenRouter（脚本清点 10/9）</div><div class="ua-v">目录 <b>469 款（+2）</b>、<b>零价 20 → 19 款（−1）</b>。<br>
+            <b>唯一出池</b>：<code>inclusionai/ling-3.0-flash-sante:free</code>——同时转为<b>付费版</b> <code>inclusionai/ling-3.0-flash-sante</code>（$0.042 / $0.1232 per M）。<br>
+            新增 3 条全为<b>付费</b>：<code>openai/gpt-6.1-sol:batch</code>、<code>gpt-6.1-sol-pro:batch</code>、<code>stepfun/step-5-preview</code>；另移除 <code>baidu/ernie-4.5-vl-424b-a47b</code>。<br>
+            <b>注意</b>：<code>inclusionai/ling-3.1-flash</code>（无 <code>:free</code> 后缀）<b>仍为 $0/$0</b>——「零价但不带后缀」这条口径继续成立。</div></div>
+            <div class="ua-cell"><div class="ua-k">🖥️ OpenCode Zen</div><div class="ua-v">接口仍 <b>87 款</b>，免费标记 ID <b>13 个（数量不变）</b>。<br>
+            <b>−<code>fledge-alpha-free</code>（匿名 / preview 通道到期）</b>、<b>+<code>step-5-preview-free</code></b>。<br>
+            官方定价页 Free 行共 <b>13 条</b>：Big Pickle、Space Bunny、LongCat 2.5 Preview、<b>Step 5 Preview</b>、Exo、MiMo-V2.6-Flash、MiMo-V2.5、Ling 3.1 Flash、Ling 3.0 Flash Fin、Nemotron 3 Ultra、Nemotron 3.5 Lightning、Muse Spark 1.3 Contributor、Jev 1.13 Free。</div></div>
+            <div class="ua-cell"><div class="ua-k">💰 顺手一条</div><div class="ua-v"><b>Mistral Large 4 在 Zen 标 50% off</b>（$0.68 / $2.09），与预览期折扣一致。<br>
+            形态仍是「<b>预览期便宜、权重月底才开源</b>」——想长期用，先按付费规划。</div></div>
+            <div class="ua-cell"><div class="ua-k">⚠️ 一条纪律</div><div class="ua-v"><b>「数量踩住、质地换一遍」继续。</b>Fledge 这类匿名 / preview 通道的生命周期就是几天到几周。<br>
+            <b>把免费通道当变量、别当常量——写进配置里就要准备好它明天消失。</b></div></div>
+          </div>
+          <div class="mini-tbl">
+            <div class="mini-row"><span class="k">零价池近六期流水</span><span class="v">9/28：458 款 / 21 / 17 · 9/29：460 / 20 / 16 · 9/30：464 / 20 / 16 · 10/8：467 / 20 / 16 · <b>10/9（今天）：469 / 19 / 15</b>。<br>
+            <b>零价池连续四期站稳 20 上下后本期 −1，且换出的那条直接转付费</b>——「免费补给靠 preview、存量往付费迁」的结构没变。</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 次要更新 -->
+  <div class="section">
+    <h2 class="section-title"><span class="ico">🌤️</span> 次要更新 · 值得记一笔</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">🌏 国内免费额度大盘（截至 10/8）：谁家「送得最多」</div>
+        <div class="card-body">
+          <b>① 火山方舟（豆包）</b>：实名后<b>每天自动发 200 万 tokens</b>，单模型另给 50 万基础额度——<b>日额度最大的一家</b>（需先在控制台手动开通模型）。<br>
+          <b>② 商汤 SenseNova Token Plan</b>：<b>长期免费公测、不绑卡不充值</b>，<b>每 5 小时刷新配额</b>（首月每 5 小时 1500 次）。<br>
+          <b>③ 讯飞星火 Spark Lite</b>：<b>永久免费 API</b>；星辰 MaaS 开源模型 0 元无限量。<br>
+          <b>④ 腾讯混元 Lite</b>：<b>长期免费</b>；TokenHub 新人包每模型 100 万 tokens、可用到 12/31。<br>
+          <b>⑤ 阿里云百炼 / 百度千帆</b>：新用户每模型送 100 万 tokens（90 天 / 3 个月）；文心 ERNIE-Speed / Lite 长期免费。<br>
+          <b>⑥ 智谱 z.ai</b>：GLM Flash 系列<b>永久免费</b>，新用户另送 2000 万 tokens。<br>
+          <b>⚠️ 两条要记</b>：<b>硅基流动「小模型永久免费」已取消</b>（现仅 embedding / 语音 / OCR / 翻译 / Kolors 免费）；<b>市面上没有通用「AI 兑换码 / CDKey」，卖码的一律当诈骗。</b>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">📈 freellm.net 核验榜（10/8）：NIM 仍居首，但聚合站有滞后</div>
+        <div class="card-body">
+          <b>freellm.net 本期核验：499+ 款 / 30 家平台 / 235 款实时 API 验证。</b><br>
+          榜首仍是 <b>NVIDIA NIM <code>z-ai/glm-5.3</code>（95 分）</b>、<code>z-ai/glm-5.3-flash</code>（95）；其后 <b>Ollama Cloud <code>deepseek-v4-pro</code>（91）</b>、<b>Kilo Code <code>qwen3.8-27b:free</code>（91）</b>、<b>NIM Kimi K3（90）</b>。<br><br>
+          <b>⚠️ 滞后实证（本期继续）</b>：多个聚合页仍在列 <code>qwen/qwen3.8-27b:free</code>、<code>space-bunny-alpha</code> 等<b>已在正式接口里消失</b>的条目，也把已转付费的模型标成免费。<br>
+          <b>结论不变：「是否还在免费」永远回官方接口复核，别信二手榜的免费标记。</b>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">🧩 免费入口补充与提醒</div>
+        <div class="card-body">
+          <b>① Nous Portal</b>：$0 档仍含一批 <code>:free</code> 模型（Ling / LongCat / Laguna / Step 等，免绑卡、标准限速），<b>是本期 Step 5 免费一周的入口之一</b>；清单每周会变，用前先看 <code>/models</code>。<br>
+          <b>② Ox Alpha</b>：<code>oxalpha.org</code> 打出「免费 1M 上下文前沿模型」的招牌（<code>stealth/ox-alpha</code>，经 OpenRouter 路由）——<b>属 stealth 自营宣传站，本期并未进入 OR 零价池，当作参考即可，勿作长期依赖。</b><br>
+          <b>③ 纪律</b>：聚合网关（UnoRouter / OrcaRouter / Nous Portal / Kilo 等）<b>上游不透明、无 SLA</b>，只做试验与个人项目，别接生产 key。<br>
+          <b>④ 「免费期数据可能用于训练」的通道（Exo / Fledge / Muse Spark Contributor 等）：别喂机密代码与个人信息。</b>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">🔬 开源侧顺手记：决策模型与极致量化</div>
+        <div class="card-body">
+          <b>① Cloudflare 首款自研模型 Clef（27B）/ Clef-flash（9B）</b>：开源权重，<b>返回每个候选答案的概率</b>而非自由文本，支持 64K 内图像与视频；兼容 Jev 的 API，<b>延迟反超 Jev</b>（209ms / 38.8ms 对 524ms）。<br>
+          <b>② Samsung Labs 开源 LittleBit</b>：把权重压到 <b>1.0 → 0.1 bit / 参数</b>级别，保持原架构推理；支持 OPT / Llama 2·3 / Phi-4 / Qwen2.5·3 / Gemma 2·3。<b>⚠️ 代码为 CC BY-NC 4.0，商用需另行授权。</b><br>
+          <b>③ Google DeepMind EmbeddingGemma 2</b>：740M 多模态嵌入模型，把文本 / 代码 / 图像 / 音频 / 视频映到同一空间，可跑在手机上（数据不出端）。<br>
+          <b>读法</b>：<b>带不动大模型时，「小模型 + 极致压缩 + 本地化」是另一条免费的解法。</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 免费入口速查 -->
+  <div class="section">
+    <h2 class="section-title"><span class="ico">🎟️</span> 今日免费入口速查 · 先进 + 量大优先</h2>
+    <div class="combo-grid">
+      <div class="combo-card">
+        <div class="combo-title">🥇 今天最值得留意的八条（按「量大 · 能用 · 可持续」排序）</div>
+        <div class="combo-body">
+          <div class="free-tbl">
+            <table>
+              <thead><tr><th>入口</th><th>免费额度</th><th>模型量级</th><th>状态 / 注意</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><b>阶跃 Step 5 Preview</b><br><span class="dim">🟣 本期新增</span></td>
+                  <td class="col-today"><b>免费约一周</b><br><span class="dim">OpenRouter / OpenCode / Cline / Nous / Kilo</span></td>
+                  <td><b>600B / 27B 激活</b><br>1M · 多模态</td>
+                  <td><b>今天先进 + 免费的最佳组合</b>；DeepSWE 超 Kimi K3 / GLM-5.3；OpenCode 侧带 ZDR</td>
+                </tr>
+                <tr>
+                  <td><b>NVIDIA NIM</b><br><code>z-ai/glm-5.3</code></td>
+                  <td class="col-today"><b>40 RPM</b><br><span class="dim">约 1 万请求/日</span></td>
+                  <td>GLM-5.3 / Kimi K3<br><b>1M</b></td>
+                  <td><b>量最大、最稳的一档</b>；<b>须手机验证</b>；勿传机密数据</td>
+                </tr>
+                <tr>
+                  <td><b>Groq</b></td>
+                  <td class="col-today"><b>30 RPM · 1,000 请求/日</b></td>
+                  <td>gpt-oss-120b<br>Qwen3.8 27B</td>
+                  <td><b>免绑卡、最快（LPU）</b>；限额按组织计</td>
+                </tr>
+                <tr>
+                  <td><b>Google AI Studio</b></td>
+                  <td class="col-today"><b>免绑卡</b><br><span class="dim">按项目日额度</span></td>
+                  <td>Gemini 3.x Flash<br><b>1M · 多模态</b></td>
+                  <td><b>⚠️ App 免费档今日收紧，但 AI Studio 免费层不受影响</b>——长上下文兜底首选；免费档输入可能改进模型</td>
+                </tr>
+                <tr>
+                  <td><b>免费版 ChatGPT</b></td>
+                  <td class="col-today"><b>免费档可用</b><br><span class="dim">App / 网页</span></td>
+                  <td><b>GPT-6 Luna</b><br>旗舰级 + 交互界面</td>
+                  <td><b>旗舰模型免费</b>；无需 key / 绑卡；<b>仅 Chat 体验，API 侧不变</b></td>
+                </tr>
+                <tr>
+                  <td><b>OpenRouter</b><br><code>nemotron-3-ultra-550b-a55b:free</code></td>
+                  <td class="col-today"><b>50 请求/日</b><br><span class="dim">充 $10 → 1,000</span></td>
+                  <td>550B / 激活 55B<br><b>1M</b></td>
+                  <td><b>零价池里量最大、最稳的一条</b>；NVIDIA 试用端点</td>
+                </tr>
+                <tr>
+                  <td><b>OpenCode Zen</b><br><code>step-5-preview-free</code></td>
+                  <td class="col-today"><b>四列全 Free</b><br><span class="dim">限时</span></td>
+                  <td>Step 5 / Exo 等<br>配合 CLI / Desktop</td>
+                  <td><b>本期免费池「一进一出」</b>；免费期数据条款各异，别喂机密</td>
+                </tr>
+                <tr>
+                  <td><b>智谱 z.ai</b><br><span class="dim">永久免费档</span></td>
+                  <td class="col-today"><b>输入输出全 Free</b><br><span class="dim">无到期日</span></td>
+                  <td><code>GLM-Flash</code> 等<br>国内直连</td>
+                  <td><b>唯一可写进长期依赖的一类</b>；永久档仍在</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-title">📌 长期兜底组合（无到期日那一类）</div>
+        <div class="combo-body">
+          <ul>
+            <li><b>智谱 z.ai</b> — GLM Flash 系列 <b>输入输出全 Free，无到期日</b>（国内直连）。</li>
+            <li><b>Google AI Studio</b> — <b>Gemini 3.x Flash 免绑卡</b>，按项目日额度，<b>长期可用（⚠️ 与 App 免费档收紧无关）</b>。</li>
+            <li><b>NVIDIA NIM</b> — <b>40 RPM / 约 1 万请求·日</b>，含 <code>glm-5.3</code> 与 <code>Kimi K3</code>；<b>需手机验证</b>。</li>
+            <li><b>Groq</b> — <b>30 RPM / 1,000 请求·日</b>（<code>gpt-oss-120b</code> 等）。</li>
+            <li><b>火山方舟（豆包）</b> — <b>每天 200 万 tokens 自动刷新</b>（国内日额度最大）。</li>
+            <li><b>商汤 SenseNova Token Plan</b> — <b>长期免费公测</b>，每 5 小时刷新；<b>Cloudflare Workers AI</b> — 每天 1 万 neurons。</li>
+          </ul>
+          <p class="entry-note">组合建议：<b>主力</b>用一条稳的（NIM / 智谱永久免费档 / Google AI Studio），<b>兜底</b>用无到期日的（豆包 / 商汤 / Cloudflare），<b>试用</b>用限时与 preview（<b>Step 5 Preview</b> / Exo）。
+          <b>本期的态度：免费档正在被系统性收紧</b>（今天 Google 就是明证）——<b>把「今天就能跑完」当成规划单位，别把公告日期当承诺。</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 平台盘点 -->
+  <div class="section">
+    <h2 class="section-title"><span class="ico">🔎</span> 平台盘点 · 今日快照</h2>
+    <div class="combo-grid">
+      <div class="combo-card">
+        <div class="combo-title">📊 OpenRouter：<b>469 款中 19 款零价</b>（<code>:free</code> 15 款）</div>
+        <div class="combo-body">
+          <ul>
+            <li>清点时刻：<b>469 款</b>，<b>输入与输出同时为 $0 的共 19 款</b>，<b>带 <code>:free</code> 后缀 15 款</b>。</li>
+            <li><b>本期唯一出池</b>：<code>inclusionai/ling-3.0-flash-sante:free</code> → 转为付费 <code>inclusionai/ling-3.0-flash-sante</code>（$0.042 / $0.1232）。</li>
+            <li><b>四条「零价但不带 <code>:free</code>」</b>：<code>ling-3.1-flash</code>（560B/25B）、<code>lyria-3-pro-preview</code>、<code>lyria-3-clip-preview</code>（后两条输出音频）、<code>openrouter/free</code>（200K 自动路由池）。</li>
+            <li><b>1M 且 $0 的条目 5 条</b>：nemotron-3.5-lightning:free、nemotron-3-ultra-550b-a55b:free、inkling:free、inkling-small:free、lyria-3-pro / clip-preview。</li>
+            <li><b>⚠️ 反例仍在</b>：<code>cohere/north-mini-code:free</code>、<code>apodex/apodex-1.1-mini:free</code> 等 262K 级仍零价——<b>「零价」并不等于「弱」。</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="combo-card">
+        <div class="combo-title">🔓 零价池近六期流水（输入与输出同时为 $0 的口径）</div>
+        <div class="combo-body">
+          <div class="src-tbl">
+            <table>
+              <thead><tr><th>日期</th><th>目录总量</th><th>零价池</th><th>其中 <code>:free</code></th><th>零价净增减</th></tr></thead>
+              <tbody>
+                <tr class="col-b"><td>9/28</td><td>458</td><td>21</td><td>17</td><td>+0 / -3</td></tr>
+                <tr class="col-b"><td>9/29</td><td>460</td><td>20</td><td>16</td><td>+0 / -1</td></tr>
+                <tr class="col-b"><td>9/30</td><td>464</td><td>20</td><td>16</td><td>+0 / -0</td></tr>
+                <tr class="col-b"><td>10/8</td><td>467</td><td>20</td><td>16</td><td>+2 / -2</td></tr>
+                <tr class="col-today"><td><b>10/9（今天）</b></td><td><b>469</b></td><td><b>19</b></td><td><b>15</b></td><td><b>+0 / -1</b></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="entry-note">零价池在 20 款附近连站四期后本期 <b>−1</b>，且<b>换出的那条直接转付费</b>。<b>结构非常稳定：平台继续接新模型（本期 +2），只是不再把新模型做成免费档。</b>「免费档收缩 + 存量往付费迁」仍是当前最确定的走向——<b>今天唯一的「逆势」来自 preview：Step 5 Preview 的免费一周。</b></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 到期日历 -->
+  <div class="section">
+    <h2 class="section-title"><span class="ico">📅</span> 到期日历 · 别踩空</h2>
+    <div class="card-grid">
+      <div class="card risk-card">
+        <div class="risk-title">📅 今天 / 刚过去</div>
+        <div class="risk-body">
+          <ul>
+            <li><b>10/9（今天）— Google Gemini 应用免费档收紧为 Flash-Lite</b>，Flash / Pro 转付费（⚠️ AI Studio 免费层不受影响）</li>
+            <li><b>10/8 — OpenAI GPT-6 向 Free / Go 推送（GPT-6 Luna）</b>，分阶段进行中，未看到属正常</li>
+            <li><b>10/8 — Step 5 Preview 免费一周开始</b>（OpenRouter / OpenCode / Cline / Nous / Kilo）</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card risk-card">
+        <div class="risk-title">📅 10 月中下旬及以后</div>
+        <div class="risk-body">
+          <ul>
+            <li><b>10/10</b> — <b>DeepSeek 低谷价窗口结束</b>；<b>腾讯混元 Hy4 preview</b>（老用户夜间免费）结束</li>
+            <li><b>10/15</b> — <b>阶跃 Step 5 Preview 释放完整 BF16 权重</b>（许可证待公布）</li>
+            <li><b>10/17</b> — 豆包全用户 30 天订阅（9/24 那轮）截止</li>
+            <li><b>10/21</b> — <b>小米 <code>mimo-v2.5-pro</code> / <code>mimo-v2.5</code> 正式下线</b>（Zen 侧 <code>mimo-v2.5-free</code> 已提前移除）</li>
+            <li><b>10/31（月底）</b> — <b>Mistral Large 4 发布开源权重</b>（许可证见分晓）；<b>DeepSeek ZDR 协议本月续期截止</b></li>
+            <li><b>11/7</b> — MiniMax 开放平台 M3 / M2 免费试用到期</li>
+            <li><b>12/31</b> — 腾讯云 TokenHub / 华为云码道 / 移动云 MoMA 年度额度截止</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 今天该怎么动 -->
+  <div class="section">
+    <h2 class="section-title"><span class="ico">🧭</span> 今天该怎么动</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-title">① 现在就做（10 分钟内）</div>
+        <div class="card-body">
+          <b>第一件：把「Gemini 免费档」这条依赖从你的方案里摘出来。</b>
+          今天起免费档只剩 <b>Flash-Lite（32K）</b>——<b>如果你有脚本 / 工作流在依赖 App 端的免费 Flash 或 Pro（长上下文、深度推理），今天就会失效。</b>
+          <b>替代顺序：Google AI Studio（免费层仍在）→ NVIDIA NIM（1M）→ OpenRouter 零价池。</b>
+          <br><br><b>第二件：趁免费窗口试一次 Step 5 Preview。</b>
+          <b>1M 上下文 + 免费一周，最适合把你最吃上下文的真实任务（整库问答 / 长文档分析）跑一遍</b>，
+          再决定免费期结束后要不要按 <b>$1.00 / $2.70</b> 留用。
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">② 今天之内</div>
+        <div class="card-body">
+          <b>把「量大能用」的两条接进你的备用链。</b>
+          <b>NVIDIA NIM（约 1 万请求/日）打头，Groq（1,000/日）居中，OpenRouter（50/日）垫底</b>——
+          三者都兼容 OpenAI SDK，一个客户端类就能覆盖。<b>关键是把 <code>max_retries=0</code>，让 429 直接切下家。</b>
+          <br><br><b>顺手清一次写死的免费模型名。</b>
+          本期 <code>inclusionai/ling-3.0-flash-sante:free</code> <b>已转付费并从零价池移除</b>——
+          <b>配置里若还写着这条，请换成 <code>inclusionai/ling-3.1-flash</code>（仍 $0/$0）。</b>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">③ 本周之内</div>
+        <div class="card-body">
+          ① <b>重新评估「应用层免费旗舰」的权重。</b> <b>Google 今天收、OpenAI 昨天放</b>——结论是<b>它只能锦上添花</b>。
+          真正的底座要放在<b>有明确条款的 API 免费层</b>（AI Studio / NIM / 智谱永久免费档）上。
+          <br>② <b>把免费通道按可靠性分层，而不是按额度排序：</b><b>永久免费档（智谱 / AI Studio）→ 厂商试用端点（NIM）→ 免费应用层（GPT-6 Luna）→ 预览期免费（Step 5）→ stealth</b>。
+          <b>越往后越便宜也越短命；生产链路只用前两层。</b>
+          <br>③ <b>盯三个日期</b>：<b>10/10</b>（DeepSeek 谷时价、腾讯 Hy4 preview）、<b>10/15</b>（Step 5 权重）、<b>10/31</b>（Mistral Large 4 开源权重）。
+          <br>④ <b>留意一条「还没落地的预期」</b>：<b>Step 5 免费一周到期后，官方会不会把它做成长期免费档</b>——<b>这决定了「先进模型免费化」这条线在 preview 路径上能不能续上。</b>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>
+      <b>数据来源</b>：OpenRouter <code>/api/v1/models</code>（10/9 清点，<b>469 款中 19 款 $0、其中 15 款带 <code>:free</code> 后缀</b>；已留 <code>or_models_1009.json</code> 供次日 diff）·
+      <b>Google Gemini 免费档收紧</b>（2026-10-09 起，未订阅 Google AI 的个人账户在 Gemini 应用中可用模型由 Flash-Lite / Flash / Pro 三款缩减为 <b>仅 Flash-Lite</b>（32K 上下文）；Flash 移入 $4.99/月 AI Plus 且 AI Plus 不再含 Pro；Pro 需 $19.99/月 AI Pro；Deep Think 属 AI Ultra——依据 Google 帮助页「Changes to Gemini model access and limits」）—— Google Gemini Apps Help / 中时新闻网 / ai-toolbox ·
+      <b>阶跃 Step 5 Preview</b>（StepFun，2026-10-08 上线 OpenRouter；600B 总参 / 27B 激活稀疏 MoE、1M 上下文、文本 + 图像 + 视频；OR 定价 $1.00 / $2.70 per M、缓存 $0.05（上线期五折）；<b>在 OpenCode / Cline / Nous Research / Kilo Code 等平台免费约一周（Cline 侧两周）</b>，OpenCode 侧带 ZDR；官方称 DeepSWE 领先 Kimi K3 / GLM-5.3；社区实测约 115 tps、首字约 1.5s）—— StepFun / OpenRouter / huggingnews / wpnews ·
+      <b>OpenCode Zen</b> <code>/zen/v1/models</code> + 官方定价页（10/9：接口 87 款、免费标记 ID 13 个，−<code>fledge-alpha-free</code> / +<code>step-5-preview-free</code>；定价页 Free 行 13 条，仍列 <code>mimo-v2.5-free</code>；<b>Mistral Large 4 标 50% off，$0.68 / $2.09</b>）·
+      <b>国内免费额度大盘</b>（火山方舟豆包 200 万 tokens/日；商汤 SenseNova Token Plan 长期免费公测、每 5 小时刷新；讯飞星火 Spark Lite 永久免费 + 星辰 MaaS 0 元；腾讯混元 Lite 长期免费 + TokenHub 新人包 100 万/模型至 12/31；阿里百炼 / 百度千帆新用户 100 万 tokens；智谱 GLM-Flash 永久免费 + 新用户 2000 万；<b>硅基流动小模型永久免费已取消</b>）—— 什么值得买《全网 AI 产品免费权益清单（截至 2026.10.08）》·
+      freellm.net 核验榜（2026-10-08：499+ 款 / 30 家平台 / 235 款实时验证；榜首 NIM <code>z-ai/glm-5.3</code> 95、<code>z-ai/glm-5.3-flash</code> 95；Ollama Cloud <code>deepseek-v4-pro</code> 91、Kilo Code <code>qwen3.8-27b:free</code> 91、NIM Kimi K3 90）·
+      <b>开源侧动态</b>（Cloudflare Clef 27B / Clef-flash 9B 开源决策模型、兼容 Jev API、延迟 209ms / 38.8ms；Samsung Labs LittleBit 极致量化、代码 CC BY-NC 4.0；Google DeepMind EmbeddingGemma 2 740M 多模态嵌入）—— Sentient Foundation《OS AI Field Notes · 9 October 2026》·
+      <b>国内临期清单</b>（10/10 DeepSeek 谷时价与腾讯 Hy4 preview、10/15 阶跃 Step 5 Preview 权重、10/17 豆包 30 天订阅、10/21 小米 MiMo-V2.5 下线、10/31 Mistral Large 4 开源权重与 DeepSeek ZDR 续期、11/7 MiniMax M3/M2 试用、12/31 TokenHub 码道 MoMA 年度额度）。
+    </p>
+    <p class="sub">⚠️ 免费额度可能随时调整，请以各平台官网最新政策为准。本页所有「免费」判定均以官方接口或官方定价页为准；
+    涉及额度的具体数字请自行调用官方 Usage API 或查看控制台确认。OpenRouter 免费池日内会波动，<b>469 款 / 19 款零价 / 15 款 <code>:free</code> 是脚本清点时刻的快照</b>，不代表全天稳定值。
+    <b>「Gemini 免费档收紧」指 Gemini 应用（网页 / App）的个人免费账户；Google AI Studio / Gemini API 的免费层本次未同步调整，请以 Google 官方说明为准。</b>
+    <b>Step 5 Preview 的「免费」为限时（约一周，各平台窗口不同），到期后按各平台定价计费；免费期数据条款以各平台（尤其 OpenCode 的 ZDR 承诺）官方说明为准。</b>
+    第三方聚合榜（freellm.net / CostGoat / llmperks / llm-pricing 等）与官方目录存在滞后与计数差，本页已记录多处实证（已下架或已转付费的模型仍被标为免费 / Online），请勿单独据其做采购或宣传结论。
+    「开源」指权重公开，不代表可自由商用，商用前请逐条核对许可证（尤其 Kimi、GLM、Qwen、MiniMax、Mistral、Step、MiMo、Gemma、LittleBit 系列的许可与 Model-as-a-Service 条款）。
+    <b>Exo / Fledge / Muse Spark Contributor 等「免费期数据可能用于训练」的通道：不要把机密代码、个人信息或生产客户数据放进去。</b>
+    本页提到的聚合网关（UnoRouter / OrcaRouter / Nous Portal / Kilo 等）上游不透明或无 SLA，仅建议用于试验与个人项目，请勿把长期密钥或生产数据接入来路不明的网关。
+    <b>Ox Alpha（<code>stealth/ox-alpha</code>）为第三方 stealth 供应商自营宣传页所描述，本期并未进入 OpenRouter 零价池，请自行核实后再使用。</b></p>
+    <p class="sub">📅 生成时间：2026-10-09 · 本页由自动化任务每日生成 · 亮色 / 暗色主题可点击右上角切换</p>
+  </div>
+</div>
+
+</body>
+</html>

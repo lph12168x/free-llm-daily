@@ -6,6 +6,62 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-10-09）
+
+> 本期主线是**「收缩」**：Google 今日起把 Gemini 应用免费档砍到只剩 Flash-Lite；同时**阶跃 Step 5 Preview 免费一周**（600B / 27B、1M 上下文）成为「先进 + 免费」的最佳组合。
+
+| 数字 | 含义 |
+| --- | --- |
+| **免费档 → Flash-Lite** | Google 今日（10/9）起，未订阅 Google AI 的个人账户在 Gemini 应用可用模型由三款缩为**仅 Flash-Lite（32K）**；Flash 移入 $4.99/月 AI Plus，**AI Plus 的 Pro 也被拔除**（Pro 需 $19.99/月 AI Pro）；**⚠️ Google AI Studio / API 免费层不受影响** |
+| **600B / 27B** | 阶跃 **Step 5 Preview** 免费约一周：600B 总参 / 27B 激活 MoE、**1M 上下文**、文图视频三模态；上线 OpenRouter，并在 OpenCode / Cline / Nous / Kilo 免费开放（OpenCode 侧带 ZDR）；DeepSWE 超 Kimi K3 / GLM-5.3 |
+| **469 / 19 · 87** | OpenRouter 目录 **467 → 469**、零价 **20 → 19**（唯一出池 `ling-3.0-flash-sante:free`，且直接转为付费）；OpenCode Zen **87 款 / 免费 ID 13 个**（+`step-5-preview-free`、−`fledge-alpha-free`） |
+| **200 万 / 日** | 国内日额度最大：**火山方舟（豆包）200 万 tokens/日**；**商汤 SenseNova Token Plan 长期免费公测**（不绑卡、每 5 小时刷新） |
+
+---
+
+### 📉 **Google 今日起把 `Gemini` 免费档砍到只剩 `Flash-Lite`——免费资源收缩的标志性一条**
+
+**依据 Google 帮助页「Changes to Gemini model access and limits」，自 2026-10-09 起：** 未订阅 Google AI 的个人账户，在 Gemini 应用中可用模型由 **Flash-Lite / Flash / Pro 三款缩减为仅 Flash-Lite**（上下文 **32K**，约为 1M 的 3%）；**Flash 移入 $4.99/月 AI Plus**，且 **AI Plus 不再含 Pro**（Pro 需 **$19.99/月 AI Pro**），Deep Think 属 $99.99+ 的 **AI Ultra**——**付费档也一起缩**，是本次政策最受争议之处。**⚠️ 关键区分（别误伤自己）**：这次动的是 **Gemini 应用（网页 / App）的免费档**，**不是 Google AI Studio / Gemini API 的免费层**（免绑卡、按项目日额度）——**写代码调 API 的链路本次未同步收紧**；断掉的是「**在 App 里免费用 Pro 深度思考**」这条路。**🧭 替代顺序**：长上下文 + 多模态且不想付费 → **首选转 Google AI Studio**，其次 **NVIDIA NIM**（GLM-5.3 / Kimi K3，1M）与 **OpenRouter 零价池**。**同一天两条方向相反的动作值得对照记一笔**：Google **收紧**免费档（Flash-Lite only），OpenAI **升级**免费档（GPT-6 Luna + 智能界面，10/8 起推送）——**结论：应用层的免费旗舰只能锦上添花、不能当底座。**
+
+### 🆕 **阶跃 `Step 5 Preview` 免费约一周：600B / 27B 激活、1M 上下文——今天「先进 + 免费」的最佳组合**
+
+**10/8 上线 OpenRouter，StepFun 同时在 `OpenCode`、`Cline`、`Nous Research`、`Kilo Code` 等平台开放免费约一周（Cline 侧两周，OpenCode 侧带零数据保留 ZDR 承诺）。** 规格：**600B 总参 / 27B 激活**的稀疏 MoE、**1M 上下文**、文本 + 图像 + 视频多模态，官方定位面向**金融与编码**的 agentic 专业任务。**📈 跑分与实测**：官方称 **DeepSWE 上领先 Kimi K3 与 GLM-5.3**；AA Intelligence Index 约 **44**（与 GLM 5.3 / Kimi K3 同档）；社区实测约 **115 tokens/s**、首字约 **1.5s**。**💰 免费期后定价**：OpenRouter **$1.00 / $2.70 per M**（缓存命中 **$0.05**，上线期五折）。**🧭 和 ChatGPT Luna 不是一类**：Luna 是「应用里的一次性重活」（不接 API），Step 5 是「能接进 agent / CLI 的 1M 长上下文」——**趁免费一周，把你最吃上下文的那条链路（整库问答、长文档分析）切过去试一次。**
+
+### 🔄 **平台清点：OpenRouter `469 / 零价 19`；OpenCode Zen `87 / 免费 ID 13`**
+
+**OpenRouter**：目录 **467 → 469 款（+2）**、零价 **20 → 19（−1）**、带 `:free` 后缀 **16 → 15**。**唯一出池**：`inclusionai/ling-3.0-flash-sante:free`——**同时转为付费版** `inclusionai/ling-3.0-flash-sante`（$0.042 / $0.1232 per M）；新增 3 条**全为付费**（`openai/gpt-6.1-sol:batch`、`gpt-6.1-sol-pro:batch`、`stepfun/step-5-preview`），另移除 `baidu/ernie-4.5-vl-424b-a47b`；**注意** `inclusionai/ling-3.1-flash`（无 `:free` 后缀）**仍为 $0/$0**。**OpenCode Zen**：接口 **87 款不变**、免费标记 ID **13 个**——**移除 `fledge-alpha-free`（匿名 / preview 通道到期）、新增 `step-5-preview-free`**；官方定价页 Free 行共 **13 条**，另标 **Mistral Large 4 为 50% off（$0.68 / $2.09）**。**⚠️ 纪律**：**免费通道当变量、别当常量**——`fledge` 这类匿名 / preview 通道的生命周期就是几天到几周。
+
+### 🌏 **国内免费额度大盘：豆包 200 万 tokens/日居首，商汤长期免费公测**
+
+① **火山方舟（豆包）**：实名后**每天自动发 200 万 tokens**（**日额度最大**，需先手动开通模型）。② **商汤 SenseNova Token Plan**：**长期免费公测、不绑卡不充值，每 5 小时刷新配额**。③ **讯飞星火 Spark Lite**：**永久免费 API**；星辰 MaaS 开源模型 0 元无限量。④ **腾讯混元 Lite**：长期免费；TokenHub 新人包每模型 100 万 tokens 至 12/31。⑤ **阿里百炼 / 百度千帆**：新用户每模型 100 万 tokens；文心 ERNIE-Speed / Lite 长期免费。⑥ **智谱 z.ai**：GLM Flash 永久免费 + 新用户 2000 万。**⚠️ 两条要记**：**硅基流动「小模型永久免费」已取消**（现仅 embedding / 语音 / OCR / 翻译 / Kolors 免费）；**市面上没有通用「AI 兑换码 / CDKey」，卖码的一律当诈骗。**
+
+### 🌤️ **次要更新（10/9）**
+
+**① freellm.net 核验（10/8）**：**499+ 款 / 30 家平台 / 235 款实时验证**，榜首仍是 **NVIDIA NIM `z-ai/glm-5.3`（95 分）**、`glm-5.3-flash`（95）；其后 **Ollama Cloud `deepseek-v4-pro`（91）**、**Kilo Code `qwen3.8-27b:free`（91）**、**NIM Kimi K3（90）**。**⚠️ 滞后实证继续**：多个聚合页仍列已下架 / 已转付费的模型为免费——**「是否还在免费」一律回官方接口复核**。
+**② 免费入口补充**：**Nous Portal** $0 档仍含一批 `:free`（Ling / LongCat / Laguna / Step 等，免绑卡），**是本期 Step 5 免费一周的入口之一**；**`Ox Alpha`（oxalpha.org）** 自称免费 1M 上下文前沿模型——**属 stealth 自营宣传站，本期并未进入 OR 零价池，仅作参考**。
+**③ 开源侧顺手记**：**Cloudflare** 首款自研决策模型 **Clef（27B）/ Clef-flash（9B）** 开源（返回概率而非文本，延迟反超 Jev）；**Samsung Labs `LittleBit`** 把权重压到 **1.0 → 0.1 bit/参数**（**代码 CC BY-NC 4.0，商用需授权**）；**Google DeepMind `EmbeddingGemma 2`** 740M 多模态嵌入可跑在手机上。
+
+### 🧾 **今日免费入口速查（先进 + 量大优先）**
+
+- **阶跃 Step 5 Preview**（🟣 本期新增）— 免费约一周，**600B / 27B、1M、多模态**，OpenRouter / OpenCode / Cline / Nous / Kilo。
+- **NVIDIA NIM** — **40 RPM / 约 1 万请求·日**，GLM-5.3 / Kimi K3（1M）；**需手机验证**。
+- **Groq** — **30 RPM / 1,000 请求·日**（`gpt-oss-120b` 等），免绑卡、最快。
+- **Google AI Studio** — 免绑卡、按项目日额度，Gemini 3.x Flash（1M）；**⚠️ App 免费档今日收紧，AI Studio 免费层不受影响**。
+- **免费版 ChatGPT** — 免费档可用 **GPT-6 Luna**（旗舰级 + 交互界面），无需 key / 绑卡。
+- **OpenRouter** — **50 请求/日**（充 $10 → 1,000），零价池最稳一条 `nemotron-3-ultra-550b-a55b:free`（1M）。
+- **OpenCode Zen** — 四列全 Free：`step-5-preview-free` / `exo-free` 等，限时。
+- **智谱 z.ai** — GLM Flash 系列**永久免费、无到期日**（国内直连）——**唯一可写进长期依赖的一类**。
+
+### ⏰ **到期红线**
+
+- **10/9（今天）** — **Gemini 应用免费档收紧为 Flash-Lite**（⚠️ AI Studio 免费层不受影响）。
+- **10/10** — DeepSeek 低谷价窗口结束；腾讯混元 Hy4 preview 结束。
+- **10/15** — 阶跃 Step 5 Preview 释放完整 BF16 权重。
+- **10/17** — 豆包 30 天订阅截止；**10/21** — 小米 `mimo-v2.5-pro` / `mimo-v2.5` 下线。
+- **10/31** — **Mistral Large 4 开源权重**；DeepSeek ZDR 协议续期截止。**11/7** — MiniMax M3/M2 试用到期。**12/31** — 腾讯云 TokenHub / 华为云码道 / 移动云 MoMA 年度额度截止。
+
+---
+
 ## 📰 今日摘要（2026-10-08 · 午后复检）
 
 > 本日为**同日第二次触发**：上午已发主线（Haiku 5.5 / Mistral Large 4 / 零价池换血），午后复检新增**今日最大一条——OpenAI 向免费用户开放 GPT-6**，并补一张**「量大能用」免费额度大盘**。
