@@ -6,6 +6,58 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-10-10）
+
+> 本期主线是**「收势确认 + 开源补位」**：闭源应用免费档继续缩（Google 昨日已切 Flash-Lite，今日无反转），开源旗舰继续放——**阶跃 Step 5 Preview 登顶 OpenRouter 双榜**，**Qwen-Image-2.1-Turbo 开源**；两家接口清点与昨日**完全一致**。
+
+| 数字 | 含义 |
+| --- | --- |
+| **登顶双榜** | 阶跃 **Step 5 Preview 登顶 OpenRouter Trending 榜、日榜全球第二**（AA 综合智能指数 **44**、全球开源前三）；600B 总参 / 27B 激活 MoE、**1M 上下文**、原生多模态；免费约一周，**官方确认 10/15 正式开源权重** |
+| **458 / 19 · 87** | OpenRouter 目录 **469 → 458（−11）**、零价 **19 款（与昨日完全一致）**、`:free` 15 款；OpenCode Zen **87 款 / 免费 ID 12 个**（官方定价页 Free 行 13 条）——**两家清点与昨日完全一致** |
+| **今日算力免费** | **Qwen-Image-2.1-Turbo 开源**：7B DiT、**8 步出 2K 图**、原生透明通道；**权重 Qwen Research 许可（商用需另行授权）**，托管 API ¥0.10/张（120 RPM） |
+| **长期兜底仍在** | **NIM ~1 万请求/日居首**、**Groq 1,000/日**、**Cloudflare 1 万 neurons/日**、**豆包 200 万 tokens/日**、**智谱 GLM-Flash 永久免费** |
+
+---
+
+### 🏆 **阶跃 `Step 5 Preview` 登顶 OpenRouter 双榜：Trending 榜第 1、日榜全球第 2——10/15 正式开源**
+
+**上线第二天即冲顶**：**OpenRouter Trending 榜第 1、日榜（按当日 Token 处理量）全球第 2**，官方确认 **10 月 15 日正式开源权重**。**规格复核**：**600B 总参 / 27B 激活**稀疏 MoE、**1M 上下文**、64K 输出上限、原生多模态输入（文本 / 图像 / 视频）；**Artificial Analysis 综合智能指数 44 分，位居全球开源前三**，面向 AI 编程、软件工程、专业知识工作与金融场景优化。**DAIR.AI 联合创始人 Elvis Saravia 实测评价**：能力可与 **GLM-5.3、Kimi K3 媲美**，处在成本 / 能力权衡的**「帕累托前沿」**。**🎁 免费窗口仍在（约一周）**：OpenRouter / OpenCode / Cline / Nous Research / Kilo Code 免费开放（Cline 侧两周），**OpenCode 侧带零数据保留（ZDR）承诺**。**💰 到期后**：OpenRouter **$1.00 / $2.70 per M**（缓存 $0.05，上线期五折）；**10/15 开源权重后可自托管 = 脱离「免费档随时消失」的风险**。**🧭 行动建议**：趁免费一周，把你最吃上下文的真实任务（整库问答 / 长文档 / 多步 Agent）在 Step 5 上跑一遍。
+
+### 🔄 **平台清点：OpenRouter `458 / 零价 19`、Zen `87 / 免费 12`——两家与昨日持平**
+
+**OpenRouter**：目录 **469 → 458 款（−11）**、**零价 19 款（与昨日完全一致）**、带 `:free` 后缀 **15 款**；**今日零价池进出均为 0**——昨日 `ling-3.0-flash-sante:free` 出池转付费后，池子稳定在 19。**口径提醒**：`inclusionai/ling-3.1-flash`（无 `:free`）**仍为 $0/$0**，「零价但不带后缀」继续成立。**OpenCode Zen**：接口仍 **87 款**、免费标记 ID **12 个**，官方定价页 Free 行 **13 条**（Big Pickle、Space Bunny、LongCat 2.5 Preview、Step 5 Preview、Exo、MiMo-V2.6-Flash、MiMo-V2.5、Ling 3.1 Flash、Ling 3.0 Flash Fin、Nemotron 3 Ultra、Nemotron 3.5 Lightning、Muse Spark 1.3 Contributor、Jev 1.13 Free）。**⚠️ Zen 两条条款**：**Nemotron 3 Ultra / 3.5 Lightning Free 为 NVIDIA 免费试用端点，勿传机密数据**；Big Pickle / Space Bunny / LongCat / Step 5 / Exo / MiMo / Ling 系列 Free **免费期内数据可能用于改进模型**。**🔓 零价池近六期流水**：9/29 460/20/16 · 9/30 464/20/16 · 10/8 467/20/16 · 10/9 469/19/15 · **10/10 458/19/15**——**目录总量回落 11 条而零价池纹丝不动，减少的是付费侧条目。**
+
+### 🌤️ **次要更新（10/10）：开源侧两条 + 免费额度大盘复核**
+
+**① Qwen-Image-2.1-Turbo（阿里通义，10/9）**：7B 视觉生成模型，**去噪从 40 步压到 8 步、原生 2K 出图**，支持多参考图编辑与 **RGBA 透明通道**；托管 API **¥0.10/张（120 RPM）**，Pro 档 ¥0.25/张（20 RPM）。**⚠️ 权重为 Qwen Research License，商用自托管需另行授权**。**② NVIDIA Nemotron 3.5 Lightning**：**30B MoE / 30B 激活**开放模型，面向「始终在线的 agent」快速专业任务，**Zen 与 OpenRouter 均有 Free 端点**。**③ 免费额度大盘（10/10 复核）**：**NIM 约 40 RPM / 无明确日上限**（须手机验证、勿传机密）、**Groq 30 RPM / 1,000 RPD / 8K TPM**、**Google AI Studio Flash-Lite ~500 RPD**（免费档输入可能用于改进产品）、**Mistral 每模型 1 次/秒 + 每月约 10 亿 tokens**、**Cloudflare 每天 1 万 neurons**、**Cohere 20 RPM / 1,000 次·月**。**⚠️ 三条要记**：**GitHub Models 已于 7/30 关停**；**Cerebras 免费档改为 $5 一次性额度（需绑卡）**；**Hugging Face 仅 $0.10/月额度**。**④ freellm.net 核验榜（10/9）**：仍是 **NIM `z-ai/glm-5.3` 居首（95 分，81.8M 周调用）**、`z-ai/glm-5.3-flash`（95，3.3T 周调用）、Ollama Cloud `deepseek-v4-pro`（91）、Kilo Code `qwen3.8-27b:free`（91）、NIM Kimi K3（90）；**聚合站滞后实证继续，免费判定一律回官方接口复核。**
+
+### 🧾 **今日免费入口速查（先进 + 量大优先）**
+
+| 入口 | 免费额度 | 模型量级 | 状态 / 注意 |
+| --- | --- | --- | --- |
+| **阶跃 Step 5 Preview** 🟣 | 免费约一周（OpenRouter / OpenCode / Cline / Nous / Kilo） | **600B / 27B 激活** · 1M · 多模态 | 今天先进 + 免费的最佳组合；**双榜登顶**；AA 44 分；OpenCode 侧带 ZDR |
+| **NVIDIA NIM** `z-ai/glm-5.3` | **40 RPM**（约 1 万请求/日 · 无日 token 上限） | GLM-5.3 / Kimi K3 · 1M | **量最大、最稳的一档（连续两期榜首）**；须手机验证；勿传机密 |
+| **Groq** | **30 RPM · 1,000 请求/日** | gpt-oss-120b · Qwen3.8 27B | 免绑卡、最快（LPU）；8K TPM，长输入要节制 |
+| **Google AI Studio** | 免绑卡（Flash-Lite ~500 请求/日） | Gemini 3.x Flash · 1M · 多模态 | **⚠️ App 免费档已收紧，但 AI Studio 免费层不受影响**——长上下文兜底首选 |
+| **免费版 ChatGPT** | 免费档可用（App / 网页） | **GPT-6 Luna** | 旗舰模型免费；无需 key / 绑卡；仅 Chat 体验，API 侧不变 |
+| **OpenRouter** `nemotron-3-ultra-550b-a55b:free` | **50 请求/日**（充 $10 → 1,000） | 550B / 激活 55B · 1M | **零价池里量最大、最稳的一条**；NVIDIA 试用端点 |
+| **OpenCode Zen** `step-5-preview-free` | 四列全 Free（限时） | Step 5 / Exo 等 | 免费池本期进出均为 0；免费期数据条款各异，别喂机密 |
+| **智谱 z.ai** | 输入输出全 Free（无到期日） | `GLM-Flash` 等 · 国内直连 | **唯一可写进长期依赖的一类**；永久档仍在 |
+
+### ⏰ **到期红线**
+
+- **10/10（今天）** — **DeepSeek 低谷价窗口结束**；**腾讯混元 Hy4 preview（老用户夜间免费）结束**
+- **10/9** — Google Gemini 应用免费档收紧为 Flash-Lite（⚠️ AI Studio 免费层不受影响）；Qwen-Image-2.1-Turbo 开源权重发布
+- **10/8** — Step 5 Preview 免费一周开始（OpenRouter / OpenCode / Cline / Nous / Kilo）
+- **10/15** — **阶跃 Step 5 Preview 释放完整 BF16 权重**（许可证待公布）；NVIDIA 中国开发者日（苏州，10/15–16）
+- **10/17** — 豆包全用户 30 天订阅（9/24 那轮）截止
+- **10/21** — **小米 `mimo-v2.5-pro` / `mimo-v2.5` 正式下线**
+- **10/31** — **Mistral Large 4 发布开源权重**；**DeepSeek ZDR 协议本月续期截止**
+- **11/7** — MiniMax 开放平台 M3 / M2 免费试用到期
+- **12/31** — 腾讯云 TokenHub / 华为云码道 / 移动云 MoMA 年度额度截止
+
+---
+
 ## 📰 今日摘要（2026-10-09）
 
 > 本期主线是**「收缩」**：Google 今日起把 Gemini 应用免费档砍到只剩 Flash-Lite；同时**阶跃 Step 5 Preview 免费一周**（600B / 27B、1M 上下文）成为「先进 + 免费」的最佳组合。
