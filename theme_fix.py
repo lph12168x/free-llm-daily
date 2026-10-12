@@ -202,7 +202,10 @@ def apply_soft_palette(html):
 
 
 def fix(path, date_str=None):
-    html = io.open(path, encoding="utf-8").read()
+    # newline="" on BOTH read and write so we never silently convert line
+    # endings. Without it, Windows text mode turns every LF into CRLF, which
+    # rewrites the whole page and blows up the push pack (see automation note).
+    html = io.open(path, encoding="utf-8", newline="").read()
     changed = []
 
     # 1) No-JS fallback should be light, not dark (matches the IDE theme).
@@ -233,7 +236,7 @@ def fix(path, date_str=None):
         changed.append(note)
 
     if changed:
-        io.open(path, "w", encoding="utf-8").write(html)
+        io.open(path, "w", encoding="utf-8", newline="").write(html)
 
     return changed
 

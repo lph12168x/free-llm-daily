@@ -908,6 +908,20 @@
   .hot-item.pool-box { border-left: 4px solid var(--soft-amber); }
   /* === extra-1009 end === */
 
+/* === extra-1012pm begin === */
+  .hot-item.wb-box { border-left: 4px solid var(--soft-purple, #a78bfa); }
+  .hot-item.dm-box { border-left: 4px solid var(--soft-info, #9ec2f7); }
+  .hot-item.st-box { border-left: 4px solid var(--soft-amber, #f2cd7a); }
+  html[data-theme="light"] .hot-item.wb-box { border-left-color: #7c3aed; }
+  html[data-theme="light"] .hot-item.dm-box { border-left-color: #245cc4; }
+  html[data-theme="light"] .hot-item.st-box { border-left-color: #a2670a; }
+  .q-wrap { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 12px; }
+  .q-cell { background: var(--bg-card); border: 1px solid var(--border-card); border-radius: 12px; padding: 12px 14px; }
+  .q-cell .q-k { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; }
+  .q-cell .q-v { font-size: 13.2px; color: var(--text-secondary); line-height: 1.75; }
+  .q-cell .q-v b { color: var(--accent-3); }
+  @media (max-width: 720px) { .q-wrap { grid-template-columns: 1fr; } }
+  /* === extra-1012pm end === */
 </style>
 <script>
 (function () {
@@ -945,9 +959,7 @@
 </script>
 
 </head>
-<body>
-
-<!-- Theme Toggle -->
+<body><!-- Theme Toggle -->
 <button class="theme-toggle" onclick="toggleTheme()" title="切换亮色/暗色主题" aria-label="主题切换"><span id="theme-icon">☀️</span></button>
 
 <!-- Scroll to top -->
@@ -959,40 +971,69 @@
   <!-- Hero -->
   <div class="hero">
     <div class="hero-inner">
-      <div class="badge">🤖 AI 每日免费情报 · 10/12</div>
+      <div class="badge">🤖 AI 每日免费情报 · 10/12 午后复检</div>
       <h1>免费大模型日报</h1>
-      <div class="date-chip">📅 2026 年 10 月 12 日 · 周一</div>
+      <div class="date-chip">📅 2026 年 10 月 12 日 · 周一 · 13:15 复检</div>
       <div class="stats">
-        <div class="stat-card"><div class="stat-icon">🏆</div><div class="stat-num">5010 亿参数</div><div class="stat-label"><b>Reflection AI「Beam」开放权重发布</b>：23B 激活、1M 上下文，对标 GLM-5.2 / 逼近 Qwen3.8-Max，<b>推理算力省 3–4 倍</b>，本月 Apache 2.0 交权重</div></div>
-        <div class="stat-card"><div class="stat-icon">📊</div><div class="stat-num">458 / 19 · 82</div><div class="stat-label">OpenRouter 目录 <b>458 款</b>、零价 <b>19 款</b>（连续 3 期<i>零进出</i>）；<b>Zen 82 款 / 免费 ID 9</b>——接口侧均<b>比上周缩表</b></div></div>
-        <div class="stat-card"><div class="stat-icon">🧮</div><div class="stat-num">每 Token 省 3–4×</div><div class="stat-label">本周免费侧的真正增量<b>全在开源权重</b>：Beam、Kolibri-1、THX-01 三条新供给，免费托管档未见扩容</div></div>
-        <div class="stat-card"><div class="stat-icon">🎁</div><div class="stat-num">长期兜底仍在</div><div class="stat-label"><b>NIM ~1 万请求/日居首</b>、<b>Groq 1,000/日</b>、<b>Cloudflare 1 万 neurons/日</b>、<b>豆包 200 万 tokens/日</b>、<b>智谱 GLM-Flash 永久免费</b>、<b>OVHcloud 匿名 2 RPM</b></div></div>
+        <div class="stat-card"><div class="stat-icon">🎯</div><div class="stat-num">10/12–10/25</div><div class="stat-label">阶跃 <b>Step 5 Preview 上线腾讯 WorkBuddy 独家限免</b>：600B 总参 / 27B 激活、1M 上下文、文本 + 视觉，<b>10/15 开源完整权重</b></div></div>
+        <div class="stat-card"><div class="stat-icon">📊</div><div class="stat-num">458 / 19 · 83</div><div class="stat-label">午后复检：<b>OpenRouter 与上午 09:18 完全一致</b>（日内零变动）；<b>Zen 82 → 83</b>（仅多一条备份端点），免费 ID 仍 <b>9</b></div></div>
+        <div class="stat-card"><div class="stat-icon">🧮</div><div class="stat-num">输出 $0</div><div class="stat-label"><b>决策模型「输出免费」新赛道</b>：Microsoft Decision-1 等五家扎堆进场，把一次判定的价格压到近乎为零</div></div>
+        <div class="stat-card"><div class="stat-icon">🕵️</div><div class="stat-num">2 枚隐身</div><div class="stat-label"><b>MISSINGNO</b>（Nous Portal）与 <b>Glyph Cluster</b>（Command Code）限时免费——规模与截止日<b>均未公布</b></div></div>
       </div>
     </div>
   </div>
 
   <!-- 头条 -->
   <div class="section">
-    <h2 class="section-title"><span class="ico">🔥</span> 今日头条 · 主线</h2>
+    <h2 class="section-title"><span class="ico">🔥</span> 午后头条 · 今天就能用的免费入口</h2>
     <div class="hot-grid">
 
-      <div class="hot-item step5-box">
-        <div class="hot-link"><span class="hot-seal">① 今日最大 · 开源权重正面对标国产旗舰</span> Reflection AI 发布 <b>Beam</b>：5010 亿参数开放权重，主打代码与 Agent</div>
+      <div class="hot-item wb-box">
+        <div class="hot-link"><span class="hot-seal">① 今日新增 · 独家限免</span> 阶跃 <b>Step 5 Preview</b> 上线腾讯 WorkBuddy：<b>10/12–10/25 独家限免</b></div>
         <div class="hot-body">
-          <b>今天「先进 + 免费」这一格的主角，终于从接口侧换到了权重侧——布鲁克林初创 Reflection AI 发布首款开放权重模型 Beam，明确以「对标 GLM-5.2、逼近 Qwen3.8-Max」为目标，推理算力只要对手的 1/3 到 1/4。</b>
-          <div class="ua-grid">
-            <div class="ua-cell"><div class="ua-k">🏗️ 规格</div><div class="ua-v"><b>501B 总参 / 23B 激活</b>稀疏 MoE，<b>1M 上下文</b>、52 层、交错局部 + 全局注意力、细粒度路由专家；<br>
-            预训练 <b>23.8T tokens</b>，6,144 张 GB300 四周训完。</div></div>
-            <div class="ua-cell"><div class="ua-k">🎯 对标与跑分</div><div class="ua-v">官方称代码 / 推理<b>媲美 GLM-5.2（744B/40B）</b>、Agent 任务<b>逼近 Qwen3.8-Max</b>；<br>
-            Terminal-Bench v2.1 得 <b>80.1</b>（落后 DeepSeek V4.1 Flash 90.6、Kimi K3 88.3）——<b>不是最强，但单位算力效率最高</b>。</div></div>
-            <div class="ua-cell"><div class="ua-k">💰 怎么免费拿到</div><div class="ua-v">权重、技术报告、模型卡<b>本月内以 Apache 2.0 放出</b>，先开 early-access 候补名单；<br>
-            走 HuggingFace / 主流云与 neocloud 分发。<b>「免费用」= 自托管，不是送 API 额度</b>。</div></div>
-            <div class="ua-cell"><div class="ua-k">🧭 为什么值得关注</div><div class="ua-v">北美首个正面迎战国产开放权重的旗舰级模型（英伟达已投 8 亿美元，或进一步增持）；<br>
-            面向<b>受监管行业与「AI 工厂」本地部署</b>——对不能把代码送出境的团队是个新选项。</div></div>
+          <b>上午的「先进 + 免费」还在拼限时窗口，午间直接落地成了一个有明确日期的免费入口——阶跃 StepFun 今日 12:58 宣布 Step 5 Preview 上线腾讯 WorkBuddy，10 月 12 日至 25 日独家限免。</b>
+          <div class="q-wrap">
+            <div class="q-cell"><div class="q-k">🧱 规格</div><div class="q-v"><b>600B 总参 / 27B 激活</b>稀疏 MoE，<b>1M 上下文</b>，<b>原生文本 + 视觉</b>输入；面向 <b>AI 编程、软件工程、专业知识工作、金融</b>等真实 Agentic 任务。</div></div>
+            <div class="q-cell"><div class="q-k">📅 窗口与开源</div><div class="q-v">限免 <b>10/12–10/25</b>（比公开的「约一周」更长）；官方确认 <b>10/15 开源完整权重</b>——到期后仍可自托管，这是与纯限时通道最大的区别。</div></div>
+            <div class="q-cell"><div class="q-k">🧭 和上午那条的关系</div><div class="q-v">上午写在 OpenRouter / OpenCode / Cline / Nous / Kilo 的「免费约一周」，本条是<b>官方合作渠道</b>：日期明确、覆盖到 10/25，且 <b>10/15 后同款能力开源</b>。</div></div>
+            <div class="q-cell"><div class="q-k">⚠️ 注意</div><div class="q-v">限免通道的<b>数据条款以各平台为准</b>；把它当「今天能白嫖的先进模型」没问题，<b>别把限免期当 SLA</b>。</div></div>
           </div>
           <div class="mini-tbl">
-            <div class="mini-row"><span class="k">行动建议</span><span class="v"><b>先别急着排产线</b>：现在只有自报跑分与候补位。把 <b>HuggingFace 关注 + 候补名单</b>挂上，等权重落地后用你自己的 Agent 任务跑一遍再定。<br>真要今天就白嫖前沿能力，走 <b>Zen 的 Step 5 Preview 等限时免费通道路由</b>更实际。</span></div>
+            <div class="mini-row"><span class="k">行动建议</span><span class="v">今天就把最吃上下文的自有任务（整库问答 / 长文档 / 多步 Agent）在 Step 5 上跑一遍；<b>10/15 再看权重</b>，用同一批任务对比自托管版本，决定是否写进架构。</span></div>
           </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 决策模型 -->
+  <div class="section">
+    <h2 class="section-title"><span class="ico">🧮</span> 今日第二主线 · 决策模型「输出免费」</h2>
+    <div class="card-grid">
+
+      <div class="card">
+        <div class="card-title">🏛️ Microsoft <b>Decision-1</b>：$0.042 / 百万输入，<b>输出免费</b></div>
+        <div class="card-body">
+          <p><b>10/9 起在 Microsoft Foundry 与 OpenRouter 上线</b>：本质是 <b>Qwen3.5-9B 后训练</b>的决策模型，<b>一次前向</b>读入「状态 + 固定选项」，直接回一个<b>校准概率</b>，<b>不生成文本</b>——所以<b>输出 0 成本</b>。</p>
+          <div class="mini-tbl">
+            <div class="mini-row"><span class="k">关键数字</span><span class="v">输入 <b>$0.042 / 百万 tokens</b>（约为 OpenAI Decisions API 的 42%）、<b>32,768 上下文</b>、中位 <b>85ms</b>（p95 125ms）；官方 36 基准 147,137 题准确率 <b>83.5%</b>。</span></div>
+            <div class="mini-row"><span class="k">能干什么</span><span class="v">工单路由、事故分级、内容过滤、给 Agent 的下一步打分、按请求挑模型/工具——<b>不是聊天模型</b>，明确排除写作/翻译/摘要。</span></div>
+            <div class="mini-row"><span class="k">⚠️ 口径核实</span><span class="v">官网已列 OpenRouter，但 <b>OpenRouter 的 <code>/models</code> 接口今日仍未返回该条目</b>（458 条里查无 <code>microsoft-decision-1</code>）——<b>以官方页为准，聚合清单滞后</b>。厂商自测，未独立复核；校准项自认第二。</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title">🌊 同赛道一周内扎堆：五家一起把「判定」做成廉价件</div>
+        <div class="card-body">
+          <div class="mini-tbl">
+            <div class="mini-row"><span class="k">Cloudflare Clef-omni</span><span class="v"><b>开放权重</b>，音/视频/图/文一次调用打分（基于 Qwen3-Omni-30B-A3B，去掉语音生成）；官方称 21 秒带音视频约 <b>1.5 秒</b>评完。</span></div>
+            <div class="mini-row"><span class="k">Liquid AI d1-3B</span><span class="v">10/8 发布，<b>开放权重</b>、单次前向出类型化答案、<b>零输出 token</b>，权重已上 HuggingFace——<b>能自托管就没有 per-token 问题</b>。</span></div>
+            <div class="mini-row"><span class="k">Nace.AI Drex 1.5</span><span class="v">9B 决策模型，Decision Index 0.3.1 得 <b>58.08</b>（官方称与闭源 Jev 1.13 持平）；权重在 HF、托管在 OpenRouter。</span></div>
+            <div class="mini-row"><span class="k">TypeSafe Jev</span><span class="v">凭决策模型拿下 <b>A 轮 8.7 亿美元、估值 75 亿</b>（约 1/3 的财富 500 强在用）——资本也在给「输出免费」定价。</span></div>
+          </div>
+          <div class="mini-row" style="border:none"><span class="k">结论</span><span class="v">如果你的 Agent 里有大量<b>重复的确定性判定</b>（路由 / 门控 / 打分），把「LLM 写理由再解析」换成<b>一次前向拿概率</b>，成本与延迟都会塌一个量级。今天就有三四家免费或近免费可试。</span></div>
         </div>
       </div>
 
@@ -1001,29 +1042,27 @@
 
   <!-- 接口清点 -->
   <div class="section">
-    <h2 class="section-title"><span class="ico">📊</span> 今日接口清点 · 两池同时缩表</h2>
+    <h2 class="section-title"><span class="ico">📊</span> 接口清点（13:15 复检）：两家日内按兵不动</h2>
     <div class="combo-grid">
 
       <div class="combo-card">
-        <div class="combo-title">🔵 OpenRouter 零价池：19 款，连续 3 期零进出</div>
+        <div class="combo-title">🔵 OpenRouter：458 / 19 / 15 —— 与上午逐条一致</div>
         <div class="combo-body">
-          <p>目录 <b>458 款</b>（与 10/10 完全一致），零价口径 <b>19 款</b>、带 <code>:free</code> 后缀 <b>15 款</b>。<b>本期无一进一出</b>——池子已稳定，但稳定本身就是信号：<b>免费池不再增长</b>。</p>
+          <p>目录 <b>458 款</b>、零价口径 <b>19 款</b>、带 <code>:free</code> 后缀 <b>15 款</b>；与上午 09:18 快照<b>无一条进出</b>（零价池既无新增也无退出）。<b>日内不动本身就是信号：免费池已进入「只出不进」的稳定态。</b></p>
           <div class="mini-tbl">
-            <div class="mini-row"><span class="k">元老仍在</span><span class="v"><b>Nemotron 3 Ultra 550B</b>（1M）、<b>Nemotron 3 Super 120B</b>、<b>Nemotron 3.5 Lightning</b>、<b>Thinking Machines Inkling / Inkling Small</b>（1M，多模态）、<b>Gemma 4 31B / 26B</b>、<b>Ling 3.1 Flash</b>（零价但<b>无 <code>:free</code> 后缀</b>）、<b>Lyria 3 两款</b></span></div>
-            <div class="mini-row"><span class="k">新面孔</span><span class="v"><b>Poolside Laguna S 2.1 / XS 2.1</b>（118B、33B-A3B，代码 Agent，免费双端）、<b>Cohere North Mini Code</b>（256K，首发 Agentic 编码）、<b>Apodex 1.1 Mini</b>（262K，长程研究/预测）、<b>Dots3-Note Preview</b>（512K）、<b>LFM2.5-2.6B</b></span></div>
-            <div class="mini-row"><span class="k">⚠️ 注意</span><span class="v">本月新入池多为<b>代码 / Agent 小模型</b>，参数规模普遍 <b>30B–120B</b>；<b>1M 长上下文只剩 NVIDIA 与 Thinking Machines 两家</b>，选型前先看上下文够不够。</span></div>
+            <div class="mini-row"><span class="k">量最大的两条</span><span class="v"><b>Nemotron 3 Ultra 550B</b>（1M，零价池里量最大）、<b>Nemotron 3 Super 120B</b>；<b>Thinking Machines Inkling / Inkling Small</b>（1M、多模态）紧随。</span></div>
+            <div class="mini-row"><span class="k">易漏计</span><span class="v"><code>inclusionai/ling-3.1-flash</code> <b>零价但不带 <code>:free</code> 后缀</b>，只看后缀会漏。</span></div>
           </div>
         </div>
       </div>
 
       <div class="combo-card">
-        <div class="combo-title">🔷 OpenCode Zen：82 款 / 免费 9 个，本周砍掉 5 款</div>
+        <div class="combo-title">🔷 OpenCode Zen：82 → 83，免费 ID 仍 9</div>
         <div class="combo-body">
-          <p>接口目录 <b>82 款</b>（10/10 为 87），<b>−5</b>；免费 ID <b>9 个</b>。官方定价页 <b>Free 行 13 条</b>（含 <code>big-pickle</code> 隐身模型）——<b>以定价页为准</b>。</p>
+          <p>接口目录由 <b>82 增至 83</b>，唯一新增是 <code>claude-opus-5-5-backup</code>（<b>备份端点，非免费</b>）；<b>免费 ID 仍 9 个</b>（含隐身 <code>big-pickle</code>），官方定价页 <b>Free 行 13 条为准</b>。</p>
           <div class="mini-tbl">
-            <div class="mini-row"><span class="k">本周下线</span><span class="v"><code>exo-free</code>、<code>nemotron-3-ultra-free</code>、<code>ling-3.0-flash-fin-free</code>、<code>deepseek-v4-flash-vision-exp</code>、<code>claude-sonnet-4</code></span></div>
-            <div class="mini-row"><span class="k">免费主力</span><span class="v"><b>Step 5 Preview Free</b>（约一周窗口，ZDR）、<b>Space Bunny Free</b>（隐身，ZDR）、<b>LongCat 2.5 Preview Free</b>（ZDR）、<b>Muse Spark 1.3 Contributor Free</b>（Meta，<b>换你数据训模型</b>）、<b>Jev 1.13 Free</b>、<b>MiMo-V2.6-Flash Free</b>、<b>Nemotron 3.5 Lightning Free</b>、<b>Ling 3.1 Flash Free</b>、<b>Big Pickle</b></span></div>
-            <div class="mini-row"><span class="k">🔐 条款差异</span><span class="v"><b>ZDR 可用</b>：Space Bunny / LongCat / Step 5 Preview；<b>数据可能用于训练</b>：Big Pickle、Exo、MiMo、Ling、Muse Spark Contributor；<b>Nemotron 仅限试用</b>，勿投个人或机密数据。</span></div>
+            <div class="mini-row"><span class="k">免费主力</span><span class="v"><b>Step 5 Preview Free</b>、<b>Space Bunny Free</b>、<b>LongCat 2.5 Preview Free</b>（三者 ZDR）、<b>Muse Spark 1.3 Contributor Free</b>（Meta，换数据训模型）、<b>Jev 1.13 Free</b>、<b>MiMo-V2.6-Flash Free</b>、<b>Nemotron 3.5 Lightning Free</b>、<b>Ling 3.1 Flash Free</b>、<b>Big Pickle</b>。</span></div>
+            <div class="mini-row"><span class="k">⚠️ 条款分层</span><span class="v">ZDR 可用：Space Bunny / LongCat / Step 5；<b>数据可能用于训练</b>：Big Pickle / Exo / MiMo / Ling / Muse Spark Contributor；<b>Nemotron 仅限试用</b>。</span></div>
           </div>
         </div>
       </div>
@@ -1031,31 +1070,29 @@
     </div>
   </div>
 
-  <!-- 本周新供给 -->
+  <!-- 隐身模型 -->
   <div class="section">
-    <h2 class="section-title"><span class="ico">🧪</span> 本周新免费供给 · 都在开源侧</h2>
+    <h2 class="section-title"><span class="ico">🕵️</span> 第二批「隐身免费」：名字都还没定，先免费</h2>
     <div class="card-grid">
 
       <div class="card">
-        <div class="card-title">🦜 Aleph Alpha「Kolibri-1」：欧洲主权牌，78.1B Apache 2.0</div>
+        <div class="card-title">❓ Nous Portal <code>stealth/missingno</code>：$0 / 百万 tokens</div>
         <div class="card-body">
-          <p><b>10/3 德国统一日发布，78.1B 总参 / 仅 3.46B 激活</b>，德英双语、<b>262K 上下文</b>，权重已在 HuggingFace 以 <b>Apache 2.0</b> 放出（可商用）。</p>
+          <p>Nous Research 于 <b>10/10</b> 发帖：一款「<b>高 token 效率的编码与 Agent 推理模型</b>，在 Nous Portal 限时免费」，可在 Hermes Agent 里直接用。Portal 目录里以 <code>stealth/missingno</code> 标 <b>$0.00 / 百万</b>。</p>
           <div class="mini-tbl">
-            <div class="mini-row"><span class="k">为什么值得看</span><span class="v">跑分超 Nemotron 3 Super 与 GPT-OSS 120B；<b>德国 + 芬兰基建、无外国控制</b>，主打公共部门 / 工业 / 航空航天。</span></div>
-            <div class="mini-row"><span class="k">⚠️ 两个坑</span><span class="v">① 主线 llama.cpp / Ollama / LM Studio <b>还加载不了</b>（需社区补丁），Q4 量化约 <b>47.5GB</b>；② 发布方已于 9/16 与 Cohere 签合并协议，<b>「主权」的长期维护方未定</b>。</span></div>
-            <div class="mini-row"><span class="k">结论</span><span class="v"><b>已有 64GB+ 显存 / 内存再考虑尝鲜</b>；做德语业务可关注，做代码任务性价比不如 Qwen3.6-35B-A3B。</span></div>
+            <div class="mini-row"><span class="k">已知</span><span class="v">限时免费、编码 + Agent 方向、Nous 自称「token 高效」（<b>无任何数字佐证</b>）。</span></div>
+            <div class="mini-row"><span class="k">未公布</span><span class="v"><b>参数量、上下文、跑分、权重是否开放、截止日、之后价格——全部未知</b>。本质是匿名模型的「盲盒试用」。</span></div>
           </div>
         </div>
       </div>
 
       <div class="card">
-        <div class="card-title">⚡ HAL-X「THX-01」：322M 决策模型，API 完全免密钥</div>
+        <div class="card-title">🧩 Command Code <code>stealth/glyph-cluster:free</code>：256K，全档免费</div>
         <div class="card-body">
-          <p>非自回归小模型，<b>322M 参数</b>、Apache 2.0、权重 + 训练脚本全开；<b>托管 API 无需注册、无需 API Key</b>，约 <b>10ms</b> 出结果。</p>
+          <p>Command Code 新增隐身<b>推理</b>模型 <b>Glyph Cluster</b>，<b>256K 上下文</b>，<b>对所有档位免费</b>（含 $1 入门档），调用方式 <code>cmd --model stealth/glyph-cluster:free</code>。</p>
           <div class="mini-tbl">
-            <div class="mini-row"><span class="k">能干什么</span><span class="v">不是聊天模型——做<b>垃圾邮件判定 / 工单路由 / 发票字段抽取 / 有序打分 / 逐字摘录</b>，输出带校准概率的结构化答案。</span></div>
-            <div class="mini-row"><span class="k">跑分</span><span class="v">2,843 条多语言工单准确率 <b>98.4%</b>（Jev 1.13 为 97.4%），延迟约 <b>10ms vs 331ms</b>（官方称不同部署，非受控对比）。支持 18 种后训练语言。</span></div>
-            <div class="mini-row"><span class="k">适合谁</span><span class="v">要在流水线里塞一个<b>分类 / 抽取判别器</b>、又不想为一次分类付大模型钱的团队；<code>pip install thx01</code> 即可，也能跑在手机上。</span></div>
+            <div class="mini-row"><span class="k">值得注意</span><span class="v">Command Code 的免费隐身模型已是<b>连续第三个</b>（此前 Space Bunny Alpha、Pixel Canary，后者 9/30 到期下线）——<b>「隐身模型 + 全档免费」正成为招商标准动作</b>。</span></div>
+            <div class="mini-row"><span class="k">风险</span><span class="v">隐身模型通常<b>条款不透明、随时下线</b>；Command Code 官方口径是「不拿你的代码训练、taste 数据本地存」，但<b>具体条款仍建议自查</b>。</span></div>
           </div>
         </div>
       </div>
@@ -1063,64 +1100,44 @@
     </div>
   </div>
 
-  <!-- 量大免费档 -->
+  <!-- 国内 -->
   <div class="section">
-    <h2 class="section-title"><span class="ico">🎟️</span> 「量大能用」免费额度大盘（10/12 复核）</h2>
+    <h2 class="section-title"><span class="ico">🇨🇳</span> 国内侧：智谱「回工三连」+ 永久免费口径澄清</h2>
     <div class="card-grid">
       <div class="card">
-        <div class="card-title">🏅 国际侧：单日额度排名</div>
+        <div class="card-title">🎁 智谱：10/12 登录送 1 亿，五天累计 1.32 亿</div>
         <div class="card-body">
           <div class="mini-tbl">
-            <div class="mini-row"><span class="k">🥇 NVIDIA NIM</span><span class="v">开发者计划成员<b>免费原型访问</b>，手机验证后约 <b>40 req/min</b>——<b>单日量级仍是各家之首</b>。</span></div>
-            <div class="mini-row"><span class="k">🥈 Groq</span><span class="v">免费档 <b>30 req/min、1,000 req/日、8K tokens/min</b>（gpt-oss-120b、Qwen3.8 27B），LPU 上最快一档。</span></div>
-            <div class="mini-row"><span class="k">🥉 Cloudflare Workers AI</span><span class="v"><b>10,000 neurons/日</b>，是额度不是次数；目录内可用 <code>@cf/qwen/qwen3.8-27b</code> 等。</span></div>
-            <div class="mini-row"><span class="k">🇪🇺 OVHcloud</span><span class="v"><b>匿名档无需注册</b>即可发请求（2 RPM），<b>8 款免费模型</b>：Qwen3.8-27B、Qwen3.5-397B-A17B、Mistral-Small-3.2、Llama-3.3-70B 等，<b>GDPR 合规、欧盟机房</b>。</span></div>
-            <div class="mini-row"><span class="k">📱 应用侧</span><span class="v"><b>ChatGPT 免费档已上 GPT-6 Luna</b>（10/8 起，含 Intelligent UI 交互式回答）；<b>Gemini 应用免费档</b>仍是 Flash-Lite 级，Pro 需订阅。</span></div>
+            <div class="mini-row"><span class="k">发放节奏</span><span class="v"><b>10/12 登录直发 1 亿</b> tokens；<b>10/13–10/16 每天补发 800 万</b>；五天累计约 <b>1.32 亿</b>，零门槛。</span></div>
+            <div class="mini-row"><span class="k">⚠️ 别被「4 亿」带跑</span><span class="v">网传「普通用户最高 4 亿」是第三方按<b>非高峰半价 + 98% 缓存命中</b>估出的<b>等效量，不是发放额度</b>；<b>按 1.9 亿左右的真实直发量安排任务</b>。</span></div>
+            <div class="mini-row"><span class="k">永久免费那条</span><span class="v">官方定价页底部问答里的<b>永久免费 API</b> 是 <code>GLM-4.7-Flash</code>（200K）与 <code>GLM-4.6V-Flash</code>，输入/输出/缓存三项全免，但<b>并发仅 1 条</b>——适合低频兜底，不适合并发。</span></div>
+            <div class="mini-row"><span class="k">五折提醒</span><span class="v"><code>GLM-5.3-Flash</code> 输入限时五折至 <b>0.4 元 / 百万 token</b>（Batch 同折）。</span></div>
           </div>
         </div>
       </div>
       <div class="card">
-        <div class="card-title">🇨🇳 国内侧：手机号注册即得</div>
+        <div class="card-title">🧭 今天怎么动 · 三条路</div>
         <div class="card-body">
           <div class="mini-tbl">
-            <div class="mini-row"><span class="k">智谱 BigModel</span><span class="v"><b>GLM-Flash 永久免费</b>，另送 2000 万 token；中文写作首选。</span></div>
-            <div class="mini-row"><span class="k">火山引擎（豆包）</span><span class="v"><b>每日 200 万 tokens</b>，高并发场景；注册后需到控制台手动开通模型。</span></div>
-            <div class="mini-row"><span class="k">硅基流动</span><span class="v"><b>2000 万 token</b>，模型种类最多；注意 base_url <b>不要带 <code>/v1</code> 后缀</b>。</span></div>
-            <div class="mini-row"><span class="k">DeepSeek</span><span class="v"><b>300 万 token</b>，写代码首选。</span></div>
-            <div class="mini-row"><span class="k">⚠️ 避坑</span><span class="v">聚合网关（one-api 等）渠道类型要选 <b>type 16</b>，type 1 会 404；模型名须与后台渠道列表一致。</span></div>
+            <div class="mini-row"><span class="k">A · 要最强且免费</span><span class="v">走 <b>Step 5 Preview × WorkBuddy（10/12–10/25）</b>；或 Zen 的 <b>Step 5 Preview Free / Space Bunny Free</b>。<b>窗口短，当冲刺，不写进架构。</b></span></div>
+            <div class="mini-row"><span class="k">B · 要天天有量</span><span class="v">主力 <b>NIM（~1 万请求/日）</b>，备用 <b>Groq 1,000/日</b>、<b>Cloudflare 1 万 neurons/日</b>；国内用 <b>豆包 200 万 tokens/日</b> 或智谱永久档。</span></div>
+            <div class="mini-row"><span class="k">C · 要把判定做便宜</span><span class="v">把高频路由 / 门控 / 打分从「聊天模型」换成<b>决策模型</b>：<b>Decision-1（输出免费）</b>、<b>Clef-omni / d1-3B（开放权重）</b>现在就能试。</span></div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 选型建议 -->
-  <div class="section">
-    <h2 class="section-title"><span class="ico">🧭</span> 今天怎么选 · 三条路</h2>
-    <div class="card-grid">
-      <div class="card">
-        <div class="card-title">A · 要「最强」，不要钱</div>
-        <div class="card-body"><p>走 Zen 免费池的 <b>Step 5 Preview Free</b>（约一周、ZDR）或 <b>Space Bunny Free</b>；OpenRouter 侧用 <b>Nemotron 3 Ultra 550B</b>（1M 上下文）。<b>窗口短，当冲刺用，别写进架构。</b></p></div>
-      </div>
-      <div class="card">
-        <div class="card-title">B · 要「天天有量」</div>
-        <div class="card-body"><p>主力挂 <b>NIM（~1 万/日）</b>，备用 <b>Groq（1k/日）</b> 与 <b>Cloudflare（1 万 neurons/日）</b>；国内用 <b>豆包 200 万 tokens/日</b> 或 <b>智谱永久免费档</b>。<b>多供应商 fallback 是唯一稳态策略。</b></p></div>
-      </div>
-      <div class="card">
-        <div class="card-title">C · 要「不怕断供」</div>
-        <div class="card-body"><p><b>自托管是本期唯一的确定性增量</b>：Beam（本月 Apache 2.0）、Kolibri-1（已放权重）、THX-01（322M，可跑手机）。<b>免费 API 会缩表，权重不会。</b></p></div>
       </div>
     </div>
   </div>
 
   <div class="section">
     <div class="card risk-card">
-      <div class="card-title">⏰ 到期 / 波动提醒</div>
+      <div class="card-title">⏰ 到期 / 波动提醒（10/12 午后）</div>
       <div class="card-body">
         <div class="mini-tbl">
-          <div class="mini-row"><span class="k">本周内</span><span class="v"><b>Step 5 Preview</b>（10/8 起约一周）、<b>Zen 各 Free 通道</b>均为「limited time」制，随时可能转付费。</span></div>
-          <div class="mini-row"><span class="k">本月内</span><span class="v"><b>Beam 权重 Apache 2.0 放出</b>（early-access 候补中）；<b>Kolibri-1</b> 已可下载。</span></div>
-          <div class="mini-row"><span class="k">趋势</span><span class="v">两端接口池<b>同时缩表</b>（OR 零价持平但目录停滞、Zen −5）；免费供给的重心正从「送 API 额度」转向「放开源权重」。</span></div>
+          <div class="mini-row"><span class="k">本周内</span><span class="v"><b>Step 5 Preview</b> 各处免费窗口约一周；Zen 各 <b>Free 通道均为 limited time</b>，随时转付费。</span></div>
+          <div class="mini-row"><span class="k">10/15</span><span class="v"><b>Step 5 Preview 开源完整权重</b>（同日在 WorkBuddy 限免期内）；买断「限时」风险的唯一方式。</span></div>
+          <div class="mini-row"><span class="k">10/25</span><span class="v"><b>腾讯 WorkBuddy 独家限免结束</b>。</span></div>
+          <div class="mini-row"><span class="k">本月内</span><span class="v"><b>Beam 权重 Apache 2.0 放出</b>（early-access 候补中）；<b>Mistral Large 4 开源权重约 10/27</b>。</span></div>
+          <div class="mini-row"><span class="k">趋势</span><span class="v">免费 API 两端<b>同时缩表</b>；增量在<b>开源权重</b>与<b>新品类（决策模型输出免费）</b>——前者不会断供，后者把单位成本压到近零。</span></div>
         </div>
       </div>
     </div>
@@ -1129,12 +1146,12 @@
   <!-- 页脚 -->
   <div class="section">
     <p class="sub" style="line-height:1.9">
-    <b>口径说明：</b>本页数字为脚本清点时刻快照（2026-10-12 09:18 GMT+8）。OpenRouter 零价池按 <code>prompt=='0' and completion=='0'</code> 统计，<b>「零价但无 <code>:free</code> 后缀」的模型也已计入</b>；Zen 以<b>官方定价页 Free 行为准</b>，接口目录数为参考。
-    第三方聚合榜（freellm.net / llmperks / CostGoat 等）与官方目录存在滞后与计数差，本页已记录多处实证（已下架或已转付费的模型仍被标为免费 / Online），请勿单独据其做采购结论。
+    <b>口径说明：</b>本页接口数字为脚本清点时刻快照（<b>2026-10-12 13:15 GMT+8 午后复检</b>，与当日 09:18 上午快照逐条比对）。OpenRouter 零价池按 <code>prompt=='0' and completion=='0'</code> 统计，<b>「零价但无 <code>:free</code> 后缀」的模型也已计入</b>；Zen 以<b>官方定价页 Free 行为准</b>，接口目录数为参考。
+    第三方聚合榜（freellm.net / llmperks / CostGoat 等）与官方目录存在滞后与计数差（本期实证：<b>Microsoft-Decision-1 官网已列 OpenRouter，但 OpenRouter 的 <code>/models</code> 接口尚未收录</b>），请勿单独据其做结论。
     「开源」指权重公开，不代表可自由商用，商用前请逐条核对许可证（尤其 Kimi、GLM、Qwen、MiniMax、Mistral、Step、MiMo、Gemma、Kolibri 系列的许可与 Model-as-a-Service 条款）。
-    <b>Big Pickle / Exo / MiMo / Ling / Muse Spark Contributor / Nemotron Free 等「免费期数据可能用于训练或仅限试用」的通道：不要把机密代码、个人信息或生产客户数据放进去。</b>
-    本页提到的聚合网关（UnoRouter / OrcaRouter / Nous Portal / Kilo 等）上游不透明或无 SLA，仅建议用于试验与个人项目。</p>
-    <p class="sub">📅 生成时间：2026-10-12 · 本页由自动化任务每日生成 · 亮色 / 暗色主题可点击右上角切换</p>
+    <b>Big Pickle / Exo / MiMo / Ling / Muse Spark Contributor / Nemotron Free、以及 MISSINGNO / Glyph Cluster 等隐身或「数据可能用于训练 / 仅限试用」的通道：不要把机密代码、个人信息或生产客户数据放进去。</b>
+    本页提到的聚合网关（UnoRouter / OrcaRouter / Nous Portal / Kilo / Command Code 等）上游不透明或无 SLA，仅建议用于试验与个人项目。</p>
+    <p class="sub">📅 生成时间：2026-10-12 13:15 · 本页由自动化任务每日生成 · 亮色 / 暗色主题可点击右上角切换</p>
   </div>
 </div>
 
