@@ -975,79 +975,58 @@
       <h1>免费大模型日报</h1>
       <div class="date-chip">📅 2026 年 10 月 14 日 · 周三 · 13:11 清点</div>
       <div class="stats">
-        <div class="stat-card"><div class="stat-icon">📉</div><div class="stat-num">19 → 17</div><div class="stat-label"><b>OpenRouter 零价池两连出、4 期零进出被打破</b>：apodex-1.1-mini:free 下架（仅存活 6 天）、ling-3.1-flash 转付费，<code>:free</code> 15→14</div></div>
-        <div class="stat-card"><div class="stat-icon">⏳</div><div class="stat-num">明天 10/15</div><div class="stat-label"><b>Step 5 Preview 开源完整权重</b>（600B/27B、1M）：开源落地 = 不再依赖任何限免窗口，权重到手永久自部署</div></div>
-        <div class="stat-card"><div class="stat-icon">🌌</div><div class="stat-num">$2 / $10</div><div class="stat-label"><b>Gemini 4 Argon 进聚合渠道</b>：10/13 上架 OpenRouter（batch 半价 $1/$5）与 Zen（5 折）——旗舰到位但<b>无免费档</b></div></div>
-        <div class="stat-card"><div class="stat-icon">🆓</div><div class="stat-num">$0 输出</div><div class="stat-label"><b>scaledown 专用模型上架 OR</b>：summarize / extract（1M 上下文）<b>输出 $0</b>，输入仅 $0.04/M——「输出免费」赛道继续扩容</div></div>
+        <div class="stat-card"><div class="stat-icon">📉</div><div class="stat-num">19 → 17</div><div class="stat-label"><b>OR 零价池两连出</b>：apodex 下架、ling-3.1 转付费</div></div>
+        <div class="stat-card"><div class="stat-icon">⏳</div><div class="stat-num">明天 10/15</div><div class="stat-label"><b>Step 5 开源完整权重</b>（600B/27B、1M）</div></div>
+        <div class="stat-card"><div class="stat-icon">🌌</div><div class="stat-num">$2 / $10</div><div class="stat-label"><b>Gemini 4 Argon 上架 OR/Zen</b>，无免费档</div></div>
+        <div class="stat-card"><div class="stat-icon">🆓</div><div class="stat-num">$0 输出</div><div class="stat-label"><b>scaledown 双模型</b>：1M 上下文、输入 $0.04/M</div></div>
       </div>
     </div>
   </div>
 
   <!-- 头条 -->
   <div class="section">
-    <h2 class="section-title"><span class="ico">🔥</span> 今日头条 · 免费池开始收缩，开源倒计时进入最后一天</h2>
+    <h2 class="section-title"><span class="ico">🔥</span> 今日头条</h2>
     <div class="hot-grid">
 
       <div class="hot-item wb-box">
-        <div class="hot-link"><span class="hot-seal">① 池子异动 · 供给你方</span> OpenRouter 免费池连续 4 期零进出被打破：<b>两连出，19 → 17</b></div>
-        <div class="hot-body">
-          <b>与 10/13 快照逐条比对，零价池今天同时走了两个：10/8 才上架的 <code>apodex/apodex-1.1-mini:free</code> 整体下架（寿命仅 6 天）；昨天还居免费档智能分第一（41.1）的 <code>inclusionai/ling-3.1-flash</code> 转付费退出零价池。</b>
-          <div class="q-wrap">
-            <div class="q-cell"><div class="q-k">📉 连带清洗</div><div class="q-v">目录同步移除 <code>ling-3.0-flash-sante</code>、<code>ling-3.0-flash-fin</code>、旧版 <code>unbiased/pareto</code>（换上新版 pareto-26.9 / pareto-latest，$2.5/$7.5）。蚂蚁 Ling 系在 OR 的免费存在基本清零，免费额度转向 Zen 自家通道与官方平台。</div></div>
-            <div class="q-cell"><div class="q-k">🧭 应对</div><div class="q-v">聚合榜（modelgrep 等）仍把 ling-3.1-flash 标为免费第一——<b>已滞后</b>。免费档优先改用：<b>inkling-small:free</b>（1M、智能分 25.7）、<b>nemotron-3.5-lightning:free</b>（1M、81 t/s）、gemma-4 双子与 nemotron-3-ultra-550b（1M）。</div></div>
-          </div>
-        </div>
+        <div class="hot-link"><span class="hot-seal">① 免费池收缩</span> OR 零价池 4 期零进出被打破：<b>19 → 17 两连出</b></div>
+        <div class="hot-body">10/8 才上架的 <code>apodex-1.1-mini:free</code> 下架（仅活 6 天）；免费档智能分第一（41.1）的 <code>ling-3.1-flash</code> 转付费，蚂蚁 Ling 系在 OR 免费存在清零。聚合榜仍标其免费=滞后。<b>替代首选</b>：inkling-small:free（1M）、nemotron-3.5-lightning:free（1M、81 t/s）。</div>
       </div>
 
       <div class="hot-item wb-box">
-        <div class="hot-link"><span class="hot-seal">② 大厂动态 · 付费但必看</span> <b>Gemini 4 Argon</b> 上架 OpenRouter 与 Zen：单次输出上限 1M 的旗舰进聚合渠道</div>
-        <div class="hot-body">
-          <b>Google 9/30 受控发布的旗舰 Gemini 4 Argon（Fairwind 计划、暂不对普通用户开放）今天已可在聚合渠道直接调用：OpenRouter <code>google/gemini-4-argon</code> $2/$10 每百万、batch $1/$5；Zen 同步上架并标 5 折。无免费档，但值得盯后续降价与下放节奏。</b>
-          <div class="q-wrap">
-            <div class="q-cell"><div class="q-k">🧱 规格</div><div class="q-v"><b>单次输出上限 64K→1M</b>（多数前沿模型仅 ~128K）；DeepSWE v1.1 <b>77.9% 当前最高</b>、19 项基准 13 项领先、长视频理解 LVBench 91.7%。主打长周期工作流：代码迁移、深度研究、企业知识。</div></div>
-            <div class="q-cell"><div class="q-k">💰 价格信号</div><div class="q-v">推广期 $2/$10、缓存输入比标准低 95%，官方明示<b>后续将涨价</b>。对照自家 Gemini 3.1 Pro（$2/$12）并不贵；想白嫖同级的仍只有 AI Studio 免费层的 Flash 系（免费 10 RPM / 20 RPD）。</div></div>
-          </div>
-        </div>
+        <div class="hot-link"><span class="hot-seal">② 旗舰上架</span> <b>Gemini 4 Argon</b> 进 OR 与 Zen：输出上限 1M</div>
+        <div class="hot-body">OR <code>google/gemini-4-argon</code> <b>$2/$10</b>（batch 半价）、Zen 5 折；单次输出 64K→1M、DeepSWE 77.9% 当前最高。推广价官方明示后续将涨，<b>无免费档</b>——同级白嫖仍只有 AI Studio 免费层 Flash 系。</div>
       </div>
 
     </div>
   </div>
 
-  <!-- 接口清点 -->
+  <!-- 接口清点：横排行式 -->
   <div class="section">
-    <h2 class="section-title"><span class="ico">📊</span> 接口清点（13:11 快照）：OR 两出五进，Zen 页面与接口「打架」</h2>
+    <h2 class="section-title"><span class="ico">📊</span> 接口清点（13:11 快照）</h2>
     <div class="card-grid">
-      <div class="card">
-        <div class="card-title">OpenRouter：462 / 17 / 14</div>
-        <div class="card-body">目录 <b>459→462</b>，零价池 <b>19→17</b>、<code>:free</code> <b>15→14</b>。新增：<code>google/gemini-4-argon</code>（+batch 版）、<code>liquid/lfm-2.5-24b-a2b</code>（$0.05/$0.70）、<code>unbiased/pareto-26.9</code> 与 <code>~unbiased/pareto-latest</code>，以及 <code>scaledown/summarize</code>、<code>scaledown/extract</code>——两个 1M 上下文专用模型，<b>输出 $0</b>、输入 $0.04/M，摘要 / 结构化抽取场景近乎白嫖。免费档排面：inkling-small（1M）、nemotron-3.5-lightning（1M）、nemotron-3-ultra-550b（1M）、gemma-4-31b（262K）。</div>
-      </div>
-      <div class="card">
-        <div class="card-title">OpenCode Zen：86 / 免费 11</div>
-        <div class="card-body">目录 <b>84→86</b>（+<code>gemini-4-argon</code> 5 折、+一个内部 <code>test</code>），免费 ID <b>11 不变</b>：big-pickle、space-bunny-free、cat-jam-free、step-5-preview-free、longcat-2.5-preview-free、mimo-v2.6-flash-free、ling-3.1-flash-free、nemotron-3.5-lightning-free、muse-spark-1.2/1.3-contributor-free、jev-1.13-free。<b>⚠️ 页面与接口不同步</b>：定价页 Free 行仍列 Exo / MiMo-V2.5 / Ling 3.0 Fin / Nemotron 3 Ultra 四条，但 API 已无对应端点——以接口为准，这几条随时可能正式退场。</div>
-      </div>
-      <div class="card">
-        <div class="card-title">隐身 / 限免扩散：Glyph Cluster 进 Vercel</div>
-        <div class="card-body">Command Code 的隐身推理模型 <code>stealth/glyph-cluster:free</code>（10/7 上线、256K、全档免费、100 请求/日）本周扩散至 <b>Vercel AI Gateway</b>（模型名 <code>stealth/glyph-cluster</code>，隐身期免费）——一个隐身模型多渠道铺货，比以往只在单站限免更进一步。⚠️ 官方标注<b>不走 ZDR</b>、数据可能用于训练，勿放机密内容。Nous Portal 的 <code>stealth/missingno</code>（$0）仍在。腾讯 WorkBuddy 侧：Step 5 限免至 10/25、Hy4 preview 夜间限免至 10/31。</div>
-      </div>
-      <div class="card">
-        <div class="card-title">长期白嫖口复核</div>
-        <div class="card-body">大盘稳定：<b>NVIDIA NIM</b>（GLM-5.3 每周 4T tokens 仍是最大方的单一通道）、<b>Groq</b>（1K 请求/日）、<b>Google AI Studio</b>（Flash 系免费层未受 App 砍档影响）、<b>Cloudflare</b> 10K neurons/日。国内：<b>腾讯 TokenHub</b> 混元 Lite 长期免费、<b>豆包</b> 200 万 tokens/日、<b>商汤 Token Plan</b> 不绑卡每 5 小时刷新、<b>讯飞 Spark Lite</b> 永久免费。小众但好用：<b>OVHcloud AI Endpoints</b> 欧洲机房 <b>免注册</b>匿名即用（8 款 Qwen3.8-27B / Qwen3.5-397B / Mistral / Llama，匿名 2 RPM）。</div>
+      <div class="card" style="grid-column:1/-1">
+        <div class="card-title">各通道一览</div>
+        <div class="card-body mini-tbl">
+          <div class="mini-row"><span class="k">OpenRouter</span><span class="v"><b>462 / 17 / 14</b>。新增 gemini-4-argon（+batch）、lfm-2.5-24b-a2b、pareto-26.9、<b>scaledown summarize/extract（输出 $0）</b>；出 apodex、ling-3.1。</span></div>
+          <div class="mini-row"><span class="k">OpenCode Zen</span><span class="v"><b>86 / 免费 11</b>（不变）。⚠️ 定价页 Free 行 13 与接口打架：Exo / MiMo-V2.5 / Ling-3.0-Fin / Nemotron-Ultra 页面在列、API 已无，<b>以接口为准</b>。</span></div>
+          <div class="mini-row"><span class="k">隐身扩散</span><span class="v"><code>glyph-cluster:free</code>（256K、全档免费、100 次/日）进 <b>Vercel AI Gateway</b>；⚠️ 不走 ZDR，勿放机密数据。Nous <code>missingno</code> 仍在。</span></div>
+          <div class="mini-row"><span class="k">长期白嫖口</span><span class="v">NIM（GLM-5.3 周 4T）、AI Studio Flash 系、Groq 1K/日、Cloudflare 1 万 neurons/日、豆包 200 万/日、商汤不绑卡、讯飞 Spark Lite、<b>OVHcloud 免注册</b>匿名 2 RPM。</span></div>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- 时间线 -->
   <div class="section">
-    <h2 class="section-title"><span class="ico">📅</span> 未来两周 · 关键节点</h2>
+    <h2 class="section-title"><span class="ico">📅</span> 关键节点</h2>
     <div class="card-grid">
-      <div class="card">
-        <div class="card-title">时间线与判断</div>
+      <div class="card" style="grid-column:1/-1">
+        <div class="card-title">未来两周</div>
         <div class="card-body mini-tbl">
-          <div class="mini-row"><span class="k">10/15（明天）</span><span class="v"><b>Step 5 Preview 开源完整权重</b>（600B/27B、1M、文本+视觉）——免费供给从「限时 API」转向「永久权重」的关键一手。</span></div>
-          <div class="mini-row"><span class="k">10 月中旬</span><span class="v"><b>Kimi K3.1</b> 传发布（野纳证券消息：Agent 长任务、百万上下文、三档推理强度；未官宣，暂无免费通道）。</span></div>
-          <div class="mini-row"><span class="k">10/25</span><span class="v"><b>WorkBuddy 独家限免结束</b>（Step 5 Preview）；Zen 各 Free 通道均 limited time。</span></div>
-          <div class="mini-row"><span class="k">本月内</span><span class="v"><b>Beam 权重 Apache 2.0 放出</b>（Reflection AI）；<b>Mistral Large 4 权重约 10/27</b>。</span></div>
-          <div class="mini-row"><span class="k">观察</span><span class="v">OR 零价池 4 期零进出被打破、两连出；免费供给收缩时，<b>开源权重 + 隐身限免 + 输出免费专用模型</b>是仅存的三条增量线。</span></div>
+          <div class="mini-row"><span class="k">10/15</span><span class="v"><b>Step 5 开源完整权重</b>——免费不再依赖限免窗口。</span></div>
+          <div class="mini-row"><span class="k">10 月中旬</span><span class="v"><b>Kimi K3.1</b> 传发布（Agent 长任务、1M；未官宣）。</span></div>
+          <div class="mini-row"><span class="k">10/25</span><span class="v">WorkBuddy 限免结束；本月内 Beam 权重、Mistral Large 4 权重约 10/27。</span></div>
         </div>
       </div>
     </div>
@@ -1056,12 +1035,8 @@
   <!-- 页脚 -->
   <div class="section">
     <p class="sub" style="line-height:1.9">
-    <b>口径说明：</b>本页接口数字为脚本清点时刻快照（<b>2026-10-14 13:11 GMT+8</b>，与 10/13 快照逐条比对）。OpenRouter 零价池按 <code>prompt=='0' and completion=='0'</code> 统计，<b>「零价但无 <code>:free</code> 后缀」的模型也已计入</b>；Zen 以接口免费 ID 数为准，官方定价页列数仅作参考。
-    第三方聚合榜（freellm.net / modelgrep / free-llm.com 等）与官方目录存在滞后与计数差（modelgrep 今日仍把已转付费的 ling-3.1-flash 标为免费第一），请勿单独据其做结论。
-    「开源」指权重公开，不代表可自由商用，商用前请逐条核对许可证。
-    <b>隐身或「数据可能用于训练 / 仅限试用」的通道（glyph-cluster / missingno / 各 stealth 等）：不要把机密代码、个人信息或生产客户数据放进去。</b>
-    本页提到的聚合网关（Nous Portal / Kilo / Command Code / Vercel AI Gateway 等）上游不透明或无 SLA，仅建议用于试验与个人项目。</p>
-    <p class="sub">📅 生成时间：2026-10-14 13:11 · 本页由自动化任务每日生成 · 亮色 / 暗色主题可点击右上角切换</p>
+    <b>口径：</b>脚本清点快照（2026-10-14 13:11 GMT+8，对 10/13 逐条比对）。OR 零价池含无 <code>:free</code> 后缀的零价模型；Zen 以接口为准。聚合榜有滞后；「开源」≠可自由商用。<b>隐身/试用通道勿放机密数据。</b></p>
+    <p class="sub">📅 2026-10-14 13:11 自动生成 · 右上角切换亮/暗主题</p>
   </div>
 
 </div>
