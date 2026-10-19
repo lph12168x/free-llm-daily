@@ -6,47 +6,44 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
-## 📰 今日摘要（2026-10-16）
+## 📰 今日摘要（2026-10-19）
 
-> 本期主线：**Meta 重返开放权重**——**Muse Spark Open**（816B/42B 激活、1M、原生多模态）发布，号称"迄今美国最强开放权重模型"，还与苹果合作让两台 Mac Studio 即可本地跑；同时 **Step 5 免费窗如期关闭**，白嫖余温只剩 NIM 与自部署。
+> 本期主线：**Reflection Beam 1.0 权重开源**（Apache 2.0，501B/23B、1M）——隐身三连揭晓：OpenCode `cat-jam`、Nous `MissingNo` 都是它，免费入口 5 处同时在线；**中国电信 TeleAI Xing4.0** 上 OR 免费档；Zen 空降新隐身 `ll-alpha-free`（仅定价页可见）。
 
 | 数字 | 含义 |
 | --- | --- |
-| **816B / 42B** | **Meta Muse Spark Open 开放权重**：1M 上下文、原生多模态（文/图/视频/音频）、主攻编码与 Agent；API **$1.25/$4.25** 上 OpenRouter 等 7 平台，权重上 HF / SageMaker / GCP / Foundry（Muse Model License 有限商用）；**与苹果合作 MLX 优化，两台 M5 Ultra Mac Studio（约 1TB 统一内存）本地可跑**；工具调用 6 项测试第一，但终端编程 / 长周期 SWE **仍落后 Kimi K3、GLM-5.3**，最强 Muse Wonder 维持闭源 |
-| **$1 / $2.7** | **Step 5 Preview 免费窗如期关闭**（预测兑现）：Zen 已下架 `step-5-preview-free`，Cline / Nous / Kilo 10/15–16 恢复标价——免费一周烧掉 **12.1T tokens**（OR 周榜第二）；余温：**NVIDIA NIM 仍免费**（40 RPM）+ 10/15 权重已开源可自部署 |
-| **17 → 18** | **OR 零价池转增**：**+`nemotron-3.5-super-vl:free`**（120B/12B 激活多模态、1M，Zen 同步上免费端点）、+meta/muse-spark-open、+moondream3 / moondream3.1（9B/2B VLM，$0.30/$2.50）；−claude-sonnet-4、−pareto-26.10-preview；目录 462→465 |
-| **85 → 86** | **Zen 免费 ID 10**：进 `deepseek-v4.1-flash-free`（回归）与 `nemotron-3.5-super-vl-free`，出 `step-5-preview-free`；定价页 Free 行 13 vs 接口 10，以接口为准 |
+| **501B 开源** | **Beam 1.0 权重开源**（10/16）：Apache 2.0、不禁蒸馏；BF16≈934GB / FP8≈469GB / NVFP4≈273GB + DFlash2 投机解码，自部署推荐 4×B300；自报 SWE-bench 81.6%、Terminal-Bench 2.1 80.1%，**AA 30 分＝美国开放权重第二**；OR 走 Nebius **$0.25/$1** |
+| **5 处免费** | **Beam 免费入口**：Reflection 官 API **免费公测**、Zen `beam-free`、Vercel AI Gateway `reflection/beam-free`、Nous Portal；⚠️ 限免无截止日、**无 ZDR（30 天留存）**，Zen 侧对中国大陆及港澳不可用 |
+| **18 → 19** | **OR 零价池 +1**：+`xingchen-agi/xing4.0-29b-a4b:free`（中国电信 TeleAI，29B/4B、原生 256K、工具调用+结构化输出、**200 请求/日**；权重开源，GGUF **16GB 内存可跑**）；付费新上架 beam-1.0、deepseek-v4.1-flash-1017（$0.30/$1.20）、pareto-26.10、elorian/glimpse、qwen3.7-plus:batch；目录 465→471 |
+| **86 → 85** | **Zen 免费 ID 11→10**：+`beam-free`、+`glm-5.3-flash-free` 回归；−`cat-jam-free`（揭晓下架）、−`muse-spark-1.2/1.3-contributor-free`（贡献者免费撤销）；⚠️ 定价页 Free 行 **14** vs 接口 10，**新隐身 `ll-alpha-free`（30 天留存）仅页面可见**，以接口为准 |
 
 ---
 
-### 🦙 **Meta Muse Spark Open：重返开放权重 + 携手苹果**
+### 🧠 **Beam 1.0：权重开源落地，隐身谜底一次揭开**
 
-Meta 在 10/15（美东周四）发布开放权重模型 **Muse Spark Open**，自评"迄今美国能力最强的开放权重模型"。要点：**816B 总参 / 42B 激活稀疏 MoE、1M 上下文、原生多模态**，专为长周期 Agent 任务与复杂软件工程优化。权重上 Hugging Face / SageMaker / Google Cloud Model Garden / Foundry（**Muse Model License、有限商用**）；API 走 Baseten、Fireworks、Groq、Modal、Nebius、**OpenRouter**、Together。最大看点是与**苹果合作**：MLX 优化后**两台 M5 Ultra Mac Studio（各 512GB 统一内存，协同约 1TB）即可本地运行**。跑分方面工具调用 6 项测试第一，但**终端编程 / 长周期 SWE / GDPVal-AA 落后 Kimi K3 与 GLM-5.3**；首席 AI 官汪滔明说"最强模型通常不开源"——Muse Wonder 维持闭源，分层策略 = 开放权重铺生态、闭源保前沿。
+Reflection AI 首个开放权重模型 **Beam 1.0** 10/16 上线 HF：501B 总参 / 23B 激活稀疏 MoE、1M 上下文、256 专家，**Apache 2.0 且明示不禁蒸馏/微调/合并**。自报 SWE-bench Verified 81.6%、TB2.1 80.1%，AA 独立 30 分＝**美国开放权重第二**（仍落后中国第一梯队）。同日 **OpenCode `cat-jam`、Nous `MissingNo` 两个隐身模型揭晓均为 Beam**——隐身试用的标准剧本：匿名收集反馈、揭晓时转正。免费白嫖路径齐全：**Reflection 官 API 免费公测**、Zen `beam-free`、Vercel AI Gateway（可接 Claude Code / Cursor）、Nous Portal；OR 上 Nebius 托管仅 **$0.25/$1**。注意：限免无截止日、**不支持 ZDR**（30 天留存），公司代码别放。
 
-### ⏰ **Step 5 免费窗关闭：营销窗口的完整生命周期**
+### 🆓 **国产侧：Xing4.0 免费 + Nous 免费档上新**
 
-上期预测今日兑现：Zen 下架免费档，Cline / Nous / Kilo 三处恢复 **$1/$2.7** 标价。复盘：免费一周贡献 **12.1T tokens**（OR 周榜全球第二），但 Arena 综合仅 83 名、输出又冗长——"免费榜排名" ≠ 真实口碑。白嫖不中断的两条路：**NVIDIA NIM 的 step-5-preview 仍免费**（40 RPM），**10/15 权重已开源**（BF16+FP8 上 HF/ModelScope），自部署随时可跑。
+- **中国电信 TeleAI（星晨）Xing4.0-29B-A4B**：10/16 上 OR 免费档，29B/4B MoE、原生 256K、支持工具调用与结构化输出；权重开源（GitHub/ModelScope），GGUF 后 **16GB 内存笔记本可跑**，繁中写作口碑好、代码推理一般。
+- **Nous Portal 免费档扩容**：`stepfun/step-3.7-flash:free`（阶跃 5 月开源的 196B/11B、400 TPS）、`meituan/longcat-2.0:free`（1M）；UnoRouter / ZenMux / Kenari 也有 step-3.7-flash 免费镜像。
+- **端侧再下探**：面壁 **MiniCPM-V 4.7**（10/13，35B-A3B 端侧 MoE）在 iPhone 17 Pro Max 上 **3GB 内存 13+ tok/s**。
 
-### 💻 **本地白嫖大扩容：Nemotron 3.5 Bolt + Moondream 3.1**
+### 📊 **接口清点（09:36）**
 
-- **Nemotron 3.5 Bolt 74B-A9B**（10/15 全开源，权重+数据+配方）：2-bit 量化感知训练把 74B/9B 激活压进 **24GB**，llama.cpp / vLLM / Ollama / LM Studio 首日支持——单卡/笔记本本地 Agent 新选项。
-- **Moondream 3.1**（9B/2B 激活 VLM）：开源小视觉模型，同步上架 OR（$0.30/$2.50）。
-- 加上 Step 5 权重落地，**「自部署免费」供给线本周明显强于「限免 API」**。
-
-### 📊 **接口清点（13:11）**
-
-- **OpenRouter**：目录 **462→465** / 零价 **17→18** / `:free` **15**。进出见上表。
-- **OpenCode Zen**：接口 **85→86**，免费 ID **10**；定价页 Free 行 13 与接口 10 口径差持续（exo / mimo-v2.5 / nemotron-3-ultra 页面在列、API 已无），**以接口为准**。
-- **隐身免费未动**：Zen `cat-jam-free` / `big-pickle` / `space-bunny-free`、Nous `stealth/missingno`、Command Code `glyph-cluster:free` 均在。
-- **长期白嫖口**：NIM（GLM-5.3、Step 5）、AI Studio Flash 系、Groq、Cloudflare、豆包 200 万 tokens/日、商汤、讯飞 Spark Lite。
+- **OpenRouter**：目录 **465→471** / 零价 **18→19**（仅 +Xing4.0:free，进出集中在付费档）。
+- **OpenCode Zen**：接口 **86→85**，免费 ID **11→10**；定价页 Free 行 **14** vs 接口 10——**新隐身 `ll-alpha-free`（30 天留存）及 exo / mimo-v2.5 / nemotron-ultra 免费仅页面可见**，以接口为准。
+- **隐身免费未动**：Command Code / Vercel / Kilo 的 `glyph-cluster:free`（$0，CC 档 100 请求/日）、Zen `big-pickle` / `space-bunny-free` 均在。
+- **长期白嫖口**：NIM、AI Studio Flash 系、Groq、Cloudflare、豆包 200 万 tokens/日、商汤、讯飞 Spark Lite。
 
 ### ⏳ **到期红线**
 
-- **10 月内（传闻）** — **Fable 5.5、Grok 4.8、Kimi K3.1、GPT-6.1 Sol Ultrafast** 均传 10 月发布
-- **10/31** — **Mistral Large 4 权重**（1.05T/49B）开源
-- **soon** — **Space Bunny 揭名**（OR 官方口径，社区最猜 MiniMax M3.1-Flash-Preview）
+- **10/27** — **Mistral Large 4 权重开源**（1.05T/49B，Cybench 93%、漏洞复现修补 82% 全场最高；Reuters 口径）
+- **10 月内（传闻）** — **Kimi K3.1**（野村传中旬，今日未至）、Fable 5.5、Grok 4.8、GPT-6.1 Sol Ultrafast
+- **11/30** — Zen 上 **Gemini 4 Argon 5 折**（$2/$10）截止
+- **soon** — **Space Bunny 揭名**（OR 官方口径）；Zen `ll-alpha-free` 身份待揭晓
 
-> **口径说明**：本页数字为脚本清点时刻快照（**2026-10-16 13:11 GMT+8**，与 10/15 快照逐条比对）。OpenRouter 零价池按 `prompt=='0' and completion=='0'` 统计，「零价但无 `:free` 后缀」的模型也已计入；Zen 以**接口免费 ID 数为准**（定价页 Free 行仅作参考，两头长期打架）。第三方聚合榜与官方目录存在滞后与计数差，请勿单独据其做结论。「开源」指权重公开，不代表可自由商用。**隐身或「数据可能用于训练」的通道：不要把机密代码、个人信息或生产客户数据放进去。**
+> **口径说明**：本页数字为脚本清点时刻快照（**2026-10-19 09:36 GMT+8**，与 10/16 快照逐条比对）。OpenRouter 零价池按 `prompt=='0' and completion=='0'` 统计，「零价但无 `:free` 后缀」的模型也已计入；Zen 以**接口免费 ID 数为准**（定价页 Free 行仅作参考）。第三方聚合榜与官方目录存在滞后与计数差，请勿单独据其做结论。「开源」指权重公开，不代表可自由商用。**隐身或「数据可能用于训练」的通道：不要把机密代码、个人信息或生产客户数据放进去。**
 
 ---
 
