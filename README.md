@@ -8,7 +8,7 @@
 
 ## 📰 今日摘要（2026-10-19）
 
-> 本期主线：**Reflection Beam 1.0 权重开源**（Apache 2.0，501B/23B、1M）——隐身三连揭晓：OpenCode `cat-jam`、Nous `MissingNo` 都是它，免费入口 5 处同时在线；**中国电信 TeleAI Xing4.0** 上 OR 免费档；Zen 空降新隐身 `ll-alpha-free`（仅定价页可见）。
+> 本期主线：**Reflection Beam 1.0 权重开源**（Apache 2.0，501B/23B、1M）——隐身三连揭晓：OpenCode `cat-jam`、Nous `MissingNo` 都是它，免费入口 5 处同时在线；**中国电信 TeleAI Xing4.0** 上 OR 免费档；Zen 空降新隐身 `ll-alpha-free`（仅定价页可见）。午后复检两池零变动，新收录聚合网关 Token Harbor。
 
 | 数字 | 含义 |
 | --- | --- |
@@ -29,10 +29,12 @@ Reflection AI 首个开放权重模型 **Beam 1.0** 10/16 上线 HF：501B 总�
 - **Nous Portal 免费档扩容**：`stepfun/step-3.7-flash:free`（阶跃 5 月开源的 196B/11B、400 TPS）、`meituan/longcat-2.0:free`（1M）；UnoRouter / ZenMux / Kenari 也有 step-3.7-flash 免费镜像。
 - **端侧再下探**：面壁 **MiniCPM-V 4.7**（10/13，35B-A3B 端侧 MoE）在 iPhone 17 Pro Max 上 **3GB 内存 13+ tok/s**。
 
-### 📊 **接口清点（09:36）**
+### 📊 **接口清点（09:36 / 13:11 双时点）**
 
 - **OpenRouter**：目录 **465→471** / 零价 **18→19**（仅 +Xing4.0:free，进出集中在付费档）。
 - **OpenCode Zen**：接口 **86→85**，免费 ID **11→10**；定价页 Free 行 **14** vs 接口 10——**新隐身 `ll-alpha-free`（30 天留存）及 exo / mimo-v2.5 / nemotron-ultra 免费仅页面可见**，以接口为准。
+- **午后 13:11 复检**：OR 471 / 零价 19 / `:free` 16，Zen 85 / 免费 9、页 Free 14，两池逐条与晨间一致（日内零变动）。
+- **新挖通道 Token Harbor**（tokenharbor.ai）：聚合网关 Free 档 $0 无需绑卡，免费额度 7 天滚动刷新，当前免费阵容 MiMo V2.6 Flash / DeepSeek V4.1 Flash / 隐身 `th-rudder`；免费模型需在控制台手动启用，免费路由数据可能留存。
 - **隐身免费未动**：Command Code / Vercel / Kilo 的 `glyph-cluster:free`（$0，CC 档 100 请求/日）、Zen `big-pickle` / `space-bunny-free` 均在。
 - **长期白嫖口**：NIM、AI Studio Flash 系、Groq、Cloudflare、豆包 200 万 tokens/日、商汤、讯飞 Spark Lite。
 
