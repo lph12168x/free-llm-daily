@@ -6,6 +6,19 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-02）
+
+> 本期主线：**Poolside Laguna 全线停服兑现**——OR 两枚免费券谢幕（`:free` 16→14）；**DeepSeek Search/Fetch 免费窗如期截止**转收费；Zen 付费档 −2、免费 ID 8 持平。
+
+| 数字 | 含义 |
+| --- | --- |
+| **−2 券** | **Poolside Laguna 停服兑现**：OR 四款（付费 + `laguna-s-2.1:free` / `laguna-xs-2.1:free`）10/31 全部下架（456→452、零价 19→17、`:free` 16→14，一退零进无补位）；Nous `:free` 同步 6→4。官方 Chat 页 10/31 关停，但权重仍以 OpenMDW-1.1 开放（S 2.1 118B/8B、1M ctx；XS 33B/3B、256K）——要白嫖只能自部署。剩余编程向免费券：`recursive/flint-v1.0:free`、`cohere/north-mini-code:free` |
+| **已截止** | **DeepSeek Search/Fetch 免费窗 11/1 00:00（北京）截止**：之后 $0.75/千次成功请求（5 元）；失败请求、空结果与超时不计费；对标 Brave（$5/千次）、Tavily（$8–16）仍低一个量级，但「白嫖搜索」窗口正式关闭 |
+| **80→78** | **Zen 付费档 −2**（`gemini-3-flash`、`gemini-3.1-pro` 退场）；免费 ID 8 零变动（`big-pickle` + 7 款 `-free`）；官方页 Free 区仍列 10 行（含接口无的 `nemotron-3-ultra-free`、`jev-1.13-free`），页面滞后持续，以接口为准 |
+| **限免/前瞻** | 七牛云 `conatus-free`（至 11/30、每日 1 亿 token、充值后最高 10 亿）；Kimi K3.1 Pro 已上七牛等聚合平台（$2/$10、Highspeed $4/$20），**11/4 完整权重开源**（官方口径「11/4 前开放」，截至今晨未放出）；ZCode 每日 3 亿 GLM-5.3-Flash；11/17 Google Opal 停用；11/30 conatus-free + Argon 5 折到期；12/31 OR `dots-3-note-preview:free` 下架；freellm.net 541+ 款/31 家/249 实测（快照 10/27），NIM GLM-5.3（94）居首 |
+
+---
+
 ## 📰 今日摘要（2026-10-30）
 
 > 本期主线：**Zen 免费席位缩水**（Jev Free 撤下，免费 ID 9→8）；**DeepSeek Search/Fetch 免费窗明日截止**（今天最后一天）；**Upstage Solar Pro 3 停服兑现**，OR 免费池三连稳；Nous `:free` 6 款官方确认。
