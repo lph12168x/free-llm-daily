@@ -6,6 +6,20 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-09）
+
+> 本期主线：**Inkling 2 Small 发布即上 Zen 免费席**（594B/A17B，AA 31 分、美国开源模型第一）；**OR 免费池 18→16**（Inception Mercury 全系从 OR+Nous 退场）；**Gemini Omni 1.2 Flash** 视频生成降价 30%。
+
+| 数字 | 含义 |
+| --- | --- |
+| **594B** | **Inkling 2 Small（Thinking Machines，11/6）**：594B/A17B MoE，AA 综合分 13→31 登顶美国开源第一（前三均为中国模型：K3.1 Pro 46 / DS V4.1 Flash 33 / GLM-5.3 32）。发布即隐身上架 Zen `inkling-2-small-free`（与 `iceman-free` 同日入席），官方承诺下周 Apache 2.0 开源权重。注意「话多」：单任务平均输出约 15 万 token、成本 $1.18、耗时 21 分钟；预训练数据披露采样自 Kimi K3 |
+| **18→16** | **OR 免费池收缩**：Mercury 2/2.5/3 从 OR+Nous 双池整体撤下（Mercury 3 上架不足三周）、Inkling 两枚 `:free` 转 `:batch` 付费档；唯一进账 `liquid/lfm-3-1.7b:free`（1.7B/256K、工具调用）。OR 总量 455→461，:batch 批量档上新 8 款。Nous `:free` 3→4：新上 `meituan/longcat-2.5:free` |
+| **11 席** | **Zen 免费席换血**：`pulse-alpha-free` 上架仅 4 天于 11/6 弃用；+`inkling-2-small-free`、+`iceman-free`，免费 ID 10→11。官方页 Free 区列 14 行（含接口未见的 jev-1.13-free / nemotron-3-ultra-free，页面滞后）。价格：`gpt-oss-120b` 输出 $0.09→$0.60 涨回 6.9×；`glm-5.3` 输出 $3.60→$1.40；`deepseek-v4-pro` 半价 |
+| **-30%** | **Gemini Omni 1.2 Flash（11/5）**：15 秒原生视频、720p $0.07/秒（降 30%），Arena 文/图生视频双榜首；OR 按分辨率分档计价；Google Vids 普通账号每月免费 3 条。另：Ripple-65B Preview（Apache 2.0）上 OR（$0.20/$0.60） |
+| **限免/预警** | 混元 **Hy4 限免至 11/15**（WorkBuddy 0 倍率每日额度，首日挤爆已十倍扩容）、Hy3 同步延至 11/15；阿里千问双 11 会场 11/5 开场；StepAudio 3 已于 11/8 收官。前瞻：11/10 Vercel SR 截止、11/15 Hy3/Hy4、11/17 Opal 停用、11/30 conatus-free；freellm.net 531+/31 家/240 实测 |
+
+---
+
 ## 📰 今日摘要（2026-11-04）
 
 > 本期主线：**Kimi K3.1 Pro 完整权重如期开源**（AA 55 分、开源第一）；**腾讯混元 Hy4 正式版发布**（770B、首次视觉+Computer Use，权重近期开源）；**Crouton Alpha 隐身模型双池免费**（OR $0 + Zen -free，免费席位 9→10）。
