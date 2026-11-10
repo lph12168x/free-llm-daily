@@ -6,6 +6,20 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-10）
+
+> 本期主线：**Claude Fable 5.2 发布即三池同步上架**（$8/$40 降 20%、FrontierCode 2.0 49.1%）；**Meta Muse Ember** 追平 Haiku 5.5 成本仅 1/3；**Inkling-2-small :free 回归 OR**、Crouton Alpha 三处退场；**Zen 免费席 11→12**。
+
+| 数字 | 含义 |
+| --- | --- |
+| **$8/$40** | **Claude Fable 5.2（Anthropic，11/10）**：FrontierCode 2.0 32.4%→49.1% 超 Opus 5.5（45.5%）与 GPT-6 Astra（42.8%），输出提速 30%；$8/$40 较上代（$10/$50）降 20%，OR `:batch` 档 $4/$20 再半价，fast mode $16/$80 提速 2.5×。OR/Zen/Nous 三池当日同步上架，`~claude-fable-latest` 跟随降价。官方案例：千智能体 30 小时形式化费马大定理 |
+| **AA 36** | **Meta Muse Ember（11/9）**：Meta 最小最高效模型，$0.10/$0.50（缓存 $0.004）、1M 上下文 / 512K 输出、原生多模态；AA 智能指数 36 追平 Claude Haiku 5.5 max，单任务成本 $0.14 仅 1/3，定位 agent 高频作业。已上 OR / Zen / Nous；同日上架 Nex-N2.6（GLM-5.3-Flash 后训，321B、$0.12/$0.40） |
+| **:free 13** | **OR 免费池 +1**（465 / 零价 16 / :free 13）：`inkling-2-small:free` 回归零价池（昨日 :batch 今日 :free，1M）；新上 fable-5.2 + :batch、muse-ember、nex-n2.6、qwen3.8-max-0902:batch；退场 `stealth/crouton-alpha`（存活 6 天，三处同步撤）与 minimax-m1。价格：glm-5.3-flash 输入涨 4.5×/输出涨 6×、kimi-k3:batch 涨 2.5×、gemma-4-26b 输出降 55% |
+| **11→12** | **Zen 免费席扩容**：+`longcat-2.5-free`（每日限 100 次、零保留、托管中国）+`minimax-m3.1-flash-free`，−`crouton-alpha-free`；付费 +fable-5.2 / +muse-ember-1.0。折扣：Gemini 3.6/3.7/3.8 Flash 全线 5 折 $0.75/$3.75（12/31 截止、2027-01-01 恢复原价）；Sonnet 5.5 缓存读取半价。Nous :free 4 持平 |
+| **限免/预警** | ⚠️ Vercel Security Review 公测免费 11/10 截止转按量计费；混元 Hy4/Hy3 限免至 11/15；本周 Inkling 2 Small 权重 Apache 2.0 开源；11/17 Google Opal 停用；11/30 conatus-free；12/31 Zen Gemini Flash 5 折截止。freellm.net 531+/31 家/240 实测（NIM GLM-5.3-Flash 90 居首） |
+
+---
+
 ## 📰 今日摘要（2026-11-09）
 
 > 本期主线：**Inkling 2 Small 发布即上 Zen 免费席**（594B/A17B，AA 31 分、美国开源模型第一）；**OR 免费池 18→16**（Inception Mercury 全系从 OR+Nous 退场）；**Gemini Omni 1.2 Flash** 视频生成降价 30%。
