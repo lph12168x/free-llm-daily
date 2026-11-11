@@ -6,6 +6,20 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-11）
+
+> 本期主线：**Gemini 4 Carbon 全量开放**（$2/$10 推广价至 11/30、12/1 翻倍，OR/Zen/Nous 三池同上）；**百度 ERNIE 5.5 Flash Preview 出海**（OR+Nous 双池）；**OR 免费池 11/09 后首度缩减**（xing4.0:free 退场）；**GLM-5.3-Flash 价格暴涨全回吐**。
+
+| 数字 | 含义 |
+| --- | --- |
+| **$2/$10** | **Gemini 4 Carbon GA（Google，11/10）**：最强推理模型两周 Fairwind 网安内测后面向所有付费开发者开放；$2/$10 推广价至 11/30（12/1 起 $4/$20）、`:batch` $1/$5、缓存输入 95% 折扣、1M 上下文、thinking_level 三档。官方称 CursorBench 4.0 / WANDR / AutomationBench 三榜第一、单任务成本不足次优外部模型一半；Antigravity 预览 /swarm 多智能体。OR/Zen（5 折同价）/Nous 三池当日同上；免费档暂不可用 |
+| **$0.28/$1.13** | **百度 ERNIE 5.5 Flash Preview（11/10）**：280B/A14B、1M 上下文、>200 tok/s，OR+Nous 双池上架（Qianfan 缓存命中实测输入 $0.077）；同场 `ernie-light-dt-1.0-intl`（基于开源 GLM + 自研 BSA 稀疏注意力，1M、$1.13/$3.94）。Base 权重已开源：年收入 ≤$5000 万商用免许可费，EU/UK/韩国除外 |
+| **:free 12** | **OR 免费池 11/09 后首度缩减**（469 / 零价 15 / :free 12，+6/−2）：退场 `xingchen-agi/xing4.0-29b-a4b:free`（10/19 上架存活 3 周+）与 qwen-2.5-7b；新上 gemini-4-carbon + :batch、ernie 两枚、KT Mi:dm K 3.0 Pro（120B/A12B Mamba-MoE、$0.20/$0.80）与 Motif 3（314B/A13.2B、$0.30/$1.20）。价格：glm-5.3-flash 回落至 $0.0399/$0.0784（昨日 4.5×/6× 暴涨几乎全回吐）；kimi-latest 输出 +18% |
+| **398 / :free 3** | **Nous Portal**：396→398，+ernie×2、gemini-4-carbon + :batch；退场 `reflection/beam-1.0-501b-a23b:free`（免费券到期，Beam Free 仍在 Zen）。现 :free 3 款：longcat-2.5、step-3.7-flash、solar-mini4。**Zen** 84→85（付费 +gemini-4-carbon 5 折），免费席 12 持平（官方页 Free 区 14 行仍滞后） |
+| **限免/前瞻** | 混元 Hy4/Hy3 限免至 11/15 + TokenHub 5 折至 12/31；本周 Inkling 2 Small 权重 Apache 2.0；11/17 Google Opal 停用；11/30 conatus-free + Carbon/Argon 推广价截止；12/1 Carbon 价格翻倍生效。freellm.net 532+/31 家/241 实测（NIM GLM-5.3-Flash 90 居首） |
+
+---
+
 ## 📰 今日摘要（2026-11-10）
 
 > 本期主线：**Claude Fable 5.2 发布即三池同步上架**（$8/$40 降 20%、FrontierCode 2.0 49.1%）；**Meta Muse Ember** 追平 Haiku 5.5 成本仅 1/3；**Inkling-2-small :free 回归 OR**、Crouton Alpha 三处退场；**Zen 免费席 11→12**。
