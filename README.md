@@ -6,6 +6,20 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-12）
+
+> 本期主线：**百度 ERNIE 5.5 Flash Preview 转挂 :free**（发布 2 天即补免费席，OR :free 12→13）；**Mistral 免费档 API 核实关闭**（聚合站仍误标）；**Unbiased Pareto 26.10 复合模型双池上架**；**DeepSeek V4.1-Flash 大幅降价**。
+
+| 数字 | 含义 |
+| --- | --- |
+| **:free 13** | **ERNIE 5.5 Flash Preview 补免费席**：昨日付费 $0.28/$1.13 出海，今日付费版撤下、换 `baidu/ernie-5.5-flash-preview:free` 上架（Qianfan 免费托管、1M、P50 88 tok/s、约 200 req/天）。OR 467 / 零价 16 / :free 13。注意 Qianfan 结构化输出错误率实测 ~20% |
+| **0 免费 API** | **Mistral 免费档核实关闭**（11/8 官方文档口径）：Free mode 仅含 Le Chat / Vibe 月度额度，创建 API key 与调用须激活计费走 pay-as-you-go；旧 Experiment（~1B token/月）已成历史，freellm.net 等聚合站仍在误标 |
+| **1M / $0.8/$3.2** | **Pareto 26.10 / 26.10 Preview 双池上架**（OR + Nous）：Unbiased 复合路由模型——每请求并发多个上游择优合成、无单一上游、无公开 benchmark；1M 上下文、图文输入、$0.80/$3.20、cache $0.03、BYOK only。适合尝鲜不宜当基准 |
+| **−57%** | **价格快讯**：`deepseek-v4.1-flash` 降至 $0.022/$0.40（输入 −57%/输出 −29%）；`v4.1-flash-1017` 输入 $0.006→$0.15（限免价恢复 +2400%）；`qwen3.5-9b` 双降 67%；`glm-5.3-flash:batch` 输出 +195%；`granite-4.2-8b` 输出 −40%。付费退场：seed-1.6 / seed-1.6-flash / seed-2.0-code（OR+Nous 同源） |
+| **限免/前瞻** | Zen 85 / 免费席 12 持平；Nous 398→395、:free 3 持平；freellm.net 535+/31 家/244 实测。混元 Hy4/Hy3 限免至 11/15（剩 3 天）；本周 Inkling 2 Small 权重 Apache 2.0；11/17 Opal 停用；11/30 conatus-free + Carbon/Argon 推广价截止；12/1 Carbon 翻倍生效 |
+
+---
+
 ## 📰 今日摘要（2026-11-11）
 
 > 本期主线：**Gemini 4 Carbon 全量开放**（$2/$10 推广价至 11/30、12/1 翻倍，OR/Zen/Nous 三池同上）；**百度 ERNIE 5.5 Flash Preview 出海**（OR+Nous 双池）；**OR 免费池 11/09 后首度缩减**（xing4.0:free 退场）；**GLM-5.3-Flash 价格暴涨全回吐**。
