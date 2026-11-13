@@ -6,6 +6,20 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-13）
+
+> 本期主线：**Gemini 4 Hydrogen 发布并三池同上**（Gemini 4 系首次进消费免费档）；**OR 免费池单日 +2**（新供应商 Apodex + Particle）；**DS V4.1-Flash 限免价结束**；**K3.1 Pro 输入 −88%**。
+
+| 数字 | 含义 |
+| --- | --- |
+| **AA 51/54** | **Gemini 4 Hydrogen 发布**（11/12）：$1.5/$7.5 全 1M 统一价、batch 半价、四档思考、AA 智能指数 high 51 / xhigh 54 **超 Argon**；免费用户经 Gemini App 自动模型选择可用（Gemini 4 系首次进消费免费档）；OR+Zen+Nous 三池同上；Antigravity Orchestrator 混合调度配额 −24% |
+| **:free 15** | **OR 免费池单日 +2**：467→475（单日 +8 近期最大）、零价 16→18、:free 13→15。+`apodex/apodex-1.1-mini:free`（新供应商 Apodex，35B 开源 Apache 2.0、262K）+`particle-ai/particle-1:free`（DS V4.1 Flash 后训 agentic coding、1M）；Inkling 2 Small 付费版 $0.30/$1.00、Ling 3.0 Flash Fin/Sante 金融/医疗特化版双池上架 |
+| **13.6×** | **DS V4.1-Flash 限免价结束**：$0.022/$0.40 → $0.30/$1.20（输入 13.6×/输出 3×），`~flash-latest` 跟随上涨；`glm-5.3` 输出回升 $1.40→$3.60；`gemma-4-26b` 输出 +155% |
+| **−88%** | **Kimi K3.1 Pro 输入大降价**：$2 → $0.2375、输出 $10→$8.41（−16%），并新增 :batch $0.70/$6；`mimo-v2.5-pro` 输出 −52% |
+| **限免/前瞻** | Zen 86（+hydrogen）/ 免费席 12 持平；Nous 400/:free 3 持平；freellm.net 536+/31 家/245 实测。混元 Hy4/Hy3 限免至 11/15（剩 2 天）；ZCode 新用户体验档改版 5 天×每日 800 万、蹬蹬卡邀新 11/13 截止；Inkling 权重开源窗口；11/17 Opal 停用；11/30 conatus-free + Carbon/Argon 推广价截止 |
+
+---
+
 ## 📰 今日摘要（2026-11-12）
 
 > 本期主线：**百度 ERNIE 5.5 Flash Preview 转挂 :free**（发布 2 天即补免费席，OR :free 12→13）；**Mistral 免费档 API 核实关闭**（聚合站仍误标）；**Unbiased Pareto 26.10 复合模型双池上架**；**DeepSeek V4.1-Flash 大幅降价**。
