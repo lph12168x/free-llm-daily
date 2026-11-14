@@ -6,6 +6,15 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-14）
+
+> 🌊 **G4 Hydrogen 进 API 免费档（官方核实）**：Google 定价页确认 `gemini-4-hydrogen` 在 Gemini API Free Tier 输入/输出/缓存全免（限速内），Carbon/Argon 仍排除——**G4 系首款进 API 免费档**；freellm.net 91 分登顶免费榜。
+> 🐎 **蚂蚁 Ling 3.2 Flash 登 OR 免费档**：560B/25B 原生多模态 MoE、图文视频一等输入、1M 上下文、200 图/请求；官方限免约至 11/19（之后 $0.30/$0.90）。
+> 📦 **Inkling 2 Small 权重如期开源**：11/12 上 HF、Apache 2.0、594B/17B、1M 上下文；NVFP4 自托管需 500GB 显存（2×B300 / 4×H200）；AA 31 为中国以外开源最高。
+> 🎟️ **OR 免费池换血**：475→471、零价 17、:free 14——Apodex :free 与 Ling 3.0-fin/sante 双双存活 1 天退场，+Ling 3.2 Flash :free。
+> 💸 **价格线**：K3.1 Pro 推广价一日回吐（$0.237→$2，+742%）；deepseek-v4.1-flash 再跳水 $0.051/$0.203（第三方标注「疑路由切换」，以官方为准）；v4-pro 输出 −22%；ripple-65b −50%。
+> ⏳ 前瞻：混元 Hy4/Hy3 限免 **明天 11/15 截止**；Ling 3.2 限免 ~11/19 到期；11/17 Google Opal 停用；11/30 Carbon/Argon 推广价截止（12/1 翻倍）。
+
 ## 📰 今日摘要（2026-11-13）
 
 > 本期主线：**Gemini 4 Hydrogen 发布并三池同上**（Gemini 4 系首次进消费免费档）；**OR 免费池单日 +2**（新供应商 Apodex + Particle）；**DS V4.1-Flash 限免价结束**；**K3.1 Pro 输入 −88%**。
