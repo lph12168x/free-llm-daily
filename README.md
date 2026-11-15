@@ -6,6 +6,14 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-15）
+
+> ⏳ **混元 Hy3/Hy4 限免今晚收官**：WorkBuddy/CodeBuddy 0 倍率每日额度至 11/15 23:59；TokenHub 刊例 5 折至 12/31（折后 ¥3/¥9 每百万）、TokenPlan 订阅 2.5 折至 11/18 兜底。
+> ⚠️ **Ling 3.2 Flash 免费端点实测出炉**：3 天 38.1B prompt tokens（重度用户 Hermes Agent/Claude Code 等）；**结构化输出错误率 47.66%**（JSON 场景绕行）、工具调用 2.66%、吞吐 P50 15 tok/s；限免 ~11/19 到期。
+> 💸 **价格线**：`kimi-k3.1-pro` 输入 $2→$0.2375 再度跳水（昨日回吐今日又降，疑路由切换，以官方 $2/$10 为准）；`glm-4.7` 降 33%/20% 至 $0.40/$1.75；`glm-5.3:batch` 输出近半价 $1.068。
+> ⚖️ **三池续稳**：OR 470 / 零价 17 / :free 14 零进出（仅付费档 −glm-5.2:batch）；Zen 86 / 免费席 12 全平（官方页 Free 区 14 行滞后，新增 System One 决策类说明）；Nous 400 / :free 3 平。
+> ⏳ 前瞻：11/16 Scaleway GLM-5.2 Beta 截止；11/17 Google Opal 停用；11/18 TokenPlan 2.5 折截止；~11/19 Ling 3.2 限免到期；11/30 conatus-free + Carbon/Argon 推广价截止（12/1 翻倍）。
+
 ## 📰 今日摘要（2026-11-14）
 
 > 🌊 **G4 Hydrogen 进 API 免费档（官方核实）**：Google 定价页确认 `gemini-4-hydrogen` 在 Gemini API Free Tier 输入/输出/缓存全免（限速内），Carbon/Argon 仍排除——**G4 系首款进 API 免费档**；freellm.net 91 分登顶免费榜。
