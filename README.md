@@ -6,6 +6,15 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-16）
+
+> 🚀 **Qwen4-Max 今日正式 GA，OR + Nous 双池同日上新**：2.4T/QSA MoE、1M、原生视觉，$1.50/$4.50（缓存 $0.075）、国内 ¥10/¥30；Terminal-Bench 4.0 token 消耗 −48%、单任务成本 −58%；Qwen4 中小尺寸将陆续开源。
+> 🧹 **Scaleway GLM-5.2 今日退役兑现**：Serverless EOL，免费档请求自动路由 glm-5.3，1M tokens 免费额度不变。
+> ⏳ **关窗潮**：ZCode 周末包今晨 09:00 清零；StepAudio 3 全系语音限免 11/17 11:59 截止；Hy4 TokenPlan 2.5 折 11/17 12:00 截止；Opal 11/17 停用；U2-Flash 1 亿 Token 11/20 到期。
+> 💸 **价格线**：glm-5.3 输出 $3.60→$1.40（−61% 回落）；deepseek-v4.1-flash 反弹 $0.14/$0.42（震荡疑路由）；K3.1 Pro :batch 回刊例 $0.70/$6；gpt-oss-20b 涨 2.5×。
+> ⚖️ **三池**：OR 468 / 零价 17 / :free 14 零进出第 3 期（付费 −3/+qwen4-max）；Zen 86/12 第 4 期全平；Nous 399/:free 3 平；freellm.net 534+/31/254。
+> ⏳ 前瞻：11/19 Ling 3.2 限免到期；11/25 qwen4-max-preview 退役；11/30 conatus + Carbon/Argon 推广价截止（12/1 翻倍）。
+
 ## 📰 今日摘要（2026-11-15）
 
 > ⏳ **混元 Hy3/Hy4 限免今晚收官**：WorkBuddy/CodeBuddy 0 倍率每日额度至 11/15 23:59；TokenHub 刊例 5 折至 12/31（折后 ¥3/¥9 每百万）、TokenPlan 订阅 2.5 折至 11/18 兜底。
