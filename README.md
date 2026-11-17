@@ -6,6 +6,16 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-17）
+
+> 🚀 **腾讯混元 Hy4 Flash 发布，OR + Nous + Zen 三池同日上架**：224B/12B 激活、多模态、1M、>150 tok/s，刊例 ¥0.5/¥2（缓存 ¥0.02）；TokenHub API 五折（≈$0.035/$0.14，OR 即此价）至 11/30 12:00、WorkBuddy 客户端限免至 11/30；单任务成本 Hy4 的 1/20、盲测满意度 2.79 追平 Haiku 5.5；权重计划开源未放出。
+> 🧹 **今日三窗兑现**：StepAudio 3 全系语音限免 11:59 收官（12:00 起 realtime ¥0.65/分钟）；Hy4 TokenPlan 2.5 折 12:00 截止；Google Opal 停用。
+> ⏳ **明日 11/18（官方文档核实）**：Google Antigravity 撤 Claude Sonnet 4.6 / Opus 4.6 / GPT-OSS-120b，Free/Plus 档仅剩 Gemini 4 Hydrogen + 3.8 Flash，第三方模型归零。
+> 💸 **价格线**：GLM 系集体降价（glm-5.3:batch 输入 −37%、glm-5.3-prime −40%、flash:batch −52%）；kimi-k3.1-pro:batch 输入 −47%；deepseek-v4.1-flash-1017 输入 −76%；gpt-oss-20b 回落；qwen4-max GA 次日微降 5%；反向 qwen3.5-9b 涨约 2×。
+> ⚖️ **三池**：OR 470 / 零价 17 / :free 14 零进出第 4 期（付费 +hy4-flash、+glm-5.2:batch）；Zen 免费席换血 12 枚（−minimax-m3.1-flash-free、+hy4-flash-free）；Nous 402/:free 4；freellm.net 534+/31/254 持平。
+> 🎁 **新羊毛**：百度千帆 17 模型各送 1M tokens；百川新户 ¥80；AMD Token Lab 免费积分；GonkaRouter 1M；Vectoree $5；Braintrust Starter 每月 $10；Together Ternary Bonsai 27B 免费；Novita Apodex 1.1 Mini 免费。
+> ⏳ 前瞻：11/19 Ling 3.2 限免到期；11/20 U2-Flash 到期；11/25 qwen4-max-preview 退役；11/30 Hy4 Flash 五折止 + conatus + Carbon/Argon 推广价截止（12/1 翻倍）。
+
 ## 📰 今日摘要（2026-11-16）
 
 > 🚀 **Qwen4-Max 今日正式 GA，OR + Nous 双池同日上新**：2.4T/QSA MoE、1M、原生视觉，$1.50/$4.50（缓存 $0.075）、国内 ¥10/¥30；Terminal-Bench 4.0 token 消耗 −48%、单任务成本 −58%；Qwen4 中小尺寸将陆续开源。
