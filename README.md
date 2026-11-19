@@ -6,6 +6,14 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-19）
+
+> 🌟 **Gemini 4 Neon 发布，三池同日上架（付费）**：谷歌 11/18 发布，一个月内第四款 Gemini；OR + Nous + Zen 三池同日上架（OR 另含 `:batch`）。**非免费**——$3/$15、缓存 $0.15（95% 折）、1M 上下文、四档推理（low/medium/high/xhigh）；xhigh 档 Artificial Analysis 智能指数 **61 分全球第三**（仅次 GPT-6.2 Astra、Claude Fable 5.2），**编程智能体指数 58.6 登顶**、Terminal-Bench 4.1 65.2%；默认 high 档单任务成本较 Carbon 低 32%、速度约 3 倍、幻觉率创新低。免费用户暂无路径：API 需付费层，Gemini App 仅 Pro/Ultra 可选。
+> 🎁 **今日羊毛**：阿里旗舰 **Qwen4-Max**（2.4T MoE / 71B 激活 / 1M / 原生视觉，刊例 $1.50/$4.50）**首进 Nous Portal `:free`**，与 Nous 合作限时免费 5 天——旗舰级模型首进主流免费 API 池，欲用从速；OpenCode Zen 免费席换血（**+`tidepool-alpha-free`** 隐身新模型 11/18 上架、**−`glm-5.3-flash-free`**），免费席仍 12 款。
+> 💸 **价格线**：OR 多款限免价回归刊例——`deepseek-v4.1-flash` $0.051/$0.567 → **$0.30/$1.20**、`glm-5.3-flash` $0.0399/$0.0784 → **$0.15/$0.50**、`v4.1-flash-1017` 输入 $0.036 → $0.15；反向 `qwen3.5-27b` 输入 −35%、`gemma-3-27b` 输出 $0.45→$0.16、`~deepseek-flash-latest` 输出 $0.50→$0.15。
+> ⚖️ **三池**：OR 478→480 / 零价 17 / `:free` 14 **零进出第 6 期**（仅 +Neon 付费）；Zen 88→89 / 免费席 12 持平（换血）；Nous 410→413 / **`:free` 4→5**（+qwen4-max）；freellm.net 534+/31/254 持平（11/14 核验，Hydrogen 91 榜首）。
+> ⏳ 前瞻：11/19 今日 Ling 3.2 Flash 限免窗口预计到期（OR `:free` 是否同步撤待观察）；11/20 U2-Flash 1 亿到期；11/22 AutoClaw 1 亿清零；11/23 OpenCode 免费池 13 款 + 千帆 5 折收口；11/25 qwen4-max-preview 退役（留意 Nous 免费窗是否同期关闭）；11/30 关闸高峰（七牛/SCNet/豆包/百炼/Hy4 五折 12:00/Carbon/Argon 翻倍前夕）；12/31 Zen Gemini Flash 5 折 + TokenHub 5 折。
+
 ## 📰 今日摘要（2026-11-18）
 
 > 🚀 **OpenAI GPT-6.2 Astra / Sol 发布，三池同日上架 8 款**：11/17 发布，OR + Nous + Zen 各 +8（Astra/Sol 各含 -pro 与 :batch 变体）；**均非免费**——Astra $8/$40（较 GPT-6 Astra 降 20%、缓存 $0.40 降 60%）、Sol 沿用 $2/$10、1.05M；AA 总榜 Astra 第二（仅次 Claude Fable 5.2）、Sol 第五；Astra 被称「史上最会做 PPT 的模型」，Sol 在 FrontierCode 2.0 与 Astra 相差 <0.5 分但成本约 1/5；ChatGPT 仅 Work/Codex 内 Plus 及以上可用，免费用户暂无路径。
