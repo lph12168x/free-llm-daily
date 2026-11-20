@@ -6,6 +6,14 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-20）
+
+> 📉 **Inkling 2 Small 免费窗到期，OR 免费池 6 期零进出后首次收缩**：官方页标注 “Going away November 19, 2026”，今日快照确认 `thinkingmachines/inkling-2-small:free` 与 Zen 的 `inkling-2-small-free` 双池撤架（11/9 上架、约 10 天免费窗）。叠加 `cohere/north-mini-code:free` 同撤，**OR 零价池 17→15、`:free` 14→12**。权重 11/12 已 Apache 2.0 开源、付费版 $0.30/$1.00 仍在，可自部署续用。
+> 🎁 **今日羊毛**：Zen 免费席换血，**+`jev-1.13-free`**（TypeSafe System One 决策模型，非聊天——输入 state + 类型化问题，一次并行输出全部答案与校准概率；免 key、免注册，已被 mu-agent 选作默认 judge）、−`inkling-2-small-free`，仍 12 款；同批上架 `gpt-6-luna-decision`、`gemini-decision-1`、`gpt-image-2.5-sunburst` 等决策/图像/语音多款。
+> 💸 **价格线**：`gpt-oss-120b` $0.15/$0.60 → **$0.09/$0.36**（−40%）、`glm-5.3-flash` 限免价回 $0.0399/$0.0784、`deepseek-v4.1-flash:batch` $0.112/$0.336 → $0.05/$0.15；反向 `qwen3.5-27b` $0.195/$1.56 → $0.26/$2.6、`~deepseek-flash-latest` 输出 $0.15→$0.50、`deepseek-v4-pro-0813` 输入 $0.111→$1.32。
+> ⚖️ **三池**：OR 480→477 / 零价 17→15 / `:free` 14→12；Zen 89→91 / 免费席 12 持平（换血）；Nous 413→413 / `:free` 5 持平；freellm.net 534+/31/254 持平（11/14 核验，Hydrogen 91 榜首）。**腾讯 Hy4 今日正式开源**（770B/49B、1M、Apache 2.0），Hy4 flash 首日破 50 万亿 Token、登顶 OR 日榜。
+> ⏳ 前瞻：11/20 今日 U2-Flash 1 亿到期 + Hy4 开源；11/22 AutoClaw 1 亿清零；11/23 OpenCode 免费池 13 款收口（Jev 免费窗或仅 3 天）+ 千帆 5 折止；11/25 qwen4-max-preview 退役、留意 Nous `qwen4-max:free` 5 天窗；11/30 关闸高峰（七牛/SCNet/豆包/百炼/Hy4 五折 12:00/Carbon/Argon 翻倍前夕）；12/31 Zen Gemini Flash 5 折 + TokenHub。
+
 ## 📰 今日摘要（2026-11-19）
 
 > 🌟 **Gemini 4 Neon 发布，三池同日上架（付费）**：谷歌 11/18 发布，一个月内第四款 Gemini；OR + Nous + Zen 三池同日上架（OR 另含 `:batch`）。**非免费**——$3/$15、缓存 $0.15（95% 折）、1M 上下文、四档推理（low/medium/high/xhigh）；xhigh 档 Artificial Analysis 智能指数 **61 分全球第三**（仅次 GPT-6.2 Astra、Claude Fable 5.2），**编程智能体指数 58.6 登顶**、Terminal-Bench 4.1 65.2%；默认 high 档单任务成本较 Carbon 低 32%、速度约 3 倍、幻觉率创新低。免费用户暂无路径：API 需付费层，Gemini App 仅 Pro/Ultra 可选。
