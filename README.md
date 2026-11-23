@@ -10,8 +10,8 @@
 
 > 🚪 **11/23 集中关闸**：OpenCode 12 款限时免费模型池今日关窗（含 DeepSeek V4.1 Flash、M3.1 Flash 等，仅客户端内用、LongCat 每日 100 次）；百度千帆双 11 全家桶（Token Plan 首购 5 折 5 档 + 积分闲时 2 折）今日全线收口；智谱 ZCode 周末卡 5 亿今晨 09:00 清零（工作日卡每日 3 亿仍常态）。Zen 免费席今日再撤 `longcat-2.5-free`，剩 11 款——想白嫖只剩今天。
 > 🎁 **现役免费强模**：Zen `deepseek-v4.1-flash-free`（AA 39.5，免费档最强）、Nous `qwen4-max:free`（2.4T MoE 旗舰，限时 5 天、约 11/24 到期，欲用从速）、Gemini 4 Hydrogen（Google AI Studio Free Tier 全免、freellm.net 91 分榜首）。OR 免费池含 `nemotron-3-ultra-550b`、`ling-3.2-flash` 等。
-> 📉 **OR 池**：477→476 / 零价 15→14 / `:free` 12→11，免费席 −`dots-3-note-preview:free`（原预告 12/31 到期、提前撤）；付费 +`inkling-2-mini` +`daisyrose-27b`，−`longcat-2.0` −`hy3-preview`。价格线 23 笔微调：`deepseek-v4.1-flash` $0.30/$1.20→**$0.05/$0.20**（−83%）、`gpt-oss-120b` $0.09/$0.36→$0.05/$0.25、`qwen3.8-27b` $0.06/$2.2→$0.035/$1.5；反向 `v4.1-flash-1017` $0.15/$0.60→$0.30/$1.20、`glm-4.7` 涨至 $0.60/$2.2。
-> ⚖️ **三池**：OR 476 / 零价 14 / `:free` 11；Zen 91→105（+12 embedding + `jev-1.14` + `gemini-omni-1.2-flash` + `gpt-live-1.1`）/ 免费席 12→11；Nous 413→411 / `:free` 5 持平。freellm.net **512+ / 31 家 / 230 verified**（较上期 534+/254 回落，11/22 更新）。🧠 **Inkling 2 Mini**（11/21，Thinking Machines 最小款，26.4B 总参/3.4B 激活、1M、Apache 2.0 开源，笔记本可跑，AA 20.1）——付费但权重开源可自部署。
+> 📉 **OR 池（13:10 修订）**：477 持平 / 零价 15 / `:free` 12，`dots-3-note-preview:free` 晨撤午归（原预告 12/31 到期）；付费 +`inkling-2-mini` +`daisyrose-27b`，−`longcat-2.0` −`hy3-preview`。价格线 23 笔微调：`deepseek-v4.1-flash` $0.30/$1.20→**$0.05/$0.20**（−83%）、`gpt-oss-120b` $0.09/$0.36→$0.05/$0.25、`qwen3.8-27b` $0.06/$2.2→$0.035/$1.5；反向 `glm-4.7` 涨至 $0.60/$2.2、`v4.1-flash-1017` 午间回落 $0.15/$0.60（晨刊所记涨价未持续）。
+> ⚖️ **三池（13:10）**：OR 477 / 零价 15 / `:free` 12；Zen 91→105（+12 embedding + `jev-1.14` + `gemini-omni-1.2-flash` + `gpt-live-1.1`）/ 免费席 12→11；Nous 413→411 / `:free` 5 持平。freellm.net **512+ / 31 家 / 230 verified**（较上期 534+/254 回落，11/22 更新）。🧠 **Inkling 2 Mini**（11/21，Thinking Machines 最小款，26.4B 总参/3.4B 激活、1M、Apache 2.0 开源，笔记本可跑，AA 20.1）——付费但权重开源可自部署。
 > ⏳ 前瞻：11/23 今日三窗关闸；11/25 qwen4-max-preview 退役、留意 Nous `qwen4-max:free` 窗口；11/30 关闸高峰（七牛/SCNet/豆包/百炼/Hy4 五折 12:00/客户端限免）；12/1 Gemini 4 Carbon/Argon 翻倍 $4/$20；12/31 Zen Gemini Flash 5 折 + TokenHub 5 折。
 
 ## 📰 今日摘要（2026-11-20）
