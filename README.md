@@ -6,6 +6,14 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-24）
+
+> 🚪 **qwen4-max 五天窗口今日到期**：Nous `qwen4-max:free` 如期下线（11/19 起限时 5 天），Nous 411→410、`:free` 5→4，剩 `longcat-2.5` / `step-3.7-flash` / `hy4-flash` / `solar-mini4`；Qwen Code 1.0 免费额度领取今日最后一天（领后 30 天有效）。
+> 🎁 **现役免费强模**：Zen `deepseek-v4.1-flash-free`（AA 39.5，zero-retention）、G4 Hydrogen（Google AI Studio Free Tier 全免、freellm.net 91 分榜首）、OR `nemotron-3.5-super-vl:free`（LiveBench 免费最强 47.0）与 `ling-3.2-flash` 仍可白嫖。
+> 📉 **OR 池**：477→474（付费 −`kimi-k2` −`kimi-k2-thinking` −`mimo-v2.5-pro`），**零价 15 / `:free` 12 持平、免费池零进出**。价格线 13 笔：`deepseek-v4.1-flash-1017` $0.15/$0.60→**$0.03/$0.20**（−80%）、`~flash-latest` 输出 $0.50→$0.20、`hy3` 降；反向 `glm-5.3-flash` 限免价回吐 $0.12/$0.38、`ling-3.0-flash` 3×、`llama-3.1-8b` 2.5×、`v4-pro` 涨。
+> ⚖️ **三池（13:10）**：OR 474 / 零价 15 / `:free` 12；Zen 105→107（+`grok-imagine-video-1.5` +`1.5-lite`，均付费档）/ 免费席 11 持平；Nous 411→410 / `:free` 5→4。freellm.net **512+ / 31 家 / 230 verified**（11/23 更新，持平）。llmlatency.dev：42 家 API 中 7 家永久免费层、OR TTFB 66ms 最快；Antigravity 三模型免费档移除三度延期至 11/30。
+> ⏳ 前瞻：11/25 qwen4-max-preview 退役；11/27 ZCode 周末卡新一轮；11/30 关闸高峰（Antigravity/七牛 conatus/Hy4 五折与限免/百炼 5 折/Carbon-Argon 5 折止）；12/1 Carbon/Argon 翻倍 $4/$20；12/31 Zen Gemini Flash 5 折 + TokenHub 5 折。
+
 ## 📰 今日摘要（2026-11-23）
 
 > 🚪 **11/23 集中关闸**：OpenCode 12 款限时免费模型池今日关窗（含 DeepSeek V4.1 Flash、M3.1 Flash 等，仅客户端内用、LongCat 每日 100 次）；百度千帆双 11 全家桶（Token Plan 首购 5 折 5 档 + 积分闲时 2 折）今日全线收口；智谱 ZCode 周末卡 5 亿今晨 09:00 清零（工作日卡每日 3 亿仍常态）。Zen 免费席今日再撤 `longcat-2.5-free`，剩 11 款——想白嫖只剩今天。
