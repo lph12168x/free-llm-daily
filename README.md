@@ -6,6 +6,14 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-25）
+
+> ⏰ **qwen4-max-preview 今日退役**：官方两处文档写 10:00 / 24:00（按上午准备），预览期 2 折权益同步收官；切 `qwen4-max` 正式版有两处破坏性变更——**默认推理 xhigh→high、思考+输出上限 393216→262144**。
+> 📉 **OR 免费池双撤**：474→472 / 零价 15→14 / `:free` 12→11，−`dots-3-note-preview:free`（原预告 12/31 到期，提前 5 周撤），付费 −mistral-medium-3(.1) −`kimi-k2-0905` −`mimo-v2.5`；价格线 12 笔：`deepseek-v4.1-flash-1017` $0.03/$0.20→**$0.15/$0.60**（昨 −80% 全回吐）、`deepseek-v4.1-flash` $0.05/$0.20→$0.14/$0.42；反向 `v4-pro-0813` $0.19/$8→$0.111/$4.44、`ling-3.0-flash` −65%。
+> ⚖️ **三池（13:10）**：Zen 107→108 / 免费席 11 持平（+`kimi-k3.1-pro` 付费档）；Nous 410→409 / `:free` 4→3（−`longcat-2.5:free`，剩 step-3.7-flash / hy4-flash / solar-mini4）。freellm.net **512+ / 31 家 / 230 verified**（11/24 更新，持平）；llmperks 11/25：Nemotron 11 款在 7 家免费、GLM 10 款在 6 家免费。
+> 🏗️ **开源日（11/24）**：文心 5.5 Flash Preview（280B/14B、1M、Apache 2.0，约 166GB）、商汤 SenseNova U1.6 8B（生图自修正错字，86.04→92.28）、腾讯 Hy MT3（102 语种，误译 −43%）——权重免费但 API 仍按量计费。🎁 现役免费强模：Zen `deepseek-v4.1-flash-free`（AA 39.5）、G4 Hydrogen（91 榜首）、OR `nemotron-3.5-super-vl`（LiveBench 47.0）。
+> ⏳ 前瞻：11/26–27 Google AI Pro 黑五年付 $99.99；11/30 关闸高峰（Antigravity/七牛 conatus/Hy4 五折与限免 12:00/百炼/Carbon-Argon 5 折止）；12/1 Carbon/Argon 翻倍 $4/$20；12/8 SWE-2.1 Devin 免费止、12/9 无问码清零、12/31 Zen Flash 5 折 + TokenHub。
+
 ## 📰 今日摘要（2026-11-24）
 
 > 🚪 **qwen4-max 五天窗口今日到期**：Nous `qwen4-max:free` 如期下线（11/19 起限时 5 天），Nous 411→410、`:free` 5→4，剩 `longcat-2.5` / `step-3.7-flash` / `hy4-flash` / `solar-mini4`；Qwen Code 1.0 免费额度领取今日最后一天（领后 30 天有效）。
