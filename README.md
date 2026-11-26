@@ -6,6 +6,13 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-26）
+
+> 🔄 **Zen 免费席换血**：OpenCode 11/26 上架第二款隐身免费模型 `seaglass-alpha-free`（catalog 与 tidepool 逐字几乎相同：1M 上下文 / 131K 输出 / 纯文本 / 六档推理 / 零价，未署名厂商、提示词被保留用于改进模型、无到期日）；同时 live 列表撤下 `tidepool-alpha-free`（11/18 上架，存活 8 天），models.dev 与文档页仍列属滞后。Zen 总数 108 持平、免费席 11 换血不减。
+> 📉 **OR 免费池连续零进出**：472→474 / 零价 14 / `:free` 11 全持平，+4 Mistral `:batch` + `tngtech/deepseek-r1t2-chimera`、−`unbiased/pareto-26.10` 三款（复合路由退场）；价格线 11 笔：`deepseek-v4-pro` $1.28/$2.56→**$0.89/$1.51**（−31%/−41%）、`deepseek-v4-flash-0731` 输出 $0.30→$0.18（−40%）、`qwen3.5-9b` 输入 −41%；反向 `mimo-v2.6-flash-mopd` $0.15/$0.42→$0.50/$1.00（3.3×）、`glm-5.3-flash` 涨。
+> ⚖️ **三池（13:10）**：Zen 108/免费 11、Nous 409/`:free` 3（step-3.7-flash / hy4-flash / solar-mini4，与上期完全一致）零变动。freellm.net **517+ / 31 家 / 235 verified**（11/25 更新，较上期升），Gemini 4 Hydrogen 92 榜首。🌏 百度文心 5.5 Flash Preview 开源权重（280B/14B、1M、Apache 2.0、约 166GB、Terminal-Bench 46.5%，OR 免费档可试）；印度 BharatGen Patram 1.5（7B 文档视觉、Apache 2.0、1000 免费 credits）。现役免费强模：Zen `deepseek-v4.1-flash-free`（AA 39.5）、G4 Hydrogen（92 榜首）、OR `nemotron-3.5-super-vl`（LiveBench 47.0）。
+> ⏳ 前瞻：11/26 Google AI Pro 黑五老用户先行优惠今日截止（年付 $99.99 / 原 $199.99、含 Gemini 4 Neon）；11/27 新用户场 + ZCode 周末卡 5 亿；11/30 关闸高峰（Antigravity/七牛 conatus/Hy4 五折限免 12:00/百炼/Carbon-Argon 5 折）；12/1 Carbon/Argon 翻倍 $4/$20；12/8 SWE-2.1 Devin 免费止、12/9 无问码清零、12/31 Zen Flash 5 折 + TokenHub。
+
 ## 📰 今日摘要（2026-11-25）
 
 > ⏰ **qwen4-max-preview 今日退役**：官方两处文档写 10:00 / 24:00（按上午准备），预览期 2 折权益同步收官；切 `qwen4-max` 正式版有两处破坏性变更——**默认推理 xhigh→high、思考+输出上限 393216→262144**。
