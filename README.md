@@ -6,6 +6,13 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-27）
+
+> 🎯 **决策模型成新战场**：不生成文字、只返回 0–1 校准概率的决策模型今日扎堆——Perplexity `Decider V1.3` / `Decider Flash V1.3`、蚂蚁 `antdigital/lingdt-decision-fast-1.0:free`（11/26 上架 OR、33K、仅走 Decisions/Extractions API）、Respan `Span-01 Lite`，叠加 AMD 的 Clef / d3 / d3-flash，共四家七款；审核/分流/打标场景成本可低一个数量级。
+> 🆕 **AMD Token Factory 免费 API 新收录**：Radeon Cloud 中国站提供 OpenAI + Anthropic 双协议接口（`developer.amd.com.cn/radeon/api/v1`），约 14 款开源模型在服（DeepSeek V4.1 Flash / MiMo V2.6 Flash / Qwen3.8-27B / GLM-5.3-Flash / MiniCPM / Gemma），另有 MinerU2.5-Pro OCR、OmniVoice TTS、Clef/d3/d3-flash 决策路由；pts 计量每日重置、免绑卡，官方明示试用不建议生产、禁转售。
+> 📉 **OR 免费池连续零进出**：474→477 / 零价 14 / `:free` 11 全持平，+`inclusionai/lingsante-3.1-air-vl`（蚂蚁 Ling 3.1 Air VL、131K、付费）+ `kimi-k2`/`k2-0905` 回归；价格线 9 笔：`deepseek-v4-flash-vision-exp` $0.44/$1.32→**$0.216/$0.647**（−51%）、`v4-flash-0731` 输入 −22%/输出 +67%；反向 `kimi-k2.5`、`qwen3.8-27b` 涨。Zen 108→110（+2 语音转写付费档、免费席 11 持平）、Nous 409→410/`:free` 3 零变动。freellm.net **514+ / 31 家 / 232 verified**（11/26 更新），G4 Hydrogen 92 榜首。现役免费强模：Zen `deepseek-v4.1-flash-free`（AA 39.5）、G4 Hydrogen、OR `nemotron-3.5-super-vl:free`（LiveBench 47.0）。
+> ⚠️ 前瞻：**11/28 Recraft V4.1 Flash V2 免费文生图下线**（替代 Agnes-Image-2.0）；11/30 关闸高峰（Antigravity/七牛 conatus/Hy4 五折限免 12:00/百炼/Carbon-Argon 5 折）；12/1 Carbon/Argon 翻倍 $4/$20；12/8 SWE-2.1 Devin 免费止、12/9 无问码清零、12/31 Zen Flash 5 折 + TokenHub。
+
 ## 📰 今日摘要（2026-11-26）
 
 > 🔄 **Zen 免费席换血**：OpenCode 11/26 上架第二款隐身免费模型 `seaglass-alpha-free`（catalog 与 tidepool 逐字几乎相同：1M 上下文 / 131K 输出 / 纯文本 / 六档推理 / 零价，未署名厂商、提示词被保留用于改进模型、无到期日）；同时 live 列表撤下 `tidepool-alpha-free`（11/18 上架，存活 8 天），models.dev 与文档页仍列属滞后。Zen 总数 108 持平、免费席 11 换血不减。
