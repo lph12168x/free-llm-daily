@@ -6,6 +6,13 @@
 
 每天自动搜集并整理可免费使用的国内外大模型信息，生成精美 HTML 报告。
 
+## 📰 今日摘要（2026-11-28）
+
+> 📉 **免费池多期零进出终结**：蚂蚁数科 DTMaaS 公告 `ling-3.2-flash`（560B/25B 原生多模态、1M）北京时间**今日 11/28 10:00 结束免费期**，转原价输入 ¥2 / 输出 ¥6 每百万 token。OpenRouter 同步撤 `inclusionai/ling-3.2-flash:free`、同刻上架付费版（$0.30/$0.90）——OR 总数 477→476、零价 14→13、`:free` 11→10，连续多期零进出的免费池首次回撤。现役 10 款 `:free`：Nemotron 3 Ultra / 3.5 Lightning / 3.5 Super VL / 3 Nano Omni、Gemma 4 31B/26B-A4B、ERNIE-5.5-Flash-Preview、Particle-1、Flint v1.0、LFM3-1.7B。
+> 💰 **OR 价格线 12 笔、11 降 1 升**：`deepseek-v4-pro` 输入 $0.888→**$0.35**（−61%）、`deepseek-v4.1-flash` 输入 $0.14→**$0.051**（−64%，输出反升 $0.42→$0.567，疑路由切换）、`~v4-flash-latest` 输出 −55%、Thinking Machines `inkling-2-small` 双降 50%（$0.30/$1.00→$0.15/$0.50）、`qwen3.5-9b` / Gemma 4 / Nemotron Lightning 下调。Zen 110 持平（免费席 11、须客户端内用）、Nous 410/`:free` 3 零变动。freellm.net **514+ / 31 家 / 232 verified**（11/27 更新），G4 Hydrogen 92 榜首。
+> 🎨 **今日收官**：Recraft V4.1 Flash V2 免费文生图 11/28 下线（付费端点 $0.007/张保留，替代 Agnes-Image-2.0）；智谱 `GLM-4.7-Flash`（200K、输入/输出/缓存全 0、需实名、无截止日）、硅基流动 7 款每日领仍在服。
+> ⚠️ 前瞻：**11/30 关闸高峰**（Antigravity/七牛 conatus/Hy4 五折限免 12:00/百炼/Carbon-Argon 5 折）；12/1 Carbon/Argon 翻倍 $4/$20；12/8 SWE-2.1 Devin 免费止、12/9 无问码清零、12/31 Zen Flash 5 折 + TokenHub。
+
 ## 📰 今日摘要（2026-11-27）
 
 > 🎯 **决策模型成新战场**：不生成文字、只返回 0–1 校准概率的决策模型今日扎堆——Perplexity `Decider V1.3` / `Decider Flash V1.3`、蚂蚁 `antdigital/lingdt-decision-fast-1.0:free`（11/26 上架 OR、33K、仅走 Decisions/Extractions API）、Respan `Span-01 Lite`，叠加 AMD 的 Clef / d3 / d3-flash，共四家七款；审核/分流/打标场景成本可低一个数量级。
